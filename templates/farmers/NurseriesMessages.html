@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages Directory (12_Table_messages)</title>
+    <!-- Linking externalized stylesheet rules -->
+    <link rel="stylesheet" href="tblstyle.css">
+    
+    <style>
+        /* Basic clean styles for simple school-level page layout */
+        .message-section {
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .user-header-label {
+            background-color: #f7fafc;
+            border-left: 4px solid #3182ce;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #2d3748;
+        }
+        .user-header-label strong {
+            color: #1a0dab;
+        }
+        .msg-preview {
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+    
+<div class="table-container">
+    <h2>Communication Portal (12_Table_messages)</h2>
+    
+    <!-- ================= TAB 1: INBOX ================= -->
+    <div class="message-section">
+        <h3>📥 Inbox</h3>
+        <div class="user-header-label">
+            Recipient Account: <strong>Rajesh Kumar (Profile ID: 1)</strong>
+        </div>
+        
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Message ID</th>
+                    <th>Sender Name</th>
+                    <th>Subject / Title</th>
+                    <th>Message Content</th>
+                    <th>Date Received</th>
+                    <th style="text-align: center; width: 240px;">Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td><strong>Mary Thomas</strong></td>
+                    <td>Bulk Order Query</td>
+                    <td><div class="msg-preview">Interested in purchasing 200kg of your R134 variety...</div></td>
+                    <td>2024-05-12 10:30 AM</td>
+                    <td style="text-align: center;">
+                     
+                        <button class="btn-action btn-view">View</button>
+                        <button class="btn-action btn-update">Reply</button>
+                        <button class="btn-action btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td><strong>Jose George</strong></td>
+                    <td>Sapling Delivery Status</td>
+                    <td><div class="msg-preview">The grafted approach saplings are ready for pickup...</div></td>
+                    <td>2024-05-14 02:15 PM</td>
+                    <td style="text-align: center;">
+                        <button class="btn-action btn-view">View</button>
+                        <button class="btn-action btn-update">Reply</button>
+                        <button class="btn-action btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td><strong>Ammu Joseph</strong></td>
+                    <td>Organic Farming Advice</td>
+                    <td><div class="msg-preview">Which organic compost ratio worked best for your soil?</div></td>
+                    <td>2024-05-15 09:00 AM</td>
+                    <td style="text-align: center;">
+                        <button class="btn-action btn-view">View</button>
+                        <button class="btn-action btn-update">Reply</button>
+                        <button class="btn-action btn-delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= TAB 2: SENT MESSAGES ================= -->
+    <div class="message-section">
+        <h3>📤 Sent Messages</h3>
+        <div class="user-header-label">
+            Sender Account: <strong>Rajesh Kumar (Profile ID: 1)</strong>
+        </div>
+        
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Message ID</th>
+                    <th>Recipient Name</th>
+                    <th>Subject / Title</th>
+                    <th>Message Content</th>
+                    <th>Date Sent</th>
+                    <th style="text-align: center; width: 180px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>102</td>
+                    <td><strong>Mary Thomas</strong></td>
+                    <td>RE: Bulk Order Quote</td>
+                    <td><div class="msg-preview">Shared the per-KG breakdown for our premium crop harvest...</div></td>
+                    <td>2024-05-12 11:15 AM</td>
+                    <td style="text-align: center;">
+                        <button class="btn-action btn-view">View</button>
+                        <button class="btn-action btn-update">Update</button>
+                        <button class="btn-action btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td><strong>Rahul Nair</strong></td>
+                    <td>Pruning Tools Order</td>
+                    <td><div class="msg-preview">Please check if the heavy-duty shears are back in stock...</div></td>
+                    <td>2024-05-14 04:00 PM</td>
+                    <td style="text-align: center;">
+                        <button class="btn-action btn-view">View</button>
+                        <button class="btn-action btn-update">Update</button>
+                        <button class="btn-action btn-delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+
+    
+</body>
+</html>
