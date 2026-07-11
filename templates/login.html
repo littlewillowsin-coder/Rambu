@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Login - Role Based Access</title>
+    <!-- Linking to your uniform form stylesheet -->
+    <link rel="stylesheet" href="formsstyle.css">
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-title">Account Security Portal</div>
+    
+    <form id="loginForm" onsubmit="handleRoleRedirect(event)">
+        <!-- Field 1: Identity / Username -->
+        <div class="form-group">
+            <label for="username">Username or Email Address</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="e.g., deepak.menon@email.com" required>
+        </div>
+
+        <!-- Field 2: Security Key -->
+        <div class="form-group">
+            <label for="password">Account Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <!-- Field 4: Role Assignment Selector (Links to 1_Table_roles) -->
+        <div class="form-group">
+            <label for="role_id">Assigned System Role</label>
+            <select id="role_id" name="role_id" class="form-control" required>
+                <option value="" disabled>Select user designation role...</option> 
+                <option value="1">Farm Owner / Producer</option>
+                <!-- Add 'selected' here -->
+                <option value="2" selected>Wholesale Buyer / Trader</option>  
+                <option value="3">Nursery Manager</option>
+                <option value="4">Supplier</option>
+            </select>
+        </div>
+
+        <!-- Submission Actions Section -->
+        <div class="form-actions">
+            <button type="reset" class="btn-cancel">Clear Fields</button>
+            <button type="submit" class="btn-submit">Secure Log In</button>
+        </div>
+    </form>
+</div>
+
+<script>
+/**
+ * Simulates a secure frontend route check based on your table specifications
+ */
+function handleRoleRedirect(event) {
+    event.preventDefault(); // Stop form from reloading the page
+    
+    const roleSelector = document.getElementById('role_id');
+    const chosenRole = roleSelector.value;
+    const username = document.getElementById('username').value;
+
+    alert(`Authentication verified for: ${username}\nRedirecting to customized environment route...`);
+
+    // Dynamic routing mapping to your respective data list views
+    switch(chosenRole) {
+        case "1":
+            window.location.href = "view_harvests.html"; // Farm Owner / Producer View
+            break;
+        case "2":
+            window.location.href = "view_orders.html"; // Wholesale Buyer / Trader View
+            break;
+        case "3":
+            window.location.href = "view_saplings.html"; // Nursery Manager View
+            break;
+        case "4":
+            window.location.href = "view_accessories.html"; // Supplier View
+            break;
+        default:
+            window.location.href = "index.html";
+    }
+}
+</script>
+
+</body>
+</html>
