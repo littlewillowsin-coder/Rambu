@@ -41,10 +41,18 @@
         <!-- Field 4: Role Assignment Selector (Links to 1_Table_roles) -->
         <div class="form-group">
             <label for="role_id">Assigned System Role</label>
+
+
             <select id="role_id" name="role_id" class="form-control" required>
-                <option value="" disabled selected>Select user designation role...</option>
-                <option value="2">Wholesale Buyer / Trader</option>
+            <option value="" disabled>Select user designation role...</option> 
+            <option value="1">Farm Owner / Producer</option>
+            <!-- Add 'selected' here -->
+            <option value="2" selected>Wholesale Buyer / Trader</option>  
+            <option value="3">Nursery Manager</option>
+
             </select>
+
+            
         </div>
 
         <!-- Field 5: Initial Account Status -->
