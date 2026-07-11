@@ -199,7 +199,7 @@ nav a:hover {
 .btn {
   display: inline-block;       /* Allows button to have width/height while staying inline */
   padding: 12px 24px;          /* Adds 12px vertical and 24px horizontal padding for comfortable size */
-  font-size: 12px;             /* Sets button text size to 14px */
+  font-size: 10px;             /* Sets button text size to 14px */
   font-weight: bold;           /* Makes button text bold for emphasis */
   text-decoration: none;       /* Removes underline from button text */
   border-radius: 5px;          /* Rounds button corners with 5px radius */
