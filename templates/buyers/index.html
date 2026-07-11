@@ -8,44 +8,9 @@
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="brand">
-      <a href="index.html">
-        <img src="../../images/RambuConnectLogo.png" alt="RambuConnect Logo" class="logo-img">
-      </a>
-    </div>
-
-    <nav>
-      <a href="../index.html">Dashboard</a>
-      <a href="../buyers/index.html">Buyer services</a>        
-      <div class="dropdown">
-      <a href="#">My Profile</a>
-      <div class="dropdown-content">
-        <a href="../buyers/Profiles.html"> My Profile</a>
-        <a href="../buyers/settings.html"> Update email, Mobile</a>
-        <a href="../buyers/change_password.html"> Change Password</a>
-         </div>
-      </div>      
-
-      
-      <div class="dropdown">
-        <a href="#">My Transactions</a>
-        <div class="dropdown-content">
-          <a href="../buyers/Profiles.html">Rambutan Farmers Directory</a>          
-          <a href="../buyers/harvest.html">Rambutan for Sale (Harvests)</a>
-          <a href="../buyers/index.html">My Orders </a>
-          <a href="../buyers/index.html">Messages with Farmers</a>
-           </div>
-      </div>
-
-       
-      <a href="../buyers/index.html">Logout</a>      
-
-
-    </nav>
-  </div>
-
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
 
 <div class="user-corner-container">
   <div class="user-image-wrapper">
@@ -77,9 +42,24 @@
   
   </section>
 
-  <footer>
-    A project by Amit Lijo, Class XII
-  </footer>
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
 
 </body>
 </html>
