@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sapling Listings Table Visualization</title>
+    <!-- Linking externalized stylesheet rules -->
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+
+
+ <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+<div class="table-container">
+    <h2>Nursery Sapling Stock Inventory (7_Table_sapling_listings)</h2>
+    
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Stock ID</th>
+                <th>Farm ID</th>
+                <th>Variety ID</th>
+                <th>Stock Count</th>
+                <th>Price per Sapling</th>
+                <th>Age (Months)</th>
+                <th>Grafting Type</th>
+                <th>Potting Mix</th>
+                <th>Listing Status</th>
+                <th style="text-align: center; width: 280px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sapling 1 -->
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>2 (Rongrien)</td>
+                <td><strong>250</strong></td>
+                <td>₹180.00</td>
+                <td>8 Months</td>
+                <td>Root Grafted</td>
+                <td>Coco-peat & Soil</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 2 -->
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>1 (R134)</td>
+                <td><strong>500</strong></td>
+                <td>₹220.00</td>
+                <td>12 Months</td>
+                <td>Approach Grafted</td>
+                <td>Organic Compost Mix</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 3 -->
+            <tr>
+                <td>3</td>
+                <td>5</td>
+                <td>8 (Siman)</td>
+                <td><strong>120</strong></td>
+                <td>₹250.00</td>
+                <td>6 Months</td>
+                <td>Epicotyl Grafted</td>
+                <td>Red Soil Mix</td>
+                <td><span class="status-inactive">Hidden</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 4 -->
+            <tr>
+                <td>4</td>
+                <td>2</td>
+                <td>3 (R156)</td>
+                <td><strong>80</strong></td>
+                <td>₹190.00</td>
+                <td>10 Months</td>
+                <td>Side Grafted</td>
+                <td>Standard Topsoil</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 5 -->
+            <tr>
+                <td>5</td>
+                <td>8</td>
+                <td>4 (R162)</td>
+                <td><strong>300</strong></td>
+                <td>₹200.00</td>
+                <td>14 Months</td>
+                <td>Approach Grafted</td>
+                <td>Coco-peat Heavy</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 6 -->
+            <tr>
+                <td>6</td>
+                <td>5</td>
+                <td>5 (R167)</td>
+                <td><strong>45</strong></td>
+                <td>₹300.00</td>
+                <td>18 Months</td>
+                <td>Budding Selection</td>
+                <td>Premium Nursery Mix</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 7 -->
+            <tr>
+                <td>7</td>
+                <td>11</td>
+                <td>2 (Rongrien)</td>
+                <td><strong>150</strong></td>
+                <td>₹175.00</td>
+                <td>7 Months</td>
+                <td>Root Grafted</td>
+                <td>Alluvial Mix</td>
+                <td><span class="status-inactive">Out of Stock</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 8 -->
+            <tr>
+                <td>8</td>
+                <td>16</td>
+                <td>1 (R134)</td>
+                <td><strong>600</strong></td>
+                <td>₹210.00</td>
+                <td>9 Months</td>
+                <td>Approach Grafted</td>
+                <td>Compost Heavy</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 9 -->
+            <tr>
+                <td>9</td>
+                <td>3</td>
+                <td>6 (Chom Rong)</td>
+                <td><strong>95</strong></td>
+                <td>₹240.00</td>
+                <td>11 Months</td>
+                <td>Side Grafted</td>
+                <td>Vermicompost Mix</td>
+                <td><span class="status-active">Active</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+            <!-- Sapling 10 -->
+            <tr>
+                <td>10</td>
+                <td>22</td>
+                <td>10 (Nibong)</td>
+                <td><strong>110</strong></td>
+                <td>₹160.00</td>
+                <td>12 Months</td>
+                <td>Seedling Selection</td>
+                <td>Forest Loam Mix</td>
+                <td><span class="status-inactive">Hidden</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-buy">Buy</button>
+                    <button class="btn-action btn-view">View</button>
+                    <button class="btn-action btn-update">Update</button>
+                    <button class="btn-action btn-hide">Hide</button>
+                    <button class="btn-action btn-delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Mock Pagination Footer -->
+    <div class="pagination-container">
+        <div>Showing entries 1 to 10 of 19 entries</div>
+        <div class="pagination-buttons">
+            <a href="#">&laquo; Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">Next &raquo;</a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+</body>
+</html>
