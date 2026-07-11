@@ -190,6 +190,7 @@ nav a:hover {
   display: flex;               /* Uses flexbox to arrange buttons in a row */
   flex-wrap: wrap;             /* Allows buttons to wrap to next line if container is too narrow */
   gap: 15px;                   /* Adds 15px spacing between buttons */
+  justify-content: center;  /* ← ADD THIS LINE to center buttons horizontally */
 }
 
 /* Base button styling */
