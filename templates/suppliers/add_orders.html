@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Order Checkout (10_Table_orders)</title>
+    <!-- Hooking into your exact external form stylesheet -->
+    <link rel="stylesheet" href="formsstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<div class="form-container">
+    <div class="form-title">Order Checkout Ledger: 10_Table_orders</div>
+    
+    <form action="#" method="POST">
+        <!-- Field 1: Buyer Profile Selection -->
+        <div class="form-group">
+            <label for="buyer_id">Purchased By (Buyer Profile Link)</label>
+            <select id="buyer_id" name="buyer_id" class="form-control" required>
+                <option value="" disabled selected>Select the purchasing profile buyer...</option>
+                <option value="10">Deepak Menon (ID: 10)</option>
+                <option value="15">Anjali Nair (ID: 15)</option>
+                <option value="2">Highlands Trading Co. (ID: 2)</option>
+            </select>
+        </div>
+
+        <!-- Field 2: Base Order Date -->
+        <div class="form-group">
+            <label for="order_date">Transaction / Order Date</label>
+            <input type="date" id="order_date" name="order_date" class="form-control" value="2026-07-11" required>
+        </div>
+
+        <!-- Field 3: Initial Workflow Status -->
+        <div class="form-group">
+            <label for="status_id">Initial Lifecycle Status Assignment</label>
+            <select id="status_id" name="status_id" class="form-control" required>
+                <option value="1">1 (Pending Payment)</option>
+                <option value="2" selected>2 (Payment Confirmed)</option>
+                <option value="3">3 (Processing / Packaging)</option>
+                <option value="4">4 (Shipped / Dispatched)</option>
+            </select>
+        </div>
+
+        <!-- Field 4: Detailed Shipping Destination -->
+        <div class="form-group">
+            <label for="shipping_destination">Shipping Destination Details</label>
+            <textarea id="shipping_destination" name="shipping_destination" class="form-control" placeholder="Specify recipient full drop-off street address, industrial lane, or enterprise warehouse coordinates..." required></textarea>
+        </div>
+
+        <!-- Optional Checkbox Group Field for Order Handling Parameters -->
+        <div class="form-group">
+            <label>Order Logistics Tags (Optional)</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="logistics_tags[]" value="cold_storage"> Requires Cold Storage
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="logistics_tags[]" value="express"> Express Dispatch Priority
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="logistics_tags[]" value="insurance"> Marine Cargo Insurance
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="logistics_tags[]" value="bulk"> Bulk Container Freight
+                </label>
+            </div>
+        </div>
+
+        <!-- Form Form Submission/Cancel Action Controls -->
+        <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="window.history.back();">Cancel</button>
+            <button type="submit" class="btn-submit">Log Checkout Transaction</button>
+        </div>
+    </form>
+</div>
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+
+</body>
+</html>
