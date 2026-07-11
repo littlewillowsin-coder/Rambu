@@ -6,15 +6,10 @@
 
 </head>
 <body>
-<div id="header-placeholder"></div>
-<script>
-    // Load header
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header-placeholder').innerHTML = data);
     
-
-  </script>    
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
 <div class="form-container">
     <div class="form-title">User Registration: 2_Table_users</div>
     
@@ -72,5 +67,21 @@
     </form>
 </div>
 
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+    
 </body>
 </html>
