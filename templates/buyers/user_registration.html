@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration (2_Table_users)</title>
+    <!-- Calling the external form stylesheet rules -->
+    <link rel="stylesheet" href="formsstyle.css">
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-title">User Registration: 2_Table_users</div>
+    
+    <form action="#" method="POST">
+        <!-- Field 1: Username -->
+        <div class="form-group">
+            <label for="username">System Username / Handle</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="e.g., rajesh_kumar91" required>
+        </div>
+
+        <!-- Field 2: Email Address -->
+        <div class="form-group">
+            <label for="email">Primary Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="e.g., rajesh@example.com" required>
+        </div>
+
+        <!-- Field 3: Secure Password -->
+        <div class="form-group">
+            <label for="password">Account Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <!-- Field 4: Role Assignment Selector (Links to 1_Table_roles) -->
+        <div class="form-group">
+            <label for="role_id">Assigned System Role</label>
+            <select id="role_id" name="role_id" class="form-control" required>
+                <option value="" disabled selected>Select user designation role...</option>
+                <option value="1">Farm Owner / Producer</option>
+                <option value="2">Wholesale Buyer / Trader</option>
+                <option value="3">Nursery Manager</option>
+                <option value="4">Logistics Operator</option>
+                <option value="5">System Administrator</option>
+            </select>
+        </div>
+
+        <!-- Field 5: Initial Account Status -->
+        <div class="form-group">
+            <label for="account_status">Account Registration State</label>
+            <select id="account_status" name="account_status" class="form-control">
+                <option value="Active">Active (Verified Access)</option>
+                <option value="Pending">Pending Verification</option>
+                <option value="Suspended">Suspended / Locked</option>
+            </select>
+        </div>
+
+        <!-- Submission Actions Section -->
+        <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="window.history.back();">Cancel</button>
+            <button type="submit" class="btn-submit">Register User Account</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
