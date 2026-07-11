@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Items Breakdown Ledger (11_Table_order_items)</title>
+    <!-- Hooking directly into your existing tables architecture stylesheet -->
+    <link rel="stylesheet" href="tablesstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+<div class="table-container">
+    <h2>Order Items Breakdown Ledger: 11_Table_order_items</h2>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Line Item ID</th>
+                <th>Inventory Category (Polymorphic)</th>
+                <th>Source Reference ID</th>
+                <th>Price Per Unit (₹)</th>
+                <th>Quantity</th>
+                <th>Total Value (₹)</th>
+                <th>Parent Reference Link</th>
+                <th>Available Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Row 1 -->
+            <tr>
+                <td><strong>#40121</strong></td>
+                <td><span class="status-active">Harvest Listing</span></td>
+                <td>#12 (Premium R134 Red)</td>
+                <td>175.00</td>
+                <td>1,200</td>
+                <td>210,000.00</td>
+                <td>
+                    <!-- Link mapping back to the target order ID matching your system -->
+                    <button type="button" class="btn-action btn-view" onclick="location.href='view_orders.html?id=9283'">Go to Order #9283</button>
+                </td>
+                <td>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Remove line item from order receipt?');">Delete</button>
+                </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+                <td><strong>#40122</strong></td>
+                <td><span class="status-active">Sapling Stock</span></td>
+                <td>#4 (Rongrien Grafted)</td>
+                <td>350.00</td>
+                <td>50</td>
+                <td>17,500.00</td>
+                <td>
+                    <button type="button" class="btn-action btn-view" onclick="location.href='view_orders.html?id=9283'">Go to Order #9283</button>
+                </td>
+                <td>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Remove line item from order receipt?');">Delete</button>
+                </td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+                <td><strong>#40123</strong></td>
+                <td><span class="status-inactive">Accessory Supply</span></td>
+                <td>#9 (NPK Fertilizer Mix)</td>
+                <td>1,450.00</td>
+                <td>10</td>
+                <td>14,500.00</td>
+                <td>
+                    <button type="button" class="btn-action btn-view" onclick="location.href='view_orders.html?id=9284'">Go to Order #9284</button>
+                </td>
+                <td>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Remove line item from order receipt?');">Delete</button>
+                </td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+                <td><strong>#40124</strong></td>
+                <td><span class="status-active">Harvest Listing</span></td>
+                <td>#15 (Siman Sweet Batch)</td>
+                <td>160.00</td>
+                <td>500</td>
+                <td>80,000.00</td>
+                <td>
+                    <button type="button" class="btn-action btn-view" onclick="location.href='view_orders.html?id=9285'">Go to Order #9285</button>
+                </td>
+                <td>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Remove line item from order receipt?');">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Pagination Control System Block -->
+    <div class="pagination-container">
+        <div>Showing entries 1 to 4 of 168 rows</div>
+        <div class="pagination-buttons">
+            <a href="#" class="prev">&laquo; Prev</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next &raquo;</a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+  
+</body>
+</html>

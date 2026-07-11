@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Registry Ledger (10_Table_orders)</title>
+    <!-- Linking to your existing stylesheet -->
+    <link rel="stylesheet" href="tablesstyle.css">
+</head>
+<body>
+
+ <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<div class="table-container">
+    <h2>Order Registry Ledger: 10_Table_orders</h2>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Buyer Profile ID / Account Reference</th>
+                <th>Transaction Date</th>
+                <th>Shipping Destination</th>
+                <th>Lifecycle Status</th>
+                <th>Available Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Row 1 -->
+            <tr>
+                <td><strong>#9283</strong></td>
+                <td>Deepak Menon (ID: 10)</td>
+                <td>2026-07-08</td>
+                <td>
+                    <div class="text-truncate" title="Building 4B, Wholesale Agro Hub, Cochin, Kerala - 682030">
+                        Building 4B, Wholesale Agro Hub, Cochin, Kerala - 682030
+                    </div>
+                </td>
+                <td><span class="status-active">Processing</span></td>
+                <td>
+                    <button type="button" class="btn-action btn-view" onclick="location.href='invoice.html'">Invoice</button>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-hide">Hide</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Archive this record?');">Delete</button>
+                </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+                <td><strong>#9284</strong></td>
+                <td>Anjali Nair (ID: 15)</td>
+                <td>2026-07-10</td>
+                <td>
+                    <div class="text-truncate" title="Nair Organics Cold Storage, Industrial Lane, Thrissur - 680001">
+                        Nair Organics Cold Storage, Industrial Lane, Thrissur - 680001
+                    </div>
+                </td>
+                <td><span class="status-active">Confirmed</span></td>
+                <td>
+                    <button type="button" class="btn-action btn-view">Invoice</button>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-hide">Hide</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Archive this record?');">Delete</button>
+                </td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+                <td><strong>#9285</strong></td>
+                <td>Highlands Trading Co. (ID: 2)</td>
+                <td>2026-07-11</td>
+                <td>
+                    <div class="text-truncate" title="Export Cargo Village, Terminal 3, Nedumbassery - 683111">
+                        Export Cargo Village, Terminal 3, Nedumbassery - 683111
+                    </div>
+                </td>
+                <td><span class="status-inactive">Pending</span></td>
+                <td>
+                    <button type="button" class="btn-action btn-view">Invoice</button>
+                    <button type="button" class="btn-action btn-update">Update</button>
+                    <button type="button" class="btn-action btn-hide">Hide</button>
+                    <button type="button" class="btn-action btn-delete" onclick="return confirm('Archive this record?');">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Pagination Control System Block -->
+    <div class="pagination-container">
+        <div>Showing entries 1 to 3 of 42 records</div>
+        <div class="pagination-buttons">
+            <a href="#" class="prev">&laquo; Prev</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next &raquo;</a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+    
+</body>
+</html>
