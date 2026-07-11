@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="../../css/formsstyle.css">
 </head>
 <body>
+<div id="header-placeholder"></div>
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
 
+  </script>    
 <div class="form-container">
     <div class="form-title">User Registration: 2_Table_users</div>
     
