@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harvest Listings Table Visualization</title>
+
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<div class="table-container">
+    <h2>Marketplace Stock Inventory (6_Tableharvest_listings)</h2>
+    
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Harvest ID</th>
+                <th>Farm ID</th>
+                <th>Variety ID</th>
+                <th>Quantity (KG)</th>
+                <th>Price per KG</th>
+                <th>Expected Harvest</th>
+                <th>Actual Harvest</th>
+                <th>Quality Grade</th>
+                <th>Status</th>
+                <th style="text-align: center; width: 230px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Batch 1 -->
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1 (R134)</td>
+                <td><strong>500.00</strong></td>
+                <td>₹160.00</td>
+                <td>2024-05-10</td>
+                <td>2024-05-12</td>
+                <td>Premium</td>
+                <td><span class="status-active">Available</span></td>
+                <td style="text-align: center;">
+
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+                </td>
+            </tr>
+            <!-- Batch 2 -->
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2 (Rongrien)</td>
+                <td><strong>350.00</strong></td>
+                <td>₹140.00</td>
+                <td>2024-05-15</td>
+                <td>2024-05-14</td>
+                <td>Standard</td>
+                <td><span class="status-active">Available</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 3 -->
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>1 (R134)</td>
+                <td><strong>1,200.00</strong></td>
+                <td>₹175.00</td>
+                <td>2024-05-20</td>
+                <td>--</td>
+                <td>Premium A-Grade</td>
+                <td><span class="status-active">Available</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 4 -->
+            <tr>
+                <td>4</td>
+                <td>4</td>
+                <td>3 (R156)</td>
+                <td><strong>400.00</strong></td>
+                <td>₹150.00</td>
+                <td>2024-05-18</td>
+                <td>2024-05-19</td>
+                <td>Standard</td>
+                <td><span class="status-inactive">Sold Out</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 5 -->
+            <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>4 (R162)</td>
+                <td><strong>250.00</strong></td>
+                <td>₹130.00</td>
+                <td>2024-05-05</td>
+                <td>2024-05-06</td>
+                <td>B-Grade</td>
+                <td><span class="status-inactive">Sold Out</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 6 -->
+            <tr>
+                <td>6</td>
+                <td>6</td>
+                <td>2 (Rongrien)</td>
+                <td><strong>800.00</strong></td>
+                <td>₹145.00</td>
+                <td>2024-05-25</td>
+                <td>--</td>
+                <td>Premium</td>
+                <td><span class="status-active">Available</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 7 -->
+            <tr>
+                <td>7</td>
+                <td>7</td>
+                <td>5 (R167)</td>
+                <td><strong>150.00</strong></td>
+                <td>₹200.00</td>
+                <td>2024-06-01</td>
+                <td>--</td>
+                <td>Exotic Choice</td>
+                <td><span class="status-active">Available</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 8 -->
+            <tr>
+                <td>8</td>
+                <td>3</td>
+                <td>6 (Chom Rong)</td>
+                <td><strong>650.00</strong></td>
+                <td>₹180.00</td>
+                <td>2024-05-22</td>
+                <td>--</td>
+                <td>Premium</td>
+                <td><span class="status-active">Available</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 9 -->
+            <tr>
+                <td>9</td>
+                <td>9</td>
+                <td>1 (R134)</td>
+                <td><strong>900.00</strong></td>
+                <td>₹165.00</td>
+                <td>2024-05-15</td>
+                <td>2024-05-16</td>
+                <td>Standard</td>
+                <td><span class="status-inactive">Sold Out</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+            <!-- Batch 10 -->
+            <tr>
+                <td>10</td>
+                <td>10</td>
+                <td>10 (Nibong)</td>
+                <td><strong>300.00</strong></td>
+                <td>₹120.00</td>
+                <td>2024-04-30</td>
+                <td>2024-05-02</td>
+                <td>Traditional Wild</td>
+                <td><span class="status-inactive">Expired</span></td>
+                <td style="text-align: center;">
+                    <button class="btn-action btn-view">View</button>
+                    <a href="add_orderitem.html" class="btn-action btn-buy">Buy</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Mock Pagination Footer -->
+    <div class="pagination-container">
+        <div>Showing entries 1 to 10 of 54 entries</div>
+        <div class="pagination-buttons">
+            <a href="#">&laquo; Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">Next &raquo;</a>
+        </div>
+    </div>
+</div>
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+    
+</body>
+</html>

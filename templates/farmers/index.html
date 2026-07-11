@@ -8,65 +8,11 @@
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="brand">
-      <a href="index.html">
-        <img src="../../images/RambuConnectLogo.png" alt="RambuConnect Logo" class="logo-img">
-      </a>
-    </div>
-
-    <nav>
-      <a href="../index.html">Dashboard</a>
-      <a href="../farmers/index.html">Farmer services</a>        
-      <div class="dropdown">
-      <a href="#">My Profile</a>
-      <div class="dropdown-content">
-        <a href="../farmers/index.html">My Profile</a>
-        <a href="../farmers/index.html">My Farms</a>
-        <a href="../farmers/index.html">Update email, Mobile</a>
-        <a href="../farmers/index.html">Change Password</a>
-         </div>
-      </div>      
-      
-      
-      <div class="dropdown">
-        <a href="#">My Transactions</a>
-        <div class="dropdown-content">
-          <a href="../farmers/index.html">Buyers Directory</a>          
-          <a href="../farmers/index.html">Rambutan for Sale (Harvests)</a>
-          <a href="../farmers/index.html">Orders from Buyers</a>
-          <a href="../farmers/index.html">Messages with Buyers</a>
-           </div>
-      </div>
-
-      <div class="dropdown">
-        <a href="#">Nurseries</a>
-        <div class="dropdown-content">
-          <a href="../farmers/index.html">Rambutan Nurseries Directory</a>
-          <a href="../farmers/index.html">Product Listing</a>
-          <a href="../farmers/index.html">Orders to Nurseries</a>          
-          <a href="../farmers/index.html">Messages with Nurseries</a>
-           </div>
-      </div>
-      
-       <div class="dropdown">
-        <a href="#">Suppliers</a>
-        <div class="dropdown-content">
-          <a href="../farmers/index.html">Input Suppliers</a>
-          <a href="../farmers/index.html">Product Listing</a>
-          <a href="../farmers/index.html">Orders to Suppliers</a>          
-          <a href="../farmers/index.html">Messages with Suppliers</a>
-           </div>
-      </div>
-       
-      <a href="../farmers/index.html">Logout</a>      
-
-
-    </nav>
-  </div>
-
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->
  
+
 
 
 <div class="user-corner-container">
@@ -104,9 +50,22 @@
 
   </section>
 
-  <footer>
-    A project by Amit Lijo, Class XII
-  </footer>
+ <!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
 
 </body>
 </html>
