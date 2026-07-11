@@ -36,7 +36,11 @@
     </style>
 </head>
 <body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
 
+    
 <div class="table-container">
     <h2>Communication Portal (12_Table_messages)</h2>
     
@@ -148,5 +152,25 @@
     
 </div>
 
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+
+    
 </body>
 </html>
