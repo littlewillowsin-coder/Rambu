@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Details Registration (3_Table_profiles)</title>
+    <!-- Calling the external form stylesheet rules -->
+    <link rel="stylesheet" href="formsstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+
+<div class="form-container">
+    <div class="form-title">Profile Setup: 3_Table_profiles</div>
+    
+    <form action="#" method="POST">
+        <!-- Field 1: User Account Association (Links to 2_Table_users) -->
+        <div class="form-group">
+            <label for="user_id">Link Registered User Account</label>
+            <select id="user_id" name="user_id" class="form-control" required>
+                <option value="" disabled selected>Select the corresponding user login profile...</option>
+                <option value="1">Rajesh Kumar (rajesh_kumar91)</option>
+                <option value="4">Ammu Joseph (ammu_j)</option>
+                <option value="10">Deepak Menon (deepak_m)</option>
+            </select>
+        </div>
+
+        <!-- Field 2: Full Legal Name / Enterprise Entity -->
+        <div class="form-group">
+            <label for="full_name">Full Name / Farm Enterprise Name</label>
+            <input type="text" id="full_name" name="full_name" class="form-control" placeholder="e.g., Rajesh Kumar / Highlands Plantation" required>
+        </div>
+
+        <!-- Field 3: Primary Contact Phone Number -->
+        <div class="form-group">
+            <label for="phone_number">Contact Phone Number</label>
+            <input type="tel" id="phone_number" name="phone_number" class="form-control" placeholder="e.g., +91 98765 43210" required>
+        </div>
+
+        <!-- Field 4: Regional Location / City Base -->
+        <div class="form-group">
+            <label for="location">Regional Location / District Hub</label>
+            <input type="text" id="location" name="location" class="form-control" placeholder="e.g., Thodupuzha, Kottayam, Thrissur" required>
+        </div>
+
+        <!-- Field 5: Postal Route Code -->
+        <div class="form-group">
+            <label for="pincode">Area Pincode</label>
+            <input type="text" id="pincode" name="pincode" class="form-control" placeholder="e.g., 682030" pattern="[0-9]{6}" title="Please enter a valid 6-digit postal code" required>
+        </div>
+
+        <!-- Field 6: Farming/Enterprise Experience Level -->
+        <div class="form-group">
+            <label for="experience">Cultivation / Trade Experience (Years)</label>
+            <input type="number" id="experience" name="experience" class="form-control" min="0" max="60" placeholder="e.g., 8">
+        </div>
+
+        <!-- Field 7: Core Contact Channel Preferences -->
+        <div class="form-group">
+            <label for="contact_preference">Preferred Contact Channel</label>
+            <select id="contact_preference" name="contact_preference" class="form-control">
+                <option value="Platform Portal">Platform Portal Messaging</option>
+                <option value="Phone">Direct Phone Calls</option>
+                <option value="Email">Email Correspondence</option>
+            </select>
+        </div>
+
+        <!-- Field 8: Public Bio Description / Enterprise Overview -->
+        <div class="form-group">
+            <label for="profile_bio">Enterprise Summary / Bio Note</label>
+            <textarea id="profile_bio" name="profile_bio" class="form-control" placeholder="Brief details about your farm production, target varieties, or operational capacity..."></textarea>
+        </div>
+
+        <!-- Submission Actions Section -->
+        <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="window.history.back();">Cancel</button>
+            <button type="submit" class="btn-submit">Register Profile Details</button>
+        </div>
+    </form>
+</div>
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+
+    
+</body>
+</html>

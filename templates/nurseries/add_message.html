@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Internal System Message (12_Table_messages)</title>
+    <!-- Calling the external form stylesheet rules -->
+    <link rel="stylesheet" href="formsstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+<div class="form-container">
+    <div class="form-title">Compose Communication: 12_Table_messages</div>
+    
+    <form action="#" method="POST">
+        <!-- Field 1: Sender Identification Link (Links to 3_Table_profiles) -->
+        <div class="form-group">
+            <label for="sender_id">From (Sender Profile)</label>
+            <select id="sender_id" name="sender_id" class="form-control" required>
+                <option value="" disabled selected>Select your user profile...</option>
+                <option value="4">Ammu Joseph (Producer - ID: 4)</option>
+                <option value="10">Deepak Menon (Buyer - ID: 10)</option>
+            </select>
+        </div>
+
+        <!-- Field 2: Recipient Identification Link (Links to 3_Table_profiles) -->
+        <div class="form-group">
+            <label for="receiver_id">To (Recipient Profile)</label>
+            <select id="receiver_id" name="receiver_id" class="form-control" required>
+                <option value="" disabled selected>Select destination profile...</option>
+                <option value="4">Ammu Joseph (Producer - ID: 4)</option>
+                <option value="10">Deepak Menon (Buyer - ID: 10)</option>
+                <option value="1">Rajesh Kumar (Producer - ID: 1)</option>
+            </select>
+        </div>
+
+        <!-- Field 3: Subject Heading -->
+        <div class="form-group">
+            <label for="msg_subject">Message Subject</label>
+            <input type="text" id="msg_subject" name="msg_subject" class="form-control" placeholder="e.g., Query regarding logistics dispatch timeline for Batch #3" required>
+        </div>
+
+        <!-- Field 4: Text Content Body -->
+        <div class="form-group">
+            <label for="msg_body">Message Body Content</label>
+            <textarea id="msg_body" name="msg_body" class="form-control" placeholder="Type your inquiry, logistics detail update, or trade proposal counter-offer here..." required></textarea>
+        </div>
+
+        <!-- Field 5: Optional Contextual Order/Listing Link -->
+        <div class="form-group">
+            <label for="context_ref">Contextual Reference Tag (Optional)</label>
+            <input type="text" id="context_ref" name="context_ref" class="form-control" placeholder="e.g., Order #9283 or Harvest Listing #12">
+        </div>
+
+        <!-- Submission Actions Section -->
+        <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="window.history.back();">Cancel</button>
+            <button type="submit" class="btn-submit">Dispatch Message</button>
+        </div>
+    </form>
+</div>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch(' footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+</body>
+</html>
