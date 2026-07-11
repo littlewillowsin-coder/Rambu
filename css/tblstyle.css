@@ -89,7 +89,7 @@
   border: none;                /* Removes default button border */
   border-radius: 4px;          /* Rounded corners */
   cursor: pointer;             /* Shows hand cursor */
-  font-size: 14px;             /* Match your button font size */
+  font-size: 12px;             /* Match your button font size */
   text-align: center;
   background-color: #f0f0f0;   /* Default background */
   color: #333;                 /* Default text color */
