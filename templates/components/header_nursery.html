@@ -14,14 +14,22 @@
   <title>RambuConnect</title>
   
   <!-- Links the primary structural design layouts, universal text baselines, and global component settings[cite: 2] -->
-  <link rel="stylesheet" href="../../static/css/style.css">
+  <link rel="stylesheet" href="../../static/css/ostyle.css">
   
   <!-- Pulls in design layouts specific to input components, textual forms, alignment panels, and button states[cite: 1] -->
   <link rel="stylesheet" href="../../static/css/formsstyle.css">
   
   <!-- Imports architectural guidelines for displaying data grids, record lists, status indicators, and page control links[cite: 3] -->
   <link rel="stylesheet" href="../../static/css/tblstyle.css">  
+
+  <!-- Imports architectural guidelines for displaying DASHBOARD PAGE -->
+  <link rel="stylesheet" href="../../static/css/dashboardstyle.css">
+     
 </head>
+
+<!-- =========================================================================
+     DOCUMENT BODY SECTION: Houses visible elements rendered inside the viewport
+     ========================================================================= -->
 
 <!-- =========================================================================
      DOCUMENT BODY SECTION: Houses visible elements rendered inside the viewport
@@ -31,48 +39,56 @@
   <!-- Semantic HTML5 wrapper that houses the website's primary landing and navigational elements -->
   <header>
     
-    <!-- Top banner wrapper utilized by CSS Grid properties to format structural branding assets and link blocks[cite: 2] -->
+    <!-- Top banner wrapper utilized by CSS Grid properties to format structural branding assets and link blocks -->
     <div class="topbar">
       
-      <!-- Logo layout block handling alignment parameters and center anchors over the first grid workspace[cite: 2] -->
+      <!-- Logo layout block handling alignment parameters and center anchors over the first grid workspace -->
       <div class="brand">
-        <!-- Hyperlink returning users directly back to the system's root home entry directory -->
-        <! --- the logo has a link. When a user clicks on the logo, it will take them back to the repective index.html home page --> 
-        <a href="../../templates/site/index.html">
-          <!-- Embeds the visual branding graphic asset using specific tracking styles and alternative text parameters[cite: 2] -->
+        <!-- Fixed the syntax error in the comment below --> 
+        <!-- The logo has a link. When a user clicks on the logo, it will take them back to the respective index.html home page --> 
+        <a href="../../templates/nursery/dashboard.html">
+          <!-- Embeds the visual branding graphic asset using specific tracking styles and alternative text parameters -->
           <img src="../../static/images/RambuConnectLogo.png" alt="RambuConnect Logo" class="logo-img">
         </a>
       </div>
 
-      <!-- Navigation block grouping key hyperlink records horizontally across the secondary column workspace[cite: 2] -->
+      <!-- Navigation block grouping key hyperlink records horizontally across the secondary column workspace -->
       <nav>
         <!-- Standard menu anchors redirecting pathways toward their perspective folder directories -->
-        <a href="../../templates/site/index.html">Home</a> 
-        <a href="../../templates/farmer/index.html">Farmers</a>  
-        <a href="../../templates/buyer/index.html">Buyers</a>  
-        <a href="../../templates/nursery/index.html">Nurseries</a>  
-        <a href="../../templates/supplier/index.html">Suppliers</a>  
-        <a href="../../templates/informer/index.html">Market Prices</a> 
-        
-        <!-- Context component allowing additional link nodes to hide dynamically relative to hover limits[cite: 2] -->
-        <div class="dropdown">
-          
-          <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-          <a href="#">About</a>
-          
-          <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-          <div class="dropdown-content">
-            <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-            <a href="../templates/site/about.html">About us</a>
-            <a href="../templates/site/services.html">Services</a>
-            <a href="../templates/site/contact.html">Contact us</a>
-          </div>
-          
-        </div> <!-- Closes the responsive dropdown module layout wrapper -->
+        <a href="../../templates/nursery/dashboard.html" class="nav-link">Home</a> 
 
-        <!-- Terminal navigational component linking outward to application template index records -->
-        <a href="../templates/index.html">Portal</a> 
-        
+        <!-- Profile Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Profile</a>
+          <div class="dropdown-content">
+            <a href="../templates/nursery/profile.html">View Profile</a>
+            <a href="../templates/nursery/farmers.html">Farmers </a>
+          </div>
+        </div>
+
+        <!-- Marketplace Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Marketplace</a>
+          <div class="dropdown-content">
+            <a href="../templates/nursery/saplings.html">Saplings </a> 
+            <a href="../templates/nursery/orders.html">Orders from Farmers</a>
+            <a href="../templates/nursery/payments.html">Payments </a>
+            <a href="../templates/nursery/despatch.html">Despatch & Receipts</a>    
+          </div>
+        </div>
+
+        <!-- Account/Settings Dropdown Group (Fixed label from duplicate 'Accessories') -->
+        <div class="dropdown">
+          <a href="#">Account</a>
+          <div class="dropdown-content">
+            <a href="../templates/nursery/nursery_login.html">nursery Login</a>  
+            <a href="../templates/nursery/nursery_logout.html">Logout</a>
+            <a href="../templates/nursery/nursery_settings.html">Settings </a>
+            <a href="../templates/nursery/nursery_change_pwd">Change Pwd</a>              
+          </div>
+        </div>    
+          
       </nav>
     </div>
   </header>
+</body>
