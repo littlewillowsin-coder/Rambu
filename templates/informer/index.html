@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Price Updates- RAMBUCONNECT</title>
+ 
+</head>
+<body>
+
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<div class="user-corner-container">
+  <div class="user-image-wrapper">
+    <img src="../../static/images/marketprice.jpg" alt="Rambuttan Prices">
+  </div>
+<section class="middle">
+    <h1>Rambutan Market Peice Updates</h1>
+    <p class="intro-text">
+ 
+Track daily market Market price information across key markets and primary cultivation hubs. Registered partners record seasonal prices by Varieties and Grades, critical to securing optimal prices for Rambutan Farmers.
+    </p>
+    
+    <!-- 
+      1. 'flex-direction: row' lines the buttons up horizontally adjacent to each other.
+      2. 'flex-wrap: wrap' allows buttons to step down onto a new row responsively on mobile screens.
+      3. 'justify-content: flex-start' aligns them to the left (change to 'center' if you want them centered).
+      4. 'gap: 15px' ensures a clean 15px breathing space between the buttons so they don't touch.
+    -->
+    <div class="button-group" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; gap: 15px;">
+      <a href="../informers/registration.html" class="btn btn-green">Farmers Register Here</a>
+      <a href="../informers/login.html" class="btn btn-green">Members Login Here</a>
+    </div>
+</section>
+</div>
+ 
+<!-- =========================================================================
+     DYNAMIC COMPONENT LOADER: Client-side include using JavaScript Fetch API
+     ========================================================================= -->
+     
+<!-- An empty container element where JavaScript will dynamically inject the external footer HTML markup -->
+<div id="footer-placeholder"></div>   
+
+<script>
+  // ==========================================
+  // SECTION 1: ASYNCHRONOUSLY LOADING THE HEADER
+  // ==========================================
+
+  // Step 1: Initiates a web request to fetch the external 'header_site.html' file from the components directory
+  fetch('../components/header_site.html') 
+    
+    /* Step 2: The .then() method handles the server response. It takes the raw stream 
+       and extracts the plain text content of the HTML file using 'response.text()' */
+    .then(response => response.text())
+    
+    /* Step 3: Once the text data is fully extracted, this line targets the 'header-placeholder' 
+       element by its ID and overwrites its innerHTML with the external file's markup data */
+    .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+  // ==========================================
+  // SECTION 2: ASYNCHRONOUSLY LOADING THE FOOTER
+  // ==========================================
+
+  // Step 1: Initiates a second independent web request to fetch the external 'footer.html' file
+  fetch('../components/footer.html')
+    
+    /* Step 2: Handles the footer response and processes the incoming payload 
+       into plain text layout strings */
+    .then(response => response.text())
+    
+    /* Step 3: Locates the 'footer-placeholder' div container (declared above) 
+       and injects the fetched footer HTML directly inside it to render on the page */
+    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+    
+<!-- ========================================================================= -->
+  
+</body>
+</html>
