@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmers Network - RAMBUCONNECT</title>
+ 
+</head>
+<body>
+
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<div class="user-corner-container">
+  <div class="user-image-wrapper">
+    <img src="../../static/images/farmer.png" alt="Rambutan Farmer working in the orchard">
+  </div>
+
+  <section class="middle">
+    <h1>Rambutan Farmers Corner</h1>
+    <p class="intro-text">
+      Welcome to the grower hub. Here, farmers can list seasonal crop yields, evaluate standard pricing trends, and connect directly with bulk agricultural purchasers. Learn crop defense techniques, study effective canopy configurations, and find solutions to optimize individual orchard revenue streams.
+    </p>
+    
+        <div class="button-group" style="flex-direction: column; width: 100%;">
+          <a href="../../farmer/index.html" class="btn btn-green">Growers Register Here</a>
+          <a href="../../farmer/login.html" class="btn btn-green">Members Login Here</a>
+        </div>
+  </section>
+</div>
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+</body>
+</html>
