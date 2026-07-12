@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RambuConnect NURSERY Dashboard</title>
+  
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RambuConnect Nursery Dashboard</title>
+  <!-- Links directly to the shared, detailed CSS file -->
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+ 
+  <!-- Central Operational Workspace -->
+  <main class="main-container">
+    
+    <!-- Summary Indicator Metric Cards -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h3>Saplings in Inventory</h3>
+        <div class="value">2,500+</div>
+      </div>
+      <div class="metric-card">
+        <h3>Orders from Farmers</h3>
+        <div class="value">6 Pending</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Pending Despatches</h3>
+        <div class="value">3 Batches</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Connected Farmers</h3>
+        <div class="value">42 Active</div>
+      </div>
+    </div>
+
+    <!-- Grouped Operational Modules -->
+    <div class="sections-grid">
+
+      <!-- MARKETPLACE & OPERATIONS -->
+      <section class="dashboard-section">
+        <h2>Marketplace & Commercials</h2>
+        <div class="link-list">
+          <a href="../templates/nursery/saplings.html" class="link-item">
+            <span>Manage Saplings Inventory</span>
+            <span class="action-btn">Update Stock</span>
+          </a>
+          <a href="../templates/nursery/orders.html" class="link-item">
+            <span>Incoming Orders from Farmers</span>
+            <span class="action-btn">View Orders</span>
+          </a>
+          <a href="../templates/nursery/despatch.html" class="link-item">
+            <span>Despatch Status & Receipts</span>
+            <span class="action-btn">Track Shipments</span>
+          </a>
+          <a href="../templates/nursery/payments.html" class="link-item">
+            <span>Received Payments & Balances</span>
+            <span class="action-btn">Invoices</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- PROFILE & RELATIONSHIPS -->
+      <section class="dashboard-section">
+        <h2>Nursery Profile & Network</h2>
+        <div class="link-list">
+          <a href="../templates/nursery/profile.html" class="link-item">
+            <span>View & Edit Nursery Profile</span>
+            <span class="action-btn">Manage Info</span>
+          </a>
+          <a href="../templates/nursery/farmers.html" class="link-item">
+            <span>Connected Farmers Directory</span>
+            <span class="action-btn">View Network</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ACCOUNT SYSTEM MANAGEMENT -->
+      <section class="dashboard-section">
+        <h2>Account & Security Settings</h2>
+        <div class="link-list">
+          <a href="../templates/nursery/nursery_settings.html" class="link-item">
+            <span>General Security Settings</span>
+            <span class="action-btn">Configure</span>
+          </a>
+          <a href="../templates/nursery/nursery_change_pwd" class="link-item">
+            <span>Change Account Password</span>
+            <span class="action-btn">Update Pwd</span>
+          </a>
+          <a href="../templates/nursery/nursery_login.html" class="link-item">
+            <span>Session Status (Switch Login)</span>
+            <span class="action-btn">Login Page</span>
+          </a>
+          <a href="../templates/nursery/nursery_logout.html" class="link-item" style="border-left: 3px solid var(--brand-red);">
+            <span>Terminate Session</span>
+            <span class="action-btn" style="background-color: var(--brand-red);">Logout</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+ 
+ 
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_nursery.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+    
+</body>
+</html>
