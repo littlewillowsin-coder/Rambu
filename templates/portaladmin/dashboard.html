@@ -1,0 +1,130 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RambuConnect PORTAL Admin</title>
+  
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<!-- Central Operational Workspace -->
+<main class="main-container">
+  
+  <h2 style="color: var(--brand-green); margin: 0 0 15px 0; border-bottom: 2px solid #ddd; padding-bottom: 5px;">Farmers Overview</h2>
+  <!-- Summary Cards -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <h3>Incoming Buyer Demands</h3>
+      <div class="value">12 Active</div>
+    </div>
+    <div class="metric-card">
+      <h3>Orders from Buyers</h3>
+      <div class="value">4 Pending</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Orders to Nurseries</h3>
+      <div class="value">2 Dispatched</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Supplier Orders</h3>
+      <div class="value">1 In Transit</div>
+    </div>
+  </div>
+
+  <h2 style="color: var(--brand-green); margin: 30px 0 15px 0; border-bottom: 2px solid #ddd; padding-bottom: 5px;">Buyers Overview</h2>
+  <!-- Summary Indicator Metric Cards -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <h3>My Posted Demands</h3>
+      <div class="value">5 Open</div>
+    </div>
+    <div class="metric-card">
+      <h3>Active Offers from Farmers</h3>
+      <div class="value">18 New</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Orders to Farmers</h3>
+      <div class="value">8 Pending</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Inbound Despatches</h3>
+      <div class="value">3 En Route</div>
+    </div>
+  </div>
+
+  <h2 style="color: var(--brand-green); margin: 30px 0 15px 0; border-bottom: 2px solid #ddd; padding-bottom: 5px;">Nurseries Overview</h2>
+  <!-- Summary Indicator Metric Cards -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <h3>Saplings Stock</h3>
+      <div class="value">2,500+</div>
+    </div>
+    <div class="metric-card">
+      <h3>New Orders from Farmers</h3>
+      <div class="value">6 Pending</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Awaiting Despatch</h3>
+      <div class="value">3 Batches</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Associated Farmers</h3>
+      <div class="value">42 Active</div>
+    </div>
+  </div>
+
+  <h2 style="color: var(--brand-green); margin: 30px 0 15px 0; border-bottom: 2px solid #ddd; padding-bottom: 5px;">Accessories Suppliers Overview</h2>
+  <!-- Summary Indicator Metric Cards -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <h3>Active Supply Items</h3>
+      <div class="value">148 Listed</div>
+    </div>
+    <div class="metric-card">
+      <h3>New Orders from Farmers</h3>
+      <div class="value">9 Pending</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Awaiting Despatch</h3>
+      <div class="value">4 Orders</div>
+    </div>
+    <div class="metric-card" style="border-left-color: var(--brand-red);">
+      <h3>Associated Farmers</h3>
+      <div class="value">56 Active</div>
+    </div>
+  </div>
+
+</main>
+
+
+ 
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+    
+</body>
+</html>
+
