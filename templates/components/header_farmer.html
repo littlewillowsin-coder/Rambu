@@ -1,5 +1,3 @@
-
-
 <!-- =========================================================================
      DOCUMENT HEAD SECTION: Contains invisible configuration and metadata
      ========================================================================= -->
@@ -13,13 +11,13 @@
   <!-- Defines the document title displayed on the browser tab or search engine results pages -->
   <title>RambuConnect</title>
   
-  <!-- Links the primary structural design layouts, universal text baselines, and global component settings[cite: 2] -->
+  <!-- Links the primary structural design layouts, universal text baselines, and global component settings -->
   <link rel="stylesheet" href="../../static/css/ostyle.css">
   
-  <!-- Pulls in design layouts specific to input components, textual forms, alignment panels, and button states[cite: 1] -->
+  <!-- Pulls in design layouts specific to input components, textual forms, alignment panels, and button states -->
   <link rel="stylesheet" href="../../static/css/formsstyle.css">
   
-  <!-- Imports architectural guidelines for displaying data grids, record lists, status indicators, and page control links[cite: 3] -->
+  <!-- Imports architectural guidelines for displaying data grids, record lists, status indicators, and page control links -->
   <link rel="stylesheet" href="../../static/css/tblstyle.css">  
 </head>
 
@@ -31,88 +29,87 @@
   <!-- Semantic HTML5 wrapper that houses the website's primary landing and navigational elements -->
   <header>
     
-    <!-- Top banner wrapper utilized by CSS Grid properties to format structural branding assets and link blocks[cite: 2] -->
+    <!-- Top banner wrapper utilized by CSS Grid properties to format structural branding assets and link blocks -->
     <div class="topbar">
       
-      <!-- Logo layout block handling alignment parameters and center anchors over the first grid workspace[cite: 2] -->
+      <!-- Logo layout block handling alignment parameters and center anchors over the first grid workspace -->
       <div class="brand">
-        <!-- Hyperlink returning users directly back to the system's root home entry directory -->
-        <! --- the logo has a link. When a user clicks on the logo, it will take them back to the repective index.html home page --> 
+        <!-- Fixed the syntax error in the comment below --> 
+        <!-- The logo has a link. When a user clicks on the logo, it will take them back to the respective index.html home page --> 
         <a href="../../templates/site/index.html">
-          <!-- Embeds the visual branding graphic asset using specific tracking styles and alternative text parameters[cite: 2] -->
+          <!-- Embeds the visual branding graphic asset using specific tracking styles and alternative text parameters -->
           <img src="../../static/images/RambuConnectLogo.png" alt="RambuConnect Logo" class="logo-img">
         </a>
       </div>
 
-      <!-- Navigation block grouping key hyperlink records horizontally across the secondary column workspace[cite: 2] -->
+      <!-- Navigation block grouping key hyperlink records horizontally across the secondary column workspace -->
       <nav>
         <!-- Standard menu anchors redirecting pathways toward their perspective folder directories -->
-        <a href="../../templates/farmer/index.html">Home</a> 
+        <a href="../../templates/farmer/index.html" class="nav-link">Home</a> 
 
-      <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-     <a href="#">Profile</a>
-     <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-     <div class="dropdown-content">
-       <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-       <a href="../templates/farmer/about.html">View Profile</a>
-       <a href="../templates/farmer/farms.html">Farms </a>
-       <a href="../templates/farmer/harvest.html">My Harvests</a>
-     </div>
+        <!-- Profile Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Profile</a>
+          <div class="dropdown-content">
+            <a href="../templates/farmer/about.html">View Profile</a>
+            <a href="../templates/farmer/farms.html">Farms </a>
+            <a href="../templates/farmer/harvest.html">My Harvests</a>
+          </div>
+        </div>
 
-      <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-     <a href="#">Marketplace</a>
-     <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-     <div class="dropdown-content">
-       <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-       <a href="../templates/farmer/prices.html">Market Prices</a>
-       <a href="../templates/farmer/demand.html">Buyer Demands </a>
+        <!-- Marketplace Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Marketplace</a>
+          <div class="dropdown-content">
+            <a href="../templates/farmer/prices.html">Market Prices</a>
+            <a href="../templates/farmer/demand.html">Buyer Demands </a>
+          </div>
+        </div>
 
-               
-     </div>
+        <!-- Sales Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Sales</a>
+          <div class="dropdown-content">
+            <a href="../templates/farmer/orders.html">Orders from Buyers</a>
+            <a href="../templates/farmer/payments.html">Payments </a>
+            <a href="../templates/farmer/despatch.html">Despatch & Receipts</a>      
+          </div>
+        </div>
 
-     <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-     <a href="#">Sales</a>
-     <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-     <div class="dropdown-content">
-       <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-       <a href="../templates/farmer/orders.html">Orders from Buyers</a>
-       <a href="../templates/farmer/payments.html">Payments </a>
-       <a href="../templates/farmer/despatch.html">Despatch & Receipts</a>     
-     </div>
+        <!-- Nurseries Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Nurseries</a>
+          <div class="dropdown-content">
+            <a href="../templates/farmer/Sapling.html">Saplinga</a>
+            <a href="../templates/farmer/N_orders.html">Orders to Nurseries</a>
+            <a href="../templates/farmer/N_payments.html">Payments </a>
+            <a href="../templates/farmer/N_despatch.html">Despatch & Receipts</a>              
+          </div>
+        </div>
 
-     <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-     <a href="#">Nurseries</a>
-     <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-     <div class="dropdown-content">
-       <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-        <a href="../templates/farmer/Sapling.html">Saplinga</a>
-       <a href="../templates/farmer/N_orders.html">Orders to Nurseries</a>
-       <a href="../templates/farmer/N_payments.html">Payments </a>
-       <a href="../templates/farmer/N_despatch.html">Despatch & Receipts</a>             
-     </div>
-
-     <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-     <a href="#">Accessories</a>
-     <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-     <div class="dropdown-content">
-       <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-       <a href="../templates/farmer/supplies.html">Supplies</a>  
-       <a href="../templates/farmer/S_orders.html">Orders to Suppliers</a>
-       <a href="../templates/farmer/S_payments.html">Payments </a>
-       <a href="../templates/farmer/S_despatch.html">Despatch & Receipts</a>             
-     </div>          
-           
-      <!-- Static master heading acting as the interface point for the nested sub-navigation cluster -->
-     <a href="#">Accessories</a>
-     <!-- Abstract structural box handling hidden vertical list frames removed from normal layout flow[cite: 2] -->
-     <div class="dropdown-content">
-       <!-- Secondary link points exposed strictly during interactive user mouse-over cycles[cite: 2] -->
-       <a href="../templates/farmer/farmer_login.html">Farmer Login</a>  
-       <a href="../templates/farmer/farmer_logout.html">Logout</a>
-       <a href="../templates/farmer/farmer_settings.html">Settings </a>
-       <a href="../templates/farmer/farmer_change_pwd">Change Pwd</a>             
-     </div>    
-         
+        <!-- Accessories Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Accessories</a>
+          <div class="dropdown-content">
+            <a href="../templates/farmer/supplies.html">Supplies</a>  
+            <a href="../templates/farmer/S_orders.html">Orders to Suppliers</a>
+            <a href="../templates/farmer/S_payments.html">Payments </a>
+            <a href="../templates/farmer/S_despatch.html">Despatch & Receipts</a>              
+          </div>
+        </div>          
+            
+        <!-- Account/Settings Dropdown Group (Fixed label from duplicate 'Accessories') -->
+        <div class="dropdown">
+          <a href="#">Account</a>
+          <div class="dropdown-content">
+            <a href="../templates/farmer/farmer_login.html">Farmer Login</a>  
+            <a href="../templates/farmer/farmer_logout.html">Logout</a>
+            <a href="../templates/farmer/farmer_settings.html">Settings </a>
+            <a href="../templates/farmer/farmer_change_pwd">Change Pwd</a>              
+          </div>
+        </div>    
+          
       </nav>
     </div>
   </header>
+</body>
