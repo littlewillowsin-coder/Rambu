@@ -1,0 +1,94 @@
+
+
+<!-- =========================================================================
+     DOCUMENT HEAD SECTION: Contains invisible configuration and metadata
+     ========================================================================= -->
+<head>
+  <!-- Declares the character encoding as UTF-8 to support standard universal characters, symbols, and emojis safely -->
+  <meta charset="UTF-8">
+  
+  <!-- Optimizes the webpage layout for mobile devices by forcing responsive scaling to match the hardware screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Defines the document title displayed on the browser tab or search engine results pages -->
+  <title>RambuConnect</title>
+  
+  <!-- Links the primary structural design layouts, universal text baselines, and global component settings[cite: 2] -->
+  <link rel="stylesheet" href="../../static/css/ostyle.css">
+  
+  <!-- Pulls in design layouts specific to input components, textual forms, alignment panels, and button states[cite: 1] -->
+  <link rel="stylesheet" href="../../static/css/formsstyle.css">
+  
+  <!-- Imports architectural guidelines for displaying data grids, record lists, status indicators, and page control links[cite: 3] -->
+  <link rel="stylesheet" href="../../static/css/tblstyle.css">  
+
+  <!-- Imports architectural guidelines for displaying DASHBOARD PAGE -->
+  <link rel="stylesheet" href="../../static/css/dashboardstyle.css">
+     
+</head>
+
+<!-- =========================================================================
+     DOCUMENT BODY SECTION: Houses visible elements rendered inside the viewport
+     ========================================================================= -->
+
+<!-- =========================================================================
+     DOCUMENT BODY SECTION: Houses visible elements rendered inside the viewport
+     ========================================================================= -->
+<body>
+
+  <!-- Semantic HTML5 wrapper that houses the website's primary landing and navigational elements -->
+  <header>
+    
+    <!-- Top banner wrapper utilized by CSS Grid properties to format structural branding assets and link blocks -->
+    <div class="topbar">
+      
+      <!-- Logo layout block handling alignment parameters and center anchors over the first grid workspace -->
+      <div class="brand">
+        <!-- Fixed the syntax error in the comment below --> 
+        <!-- The logo has a link. When a user clicks on the logo, it will take them back to the respective index.html home page --> 
+        <a href="../../templates/supplier/dashboard.html">
+          <!-- Embeds the visual branding graphic asset using specific tracking styles and alternative text parameters -->
+          <img src="../../static/images/RambuConnectLogo.png" alt="RambuConnect Logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- Navigation block grouping key hyperlink records horizontally across the secondary column workspace -->
+      <nav>
+        <!-- Standard menu anchors redirecting pathways toward their perspective folder directories -->
+        <a href="../../templates/supplier/dashboard.html" class="nav-link">Home</a> 
+
+        <!-- Profile Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Profile</a>
+          <div class="dropdown-content">
+            <a href="../templates/supplier/profile.html">View Profile</a>
+            <a href="../templates/supplier/farmers.html">Farmers </a>
+          </div>
+        </div>
+
+        <!-- Marketplace Dropdown Group -->
+        <div class="dropdown">
+          <a href="#">Marketplace</a>
+          <div class="dropdown-content">
+            <a href="../templates/supplier/supplies.html">Supplies </a> 
+            <a href="../templates/supplier/orders.html">Orders from Farmers</a>
+            <a href="../templates/supplier/payments.html">Payments </a>
+            <a href="../templates/supplier/despatch.html">Despatch & Receipts</a>    
+          </div>
+        </div>
+
+        <!-- Account/Settings Dropdown Group (Fixed label from duplicate 'Accessories') -->
+        <div class="dropdown">
+          <a href="#">Account</a>
+          <div class="dropdown-content">
+            <a href="../templates/supplier/nursery_login.html">nursery Login</a>  
+            <a href="../templates/supplier/nursery_logout.html">Logout</a>
+            <a href="../templates/supplier/nursery_settings.html">Settings </a>
+            <a href="../templates/supplier/nursery_change_pwd">Change Pwd</a>              
+          </div>
+        </div>    
+          
+      </nav>
+    </div>
+  </header>
+</body>
