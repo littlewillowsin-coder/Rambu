@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RambuConnect FARMERS Dashboard</title>
+  
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+
+  <main class="main-container">
+   
+    <!-- Summary Cards -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h3>Incoming Buyer Demands</h3>
+        <div class="value">12 Active</div>
+      </div>
+      <div class="metric-card">
+        <h3>Orders from Buyers</h3>
+        <div class="value">4 Pending</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Orders to Nurseries</h3>
+        <div class="value">2 Dispatched</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Supplier Orders</h3>
+        <div class="value">1 In Transit</div>
+      </div>
+    </div>
+
+    <!-- Grouped Operational Modules -->
+    <div class="sections-grid">
+
+      <!-- BUYERS & MARKETPLACE -->
+      <section class="dashboard-section">
+        <h2>Sales & Marketplace (Buyers)</h2>
+        <div class="link-list">
+          <a href="../templates/farmer/demand.html" class="link-item">
+            <span>Market Demand & Buyer Requests</span>
+            <span class="action-btn">View Needs</span>
+          </a>
+          <a href="../templates/farmer/prices.html" class="link-item">
+            <span>Current Market Prices</span>
+            <span class="action-btn">Check</span>
+          </a>
+          <a href="../templates/farmer/orders.html" class="link-item">
+            <span>Orders from Buyers</span>
+            <span class="action-btn">Manage</span>
+          </a>
+          <a href="../templates/farmer/despatch.html" class="link-item">
+            <span>Despatches & Receipts (Buyers)</span>
+            <span class="action-btn">Track</span>
+          </a>
+          <a href="../templates/farmer/payments.html" class="link-item">
+            <span>Incoming Payments Log</span>
+            <span class="action-btn">Invoices</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- NURSERIES -->
+      <section class="dashboard-section">
+        <h2>Nursery Operations</h2>
+        <div class="link-list">
+          <a href="../templates/farmer/Sapling.html" class="link-item">
+            <span>Browse Saplings Stock</span>
+            <span class="action-btn">Order Seedlings</span>
+          </a>
+          <a href="../templates/farmer/N_orders.html" class="link-item">
+            <span>Orders Placed to Nurseries</span>
+            <span class="action-btn">View Orders</span>
+          </a>
+          <a href="../templates/farmer/N_despatch.html" class="link-item">
+            <span>Despatch & Receipts from Nurseries</span>
+            <span class="action-btn">Track Delivery</span>
+          </a>
+          <a href="../templates/farmer/N_payments.html" class="link-item">
+            <span>Nursery Account Balances & Payments</span>
+            <span class="action-btn">Pay</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SUPPLIERS / ACCESSORIES -->
+      <section class="dashboard-section">
+        <h2>Suppliers & Accessories</h2>
+        <div class="link-list">
+          <a href="../templates/farmer/supplies.html" class="link-item">
+            <span>Farm Supplies & Equipment Catalog</span>
+            <span class="action-btn">Browse</span>
+          </a>
+          <a href="../templates/farmer/S_orders.html" class="link-item">
+            <span>Orders Placed to Suppliers</span>
+            <span class="action-btn">View Orders</span>
+          </a>
+          <a href="../templates/farmer/S_despatch.html" class="link-item">
+            <span>Despatch & Supply Deliveries</span>
+            <span class="action-btn">Track Items</span>
+          </a>
+          <a href="../templates/farmer/S_payments.html" class="link-item">
+            <span>Supplier Invoices & Payments</span>
+            <span class="action-btn">Pay</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- FARMER MANAGEMENT -->
+      <section class="dashboard-section">
+        <h2>My Production Profile</h2>
+        <div class="link-list">
+          <a href="../templates/farmer/farms.html" class="link-item">
+            <span>Farm Layouts & Locations</span>
+            <span class="action-btn">Edit Farms</span>
+          </a>
+          <a href="../templates/farmer/harvest.html" class="link-item">
+            <span>My Harvest Records</span>
+            <span class="action-btn">Log Yield</span>
+          </a>
+          <a href="../templates/farmer/profile.html" class="link-item">
+            <span>Personal Profile Settings</span>
+            <span class="action-btn">Update</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+ 
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_farmer.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+    
+</body>
+</html>
