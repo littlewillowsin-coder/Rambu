@@ -1,19 +1,32 @@
 <!-- =========================================================================
      DOCUMENT FOOTER SECTION: Displays navigation links and project credentials
      ========================================================================= -->
-<footer>
+<footer style="background-color: #222; text-align: center; padding: 20px 0;">
   <div class="footer-container" style="max-width: 1300px; margin: 0 auto; padding: 20px 20px 10px 20px; box-sizing: border-box;">
     
-    <!-- Sub-navigation links centered inside the footer block -->
-    <div class="footer-nav" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
+    <!-- Row 1: Site-wide Navigation Links -->
+    <div class="footer-nav" style="margin-bottom: 15px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
       <a href="../site/index.html" style="color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Home</a>
       <a href="../site/about.html" style="color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s ease;">About us</a>
       <a href="../site/services.html" style="color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Services</a>
       <a href="../site/contact.html" style="color: #ffffff; text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Contact us</a>
     </div>
 
+    <!-- Row 2: Portal Dashboards Navigation Links (Red Text with Pipe Dividers) -->
+    <div class="portal-nav" style="margin-bottom: 20px; display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--brand-red, #a80024); font-size: 14px; font-weight: bold;">
+      <a href="../farmer/dashboard.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;">Farmers</a>
+      <span>|</span>
+      <a href="../buyer/dashboard.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;">Buyers</a>
+      <span>|</span>
+      <a href="../nursery/dashboard.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;">Nurseries</a>
+      <span>|</span>
+      <a href="../supplier/dashboard.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;">Suppliers</a>
+      <span>|</span>
+      <a href="../portaladmin/dashboard.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;">Admin</a>
+    </div>
+
     <!-- Thin divider line to cleanly separate links from copyright text -->
-    <hr style="border: 0; border-top: 1px solid #444; margin-bottom: 15px; width: 80%;">
+    <hr style="border: 0; border-top: 1px solid #444; margin-bottom: 15px; width: 80%; margin-left: auto; margin-right: auto;">
 
     <!-- Dynamic copyright details identifying the school project credentials -->
     <p class="copyright-text" style="margin: 0; font-size: 14px; color: #b3b3b3; letter-spacing: 0.5px;">
