@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RambuConnect SUPPLIER Dashboard</title>
+  
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+ 
+
+  <!-- Central Operational Workspace -->
+  <main class="main-container">
+    
+    <!-- Summary Indicator Metric Cards -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h3>Active Supply Items</h3>
+        <div class="value">148 Listed</div>
+      </div>
+      <div class="metric-card">
+        <h3>New Orders from Farmers</h3>
+        <div class="value">9 Pending</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Awaiting Despatch</h3>
+        <div class="value">4 Orders</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Associated Farmers</h3>
+        <div class="value">56 Active</div>
+      </div>
+    </div>
+
+    <!-- Grouped Operational Modules -->
+    <div class="sections-grid">
+
+      <!-- MARKETPLACE & SALES FULFILLMENT -->
+      <section class="dashboard-section">
+        <h2>Marketplace & Fulfillment</h2>
+        <div class="link-list">
+          <a href="../templates/supplier/supplies.html" class="link-item">
+            <span>Manage My Supplies Catalog</span>
+            <span class="action-btn">Edit Stock</span>
+          </a>
+          <a href="../templates/supplier/orders.html" class="link-item">
+            <span>Incoming Orders from Farmers</span>
+            <span class="action-btn">View Orders</span>
+          </a>
+          <a href="../templates/supplier/despatch.html" class="link-item">
+            <span>Despatch Logistics & Receipts</span>
+            <span class="action-btn">Track Shipments</span>
+          </a>
+          <a href="../templates/supplier/payments.html" class="link-item">
+            <span>Payment Log & Statements</span>
+            <span class="action-btn">Invoices</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- PROFILE & RELATIONSHIPS -->
+      <section class="dashboard-section">
+        <h2>Supplier Profile & Network</h2>
+        <div class="link-list">
+          <a href="../templates/supplier/profile.html" class="link-item">
+            <span>View & Edit Supplier Profile</span>
+            <span class="action-btn">Manage Info</span>
+          </a>
+          <a href="../templates/supplier/farmers.html" class="link-item">
+            <span>Connected Farmers Directory</span>
+            <span class="action-btn">View Clients</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+ 
+ 
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_supplier.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+    
+</body>
+</html>
