@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Registration - Supplier Access</title>
+    <!-- Linking to your uniform form stylesheet -->
+  
+</head>
+<body>
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+<h2 style="text-align: center; color: var(--brand-green); margin-bottom: 20px;">Rambutan Supplier Portal Registration</h2>
+<div class="form-container">
+    <div class="form-title">User Registration</div>
+    
+    <!-- FIX: Added onsubmit handler to trigger your JavaScript redirect function -->
+    <form id="registrationForm" onsubmit="handleRoleRedirect(event)">
+        <!-- Field 1: Username -->
+        <div class="form-group">
+            <label for="username">System Username / Handle</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="e.g., rajesh_kumar91" required>
+        </div>
+
+        <!-- Field 2: Email Address -->
+        <div class="form-group">
+            <label for="email">Primary Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="e.g., rajesh@example.com" required>
+        </div>
+
+        <!-- Field 3: Secure Password -->
+        <div class="form-group">
+            <label for="password">Account Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <!-- Field 4: Static Role Assignment (Hardcoded to Supplier) -->
+        <div class="form-group">
+            <label for="role_display">Assigned System Role</label>
+            <!-- Visual display for the user -->
+            <input type="text" id="role_display" class="form-control" value="Supplier" readonly style="background-color: #eee; cursor: not-allowed; font-weight: bold; color: var(--text-light);">
+            <!-- Hidden input ensures the backend code still receives the correct ID value ("1") upon form submission -->
+            <input type="hidden" name="role_id" value="4">
+        </div>
+
+ 
+        <!-- Submission Actions Section -->
+        <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="window.history.back();">Cancel</button>
+            <button type="submit" class="btn-submit">Register User Account</button>
+        </div>
+    </form>
+</div>
+
+<!-- ============================================= -->
+<div id="footer-placeholder"></div>   
+
+<script>
+    // Load header
+    fetch('../components/header_supplier.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+    // Form Submission and Role Redirection Handler
+    function handleRoleRedirect(event) {
+        event.preventDefault(); // Prevents default form reloading sequence
+        
+        // Custom verification or API submission logic can go here...
+        
+        // Route directly to the supplier dashboard workspace
+        window.location.href = "../templates/supplier/dashboard.html"; 
+    }
+</script>
+<!-- ============================================= -->
+
+</body>
+</html>
