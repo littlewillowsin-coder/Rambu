@@ -60,6 +60,7 @@ nav a {
   color: #222;                 /* Sets link text color to dark gray (#222) matching body text */
   font-weight: bold;           /* Makes menu text bold for better visibility and emphasis */
   padding: 5px 10px;           /* Adds 5px vertical and 10px horizontal padding for clickable area and spacing */
+  font-size: 12px;             /* ← ADD THIS LINE (Adjust the px value to your liking) */
   transition: color 0.3s ease; /* Smoothly transitions color changes over 0.3 seconds for hover effects */
 }
 
@@ -100,6 +101,7 @@ nav a:hover {
   color: #222;                 /* Sets dropdown link text to dark gray */
   font-weight: normal;         /* Uses normal (non-bold) weight for dropdown items to distinguish from main nav */
   text-decoration: none;       /* Removes underline from dropdown links */
+  font-size: 10px;             /* ← ADD THIS LINE to make dropdown text smaller */
 }
 
 /* Hover state for dropdown links */
