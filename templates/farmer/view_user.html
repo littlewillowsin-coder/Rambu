@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMBUTAN FARMER PORTAL</title>
+    <!-- Linking to your uniform form stylesheet -->
+  <link rel="stylesheet" href="../ostyle.css">  
+  <link rel="stylesheet" href="../tblstyle.css">  
+  <link rel="stylesheet" href="../formsstyle.css"> 
+</head>
+<body>
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+<section class="middle">
+ 
+<!-- ====Give appropriate heading below --->
+<h2 style="text-align: center; color: var(--brand-green); margin-bottom: 20px;">Rambutan FARMER USERS</h2>
+
+
+
+
+<!-- Wrapped in .middle from ostyle.css for correct page padding and background -->
+<div class="middle">
+    <div class="table-container">
+        <h2>View Farmer Details</h2>
+        
+        <!-- Back button using tblstyle.css action classes -->
+        <a href="farmers-list.html" class="btn-action btn-view">&larr; Back to List</a>
+
+        <!-- Detail Table -->
+        <table class="user-table">
+            <tbody>
+                <tr>
+                    <th>User ID</th>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td>rajesh_farmer</td>
+                </tr>
+                <tr>
+                    <th>Email Address</th>
+                    <td>rajesh@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Phone Number</th>
+                    <td>+919847000001</td>
+                </tr>
+                <tr>
+                    <th>Role</th>
+                    <td>1 (Farmer)</td>
+                </tr>
+                <tr>
+                    <th>Account Status</th>
+                    <td><span class="status-active">Active</span></td>
+                </tr>
+                <tr>
+                    <th>Registered On</th>
+                    <td>2026-01-15 10:30:00</td>
+                </tr>
+                <tr>
+                    <th>Last Login</th>
+                    <td>2026-07-10 14:22:00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Action Buttons (inline-block by default in your CSS, so they sit neatly side-by-side) -->
+        <div style="margin-top: 20px;">
+            <a href="edit_user.html" class="btn-action btn-update">Edit Profile</a>
+            <a href="#" class="btn-action btn-delete">Delete User</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_buyer.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+    
+</body>
+</html>
+
+
+
+
