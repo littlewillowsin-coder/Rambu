@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RambuConnect BUYERS Dashboard</title>
+  
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+  <!-- Central Operational Workspace -->
+  <main class="main-container">
+    
+    <!-- Summary Indicator Metric Cards -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h3>My Posted Demands</h3>
+        <div class="value">5 Open</div>
+      </div>
+      <div class="metric-card">
+        <h3>Active Offers from Farmers</h3>
+        <div class="value">18 New</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Orders to Farmers</h3>
+        <div class="value">8 Pending</div>
+      </div>
+      <div class="metric-card" style="border-left-color: var(--brand-red);">
+        <h3>Inbound Despatches</h3>
+        <div class="value">3 En Route</div>
+      </div>
+    </div>
+
+    <!-- Grouped Operational Modules -->
+    <div class="sections-grid">
+
+      <!-- MARKETPLACE MODULE -->
+      <section class="dashboard-section">
+        <h2>Marketplace Overview</h2>
+        <div class="link-list">
+          <a href="../templates/buyer/prices.html" class="link-item">
+            <span>Live Market Prices</span>
+            <span class="action-btn">Track Prices</span>
+          </a>
+          <a href="../templates/buyer/demand.html" class="link-item">
+            <span>Manage My Buyer Demands</span>
+            <span class="action-btn">Update Needs</span>
+          </a>
+          <a href="../templates/buyer/harvest.html" class="link-item">
+            <span>Browse Offers from Farmers</span>
+            <span class="action-btn">Review Offers</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- PURCHASES & FULFILLMENT -->
+      <section class="dashboard-section">
+        <h2>Procurement & Purchases</h2>
+        <div class="link-list">
+          <a href="../templates/buyer/harvest.html" class="link-item">
+            <span>Available Harvest Details</span>
+            <span class="action-btn">View Yields</span>
+          </a>
+          <a href="../templates/buyer/orders.html" class="link-item">
+            <span>Orders Sent to Farmers</span>
+            <span class="action-btn">Manage Orders</span>
+          </a>
+          <a href="../templates/buyer/despatch.html" class="link-item">
+            <span>Despatch Status & Goods Receipts</span>
+            <span class="action-btn">Track Delivery</span>
+          </a>
+          <a href="../templates/buyer/payments.html" class="link-item">
+            <span>Outbound Payments & Invoices</span>
+            <span class="action-btn">Pay Farmers</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- BUYER PRODUCTION PROFILE -->
+      <section class="dashboard-section">
+        <h2>Buyer Profile & Farms</h2>
+        <div class="link-list">
+          <a href="../templates/buyer/profile.html" class="link-item">
+            <span>View & Edit Account Profile</span>
+            <span class="action-btn">Update</span>
+          </a>
+          <a href="../templates/buyer/farms.html" class="link-item">
+            <span>Associated Partner Farms / Locations</span>
+            <span class="action-btn">Manage Sites</span>
+          </a>
+          <a href="../templates/buyer/harvest.html" class="link-item">
+            <span>My Contracted Harvest Records</span>
+            <span class="action-btn">Log Intake</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_farmer.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+    
+</body>
+</html>
