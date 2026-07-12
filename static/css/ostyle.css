@@ -60,7 +60,7 @@ nav a {
   color: #222;                 /* Sets link text color to dark gray (#222) matching body text */
   font-weight: bold;           /* Makes menu text bold for better visibility and emphasis */
   padding: 5px 10px;           /* Adds 5px vertical and 10px horizontal padding for clickable area and spacing */
-  font-size: 12px;             /* ← ADD THIS LINE (Adjust the px value to your liking) */
+  font-size: 13px;             /* ← ADD THIS LINE (Adjust the px value to your liking) */
   transition: color 0.3s ease; /* Smoothly transitions color changes over 0.3 seconds for hover effects */
 }
 
