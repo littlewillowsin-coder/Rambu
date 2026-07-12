@@ -2,137 +2,165 @@
    RAMBUCONNECT HUB DASHBOARD STYLES
    ========================================================================= */
 
+/* Global CSS Variables (Custom Properties) for consistent branding and thematic colors */
 :root {
-  --brand-green: #1f8f3a;
-  --brand-red: #a80024;
-  --bg-gray: #f4f6f9;
-  --text-dark: #222;
-  --text-light: #555;
+  --brand-green: #1f8f3a; /* Primary brand color used for emphasis, titles, and positive actions */
+  --brand-red: #a80024;   /* Secondary brand color used for gradient highlights and notification accents */
+  --bg-gray: #f4f6f9;     /* Light gray tone for the main dashboard body background to reduce eye strain */
+  --text-dark: #222;      /* Off-black charcoal color for premium readability on headings and primary text */
+  --text-light: #555;     /* Medium gray for secondary/subtext, creating a clean typographical hierarchy */
 }
 
+/* =========================================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================================= */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg-gray);
-  color: var(--text-dark);
+  margin: 0;                      /* Removes default browser edge margins for true full-width layout */
+  font-family: Arial, sans-serif; /* Sets a clean, standard sans-serif typeface fallback chain */
+  background: var(--bg-gray);    /* Applies the soft background color defined in custom root properties */
+  color: var(--text-dark);        /* Sets global typography color to the primary dark charcoal tint */
 }
 
-/* Dashboard Header */
+/* =========================================================================
+   DASHBOARD HEADER
+   ========================================================================= */
 .dashboard-header {
+  /* Creates a smooth horizontal background shift: solid white on the left fading into brand red on the right */
   background: linear-gradient(to right, white 0%, white 55%, var(--brand-red) 100%);
-  padding: 20px;
-  border-bottom: 2px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 20px;                  /* Generates 20px of uniform spacing internal to the header container */
+  border-bottom: 2px solid #ddd;  /* Draws a distinct separation line between header and dashboard grid */
+  display: flex;                  /* Activates flexbox layout engine for single-row structural items */
+  justify-content: space-between; /* Pushes header title to the far left and structural exit button to the far right */
+  align-items: center;            /* Perfectly centers header components along the vertical axis */
 }
 
+/* Dashboard title formatting */
 .dashboard-header h1 {
-  margin: 0;
-  font-size: 24px;
-  color: var(--brand-green);
+  margin: 0;                      /* Strips default browser margins to avoid unexpected vertical displacement */
+  font-size: 24px;                /* Scales down size slightly from standard H1 for an elegant web app interface */
+  color: var(--brand-green);      /* Brand color signature for prominent text identifier */
 }
 
+/* =========================================================================
+   MAIN APP STRUCTURE
+   ========================================================================= */
 .main-container {
-  max-width: 1300px;
-  margin: 30px auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+  max-width: 1300px;              /* Restricts expanding past 1300px on ultra-wide desktop monitors */
+  margin: 30px auto;              /* Generates 30px top/bottom spacing and centers the layout block horizontally */
+  padding: 0 20px;                /* Adds 20px gutter safety margins on left/right edges for smaller screens */
+  box-sizing: border-box;         /* Ensures padding measurements remain inside the explicit width limits */
 }
 
-/* Summary Metric Grid */
+/* =========================================================================
+   SUMMARY METRICS PANEL (TOP CARDS GRID)
+   ========================================================================= */
 .metrics-grid {
-  display: grid;
+  display: grid;                  /* Engages powerful 2D layout layout framework */
+  /* Dynamically distributes columns based on size context; cards wrap to new lines if space drops below 220px */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 20px;                      /* Maintains exact 20px grid tracks/gutters between item tiles */
+  margin-bottom: 30px;            /* Forces breathing space below summary block before main system content */
 }
 
+/* Component wrapper for each individual metric box */
 .metric-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border-left: 5px solid var(--brand-green);
+  background: white;              /* High contrast background surface separating card info from gray body */
+  padding: 20px;                  /* Equal padding internally to maintain balanced visual grids */
+  border-radius: 8px;             /* Modernized rounded card profiles */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Soft premium ambient shadow styling for user interface depth */
+  border-left: 5px solid var(--brand-green); /* Subtle color indicator on the left edge as a focus accent */
 }
 
+/* Card titles for micro-level indicators */
 .metric-card h3 {
-  margin: 0 0 5px 0;
-  font-size: 14px;
-  color: var(--text-light);
-  text-transform: uppercase;
+  margin: 0 0 5px 0;              /* Nullifies unnecessary margins while ensuring 5px lower cushion space */
+  font-size: 14px;                /* Clean downscaled layout value for micro labels */
+  color: var(--text-light);       /* Dimmed accent palette for sub-labels */
+  text-transform: uppercase;      /* Forces uppercase rendering to increase UI crispness and data profile style */
 }
 
+/* Big counter typography numbers inside dashboard cards */
 .metric-card .value {
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--text-dark);
+  font-size: 28px;                /* Blown-up layout metrics size for rapid glance evaluation */
+  font-weight: bold;              /* Solid weight for emphasis */
+  color: var(--text-dark);        /* Premium primary emphasis dark palette */
 }
 
-/* Main Content Sections Layout */
+/* =========================================================================
+   MAIN DEPARTMENTS & SECTIONS SYSTEM
+   ========================================================================= */
 .sections-grid {
-  display: grid;
+  display: grid;                  /* Structural content distribution system matrix */
+  /* Two column design pattern dynamically fallback mapping into individual stack columns on smaller displays */
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 25px;
+  gap: 25px;                      /* Layout grid channel sizes separating modules */
 }
 
+/* Mobile Breakpoint Adjustment for extreme viewport context widths */
 @media (max-width: 500px) {
   .sections-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;   /* Enforces singular block columns once display room drops under 500px */
   }
 }
 
+/* Content cards for dashboard categorization modules */
 .dashboard-section {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border-top: 4px solid var(--brand-green);
-  padding: 25px;
+  background: white;              /* Flat canvas panel design */
+  border-radius: 8px;             /* Unified curved geometry aesthetics matching modern application states */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Soft aesthetic elevation shadow */
+  border-top: 4px solid var(--brand-green); /* Vibrant header card banner line creating clean categorization visual flows */
+  padding: 25px;                  /* Generous interior padding space for functional interface rows */
 }
 
+/* Segment category structural section headers */
 .dashboard-section h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: var(--brand-green);
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  margin-top: 0;                  /* Normalizes container space tracking metrics */
+  margin-bottom: 15px;            /* Spacer separation indicator over layout sub-components */
+  font-size: 20px;                /* Accessible reading scale for primary group areas */
+  color: var(--brand-green);      /* Brand signature system application title coloring */
+  border-bottom: 1px solid #eee;  /* Horizontal dividing vector line mapping clean semantic content breaks */
+  padding-bottom: 10px;           /* Breathing spacer allowance over the card border block line */
 }
 
-/* Quick Link Rows */
+/* =========================================================================
+   QUICK LINK LIST TRACKING ELEMENTS
+   ========================================================================= */
 .link-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: flex;                  /* Configures single-axis list structural flow controllers */
+  flex-direction: column;         /* Directs child item rows to stack linearly inside standard layout panels */
+  gap: 12px;                      /* Uniform tracking padding gap assigned directly between list item tags */
 }
 
+/* Individual list layout anchor controls linking downstream file directories */
 .link-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  background: #fafafa;
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  border: 1px solid #eee;
+  display: flex;                  /* Leverages directional horizontal row layouts */
+  justify-content: space-between; /* Spreads label string name left and tracking indicator elements far right */
+  align-items: center;            /* Vertical cross-axis leveling controller for child item tags */
+  padding: 10px 15px;             /* 10px top/bottom and 15px left/right tracking buffer zone inside the bar button */
+  background: #fafafa;            /* Off-white panel striping baseline color tone values */
+  border-radius: 6px;             /* Smooth micro curve details for buttons */
+  text-decoration: none;          /* Explicit design suppression neutralizing standard blue hyperlink text styling underlines */
+  color: var(--text-dark);        /* Re-maps typography colors into baseline neutral charcoal status presets */
+  font-weight: 500;               /* Semi-bold text layout emphasis weighting profile */
+  font-size: 14px;                /* Standard operational application link size metrics */
+  transition: all 0.2s ease;      /* Central animation controller softening responsive interaction mechanics across 0.2 seconds */
+  border: 1px solid #eee;         /* Lightweight contour structure mapping accurate boundaries */
 }
 
+/* Interactive link rollover state triggers */
 .link-item:hover {
-  background: #f0f7f1;
-  border-color: var(--brand-green);
-  color: var(--brand-green);
-  transform: translateX(3px);
+  background: #f0f7f1;            /* Subtle tint blend on hover for feedback */
+  border-color: var(--brand-green); /* Highlights borders with signature accent color on pointer rollover */
+  color: var(--brand-green);      /* Transitions title strings into active brand hues during interaction */
+  transform: translateX(3px);     /* Slides link horizontally 3 pixels right for responsive feedback */
 }
 
+/* Context actions design modifiers inside list item nodes */
 .action-btn {
-  font-size: 12px;
-  background: var(--brand-green);
-  color: white;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-weight: bold;
+  font-size: 12px;                /* Compact label tracking typography values */
+  background: var(--brand-green); /* Action emphasis block color matching functional design intents */
+  color: white;                   /* Full brightness contrast text adjustments on interaction items */
+  padding: 4px 10px;              /* Tight padding profile for tag micro styling indicators */
+  border-radius: 4px;             /* Crisp modern visual corners on UI tags */
+  font-weight: bold;              /* Solid font structural profile reading clarity upgrades */
 }
