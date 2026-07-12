@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Login - Buyers Access</title>
+    <!-- Linking to your uniform form stylesheet -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+<section class="middle">
+ 
+<h2 style="text-align: center; color: var(--brand-green); margin-bottom: 20px;">Rambutan Buyers Login</h2>
+    <div class="form-container">
+        <div class="form-title">Account Security Portal</div>
+        
+        <form id="loginForm" onsubmit="handleRoleRedirect(event)">
+            <!-- Field 1: Identity / Username -->
+            <div class="form-group">
+                <label for="username">Username or Email Address</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="e.g., deepak.menon@email.com" required>
+            </div>
+
+            <!-- Field 2: Security Key -->
+            <div class="form-group">
+                <label for="password">Account Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+            </div>
+
+            <!-- Field 3: Static Role Assignment (Hardcoded to Buyers) -->
+            <div class="form-group">
+                <label for="role_display">Assigned System Role</label>
+                <!-- Visual display for the user -->
+                <input type="text" id="role_display" class="form-control" value="Buyer" readonly style="background-color: #eee; cursor: not-allowed; font-weight: bold; color: var(--text-light);">
+                <!-- Hidden input ensures the backend code still receives the correct ID value ("1") upon form submission -->
+                <input type="hidden" name="role_id" value="1">
+            </div>
+     
+            <!-- Submission Actions Section -->
+            <div class="form-actions">
+                <button type="reset" class="btn-cancel">Clear Fields</button>
+                <button type="submit" class="btn-submit">Secure Log In</button>
+            </div>
+        </form>
+    </div>
+</section>  
+
+<!-- ============================================= -->
+<div id="footer-placeholder"></div>   
+
+<script>
+    // Load header
+    fetch('../components/header_buyer.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+    // Form Submission and Role Redirection Handler
+    function handleRoleRedirect(event) {
+        event.preventDefault(); // Prevents default form reloading sequence
+        
+        // Custom verification or API submission logic can go here...
+        
+        // Route directly to the buyer dashboard workspace
+        window.location.href = "../templates/buyer/dashboard.html"; 
+    }
+</script>
+<!-- ============================================= -->
+
+</body>
+</html>
