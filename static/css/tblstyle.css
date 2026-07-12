@@ -1,0 +1,165 @@
+/* ==========================================
+   Base Table Architecture & Container
+   ========================================== */
+.table-container {
+    width: 100%;                                                /* Spreads dynamic table modules wide to fit full screen environments */
+    margin: 20px 0;                                             /* Leaves 20px margins above and below the table data cards */
+    color: #333333;                                             /* Locks table numbers and names into crisp charcoal dark profiles */
+    overflow-x: auto;                                           /* Generates horizontal scroll guards if tables exceed mobile views */
+}
+
+.table-container h2 {
+    color: #2c3e50;                                             /* Sets secondary table context headers to premium dark navy tints */
+    margin-bottom: 15px;                                        /* Sets spacing buffers beneath table labels before data frames open */
+    font-size: 1.4rem;                                          /* Keeps table header text scale balanced with form title displays */
+    border-left: 4px solid #1f8f3a;                             /* Plants bold brand green vertical accent tokens next to title text */
+    padding-left: 10px;                                         /* Details a clean layout gap separating green tokens from headings */
+}
+
+/* ==========================================
+   Table Specific Styling
+   ========================================== */
+.user-table {
+    width: 100%;                                                /* Demands interior matrix grids fill the total span of host slots */
+    border-collapse: collapse;                                  /* Fuses separate cell lines into one unified, clean border mesh */
+    background-color: #ffffff;                                  /* Places white backgrounds under data grids to isolate rows cleanly */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);                      /* Generates faint, realistic soft drop shadows below table grids */
+    border-radius: 4px;                                         /* Curbs harsh grid corners using smooth 4px perimeter bevels */
+    overflow: hidden;                                           /* Keeps data cell highlights contained inside corner bevel structures */
+}
+
+.user-table th {
+    background-color: #f4f6f7;                                  /* Colors column fields using quiet light ash background bars */
+    color: #34495e;                                             /* Uses solid dark gray colors across top parameter categories */
+    font-weight: 600;                                           /* Accents grid label keys inside medium bold structural scales */
+    text-align: left;                                           /* Flush aligns top grid index labels cleanly to the left margins */
+    padding: 12px 15px;                                         /* Spreads open generous layout air spaces around categories */
+    border-bottom: 2px solid #e2e8f0;                           /* Anchors column headers down with clear dark horizontal lines */
+    font-size: 0.9rem;                                          /* Scales parameter headings down to clean technical proportions */
+}
+
+.user-table td {
+    padding: 12px 15px;                                         /* Cushions real grid entries comfortably away from cell walls */
+    border-bottom: 1px solid #edf2f7;                           /* Separates distinct student records using quiet horizontal lines */
+    font-size: 0.85rem;                                         /* Renders individual string logs inside readable secondary scales */
+    vertical-align: middle;                                     /* Vertically centers all text and button controls inside data rows */
+}
+
+.user-table tr:hover {
+    background-color: #f8fafc;                                  /* Triggers subtle color washes when rows are hovered over */
+}
+
+.text-truncate {
+    max-width: 220px;                                           /* Restricts elongated text strings up to maximum 220px lengths */
+    white-space: nowrap;                                        /* Stops words from breaking and folding down into additional lines */
+    overflow: hidden;                                           /* Hides any letters that extend beyond max-width limits */
+    text-overflow: ellipsis;                                    /* Injects professional trailing triple-dots (...) at clip markers */
+}
+
+/* ==========================================
+   Status Indicator Tokens
+   ========================================= */
+.status-active {
+    background-color: #def7ec;                                  /* Gives active indicators a light, modern mint-green background fill */
+    color: #03543f;                                             /* Applies dark green font colors to make active terms highly readable */
+    padding: 4px 8px;                                           /* Shapes a compact, clean badge field around status labels */
+    border-radius: 4px;                                         /* Curbs cell badge corners into clean curved tags */
+    font-weight: 500;                                           /* Employs mid-weight font text formatting inside alert fields */
+    font-size: 0.75rem;                                         /* Shrinks badge labels down to clear micro-tag proportions */
+}
+
+.status-inactive {
+    background-color: #fde8e8;                                  /* Swaps inactive tags to soft light crimson background plates */
+    color: #9b1c1c;                                             /* Flags alert indicator strings inside clear deep burgundy text colors */
+    padding: 4px 8px;                                           /* Maps uniform spatial limits matching sibling active tokens */
+    border-radius: 4px;                                         /* Curbs badging contours down symmetrically across a 4px layout */
+    font-weight: 500;                                           /* Syncs text weight levels equally with parallel system badges */
+    font-size: 0.75rem;                                         /* Locks text size constraints down to micro-token specifications */
+}
+
+/* ==========================================
+   Tiny Action Buttons System
+   ========================================= */
+.btn-action {
+  display: inline-block;                                        /* Formats hyperlink anchors to respect full dimensional grid boxes */
+  padding: 6px 12px;                                            /* Scales click bounds down to neat, compact table cell sizes */
+  text-decoration: none;                                        /* Removes default underlines from active action buttons */
+  border: none;                                                 /* Removes structural outline fields completely away from system nodes */
+  border-radius: 4px;                                           /* Softens corner shapes on action triggers to match table designs */
+  cursor: pointer;                                              /* Shifts mice pointer properties over into manual hand clicks */
+  font-size: 12px;                                              /* Enforces compact 12px font layouts across data row choices */
+  text-align: center;                                           /* Draws layout fonts perfectly down central horizontal planes */
+  background-color: #f0f0f0;                                    /* Sets basic baseline fallback fills for inactive nodes */
+  color: #333;                                                  /* Applies standard neutral gray colors onto neutral actions */
+  transition: all 0.3s ease;                                    /* Controls transition behaviors fluidly across a 0.3s scale */
+}
+
+/* Specific button colors */
+.btn-buy {
+  background-color: #1f8f3a;                                    /* Links purchase action items straight to primary green branding */
+  color: white;                                                 /* Pushes text properties into high contrast bright white fields */
+}
+
+.btn-buy:hover {
+  background-color: #166629;                                    /* Animates purchase boxes down to dark green options on hover */
+}
+
+.btn-view {
+  background-color: #e3f2fd;                                    /* Floods review actions inside clean sky-blue background washes */
+  color: #1976d2;                                               /* Deepens label elements inside premium primary corporate blue values */
+}
+
+.btn-view:hover {
+  background-color: #bbdefb;                                    /* Saturates blue options slightly deeper during cursor hover actions */
+}
+
+.btn-update {
+  background-color: #fff3e0;                                    /* Fills alteration modules inside warm, soft tangerine tints */
+  color: #f57c00;                                               /* Styles structural correction labels inside deep orange text colors */
+}
+
+.btn-update:hover {
+  background-color: #ffe0b2;                                    /* Darkens orange fill panels slightly during user mouse rolls */
+}
+
+.btn-delete {
+  background-color: #ffebee;                                    /* Marks destructive remove buttons inside quiet soft rose background tints */
+  color: #d32f2f;                                               /* Colors removal labels inside stark danger warning red font colors */
+}
+
+.btn-delete:hover {
+  background-color: #ffcdd2;                                    /* Intensifies crimson warning alerts as active mouse cursors slide over */
+}
+
+/* ==========================================
+   Pagination Architecture
+   ========================================= */
+.pagination-container {
+    display: flex;                                              /* Distributes boundary records and page items cleanly with Flexbox */
+    justify-content: space-between;                             /* Spreads text indicators left and splits buttons away rightward */
+    align-items: center;                                        /* Centers layout rows down uniform vertical coordinate positions */
+    margin-top: 15px;                                           /* Leaves clean layout separation space below table main borders */
+    font-size: 0.8rem;                                          /* Standardizes pagination text cleanly under secondary scales */
+    color: #718096;                                             /* Shades structural tally metrics inside soft cool gray text */
+    padding: 0 5px;                                             /* Aligns tracking elements neatly with outer boundary points */
+}
+
+.pagination-buttons a {
+    color: #4a5568;                                             /* Styles page numbering hooks inside readable charcoal text */
+    padding: 6px 12px;                                          /* Maps symmetric tap limits around page selector icons */
+    text-decoration: none;                                      /* Keeps numbers free of structural default baseline lines */
+    border: 1px solid #cbd5e0;                                  /* Outlines page cells using fine light slate borders */
+    margin-left: 4px;                                           /* Steps sequential choices away from each other horizontally */
+    border-radius: 3px;                                         /* Gently breaks hard edges on active control buttons */
+    background-color: #ffffff;                                  /* Lifts selection buttons off gray grounds with clean white fills */
+}
+
+.pagination-buttons a:hover {
+    background-color: #edf2f7;                                  /* Illuminates numbers inside soft gray steps during page hover states */
+}
+
+.pagination-buttons a.active {
+    background-color: #1f8f3a;                                  /* Locks active pagination views completely into brand green themes */
+    color: white;                                               /* Flips operational numerals bright white to stand out clearly */
+    border-color: #1f8f3a;                                      /* Recovers edge continuity using matching green structural borders */
+}

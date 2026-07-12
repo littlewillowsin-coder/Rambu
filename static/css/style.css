@@ -1,0 +1,325 @@
+/* =========================================
+   GLOBAL STYLES (Applies to entire page)
+   ========================================= */
+
+body {
+  margin: 0;                                                    /* Removes the default browser margin around the page edges */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a modern typography layout for the whole page */
+  color: #222;                                                  /* Applies a soft black text color for clean legibility */
+  background: #f4f4f4;                                          /* Sets a neutral, light gray background color for the page */
+}
+
+/* =========================================
+   TOPBAR & LOGO SECTION
+   ========================================= */
+
+.topbar {
+  background: linear-gradient(to right, white 0%, white 55%, #1f8f3a 100%); /* Creates a smooth background gradient transitioning from white to brand green */
+  padding: 15px 20px;                                           /* Adds 15px of vertical and 20px of horizontal padding inside the header */
+  display: grid;                                                /* Enforces a CSS Grid layout system for the header structure */
+  grid-template-columns: 1fr auto 1fr;                          /* Generates 3 layout columns: flexible left side, auto-sized center, flexible right side */
+  align-items: center;                                          /* Centers all inner header items vertically along the axis */
+  border-bottom: 2px solid #ddd;                                /* Places a light gray line underneath the header to separate it from content */
+  position: relative;                                           /* Establishes a standard positioning frame for absolute-positioned elements inside */
+  z-index: 10;                                                  /* Forces the topbar to stack on top of any overlapping layout elements */
+}
+
+.brand {
+  grid-column: 1;                                               /* Explicitly places the brand logo wrapper into the first grid column */
+  display: flex;                                                /* Leverages Flexbox layout properties inside the brand container */
+  align-items: center;                                          /* Automatically centers the logo image vertically within its zone */
+  justify-content: center;                                      /* Keeps the item horizontally centered, providing safety for mobile screens */
+  width: 100%;                                                  /* Commands the brand container wrapper to span the full grid cell width */
+}
+
+.logo-img {
+  height: 80px;                                                 /* Constrains the logo image area to a fixed height structure */
+  width: auto;                                                  /* Automatically calculates proportional width to preserve standard aspect ratio */
+  display: block;                                               /* Forces the image to behave like a block element, erasing standard baseline spacing */
+}
+
+/* =========================================
+   NAVIGATION MENU SECTION
+   ========================================= */
+
+nav {
+  grid-column: 2;                                               /* Spaces the primary nav container precisely inside the middle column */
+  display: flex;                                                /* Organizes child anchors in an easy horizontal row via Flexbox layout */
+  align-items: center;                                          /* Vertically standardizes alignment for all inner navigation text */
+  gap: 20px;                                                    /* Uniformly injects 20px of breathing room directly between neighboring links */
+}
+
+nav a {
+  text-decoration: none;                                        /* Deletes standard default underlines from structural hyperlinks */
+  color: #222;                                                  /* Matches nav links to the standard core text color */
+  font-weight: bold;                                            /* Thickens the nav typography to make links stand out clearly */
+  padding: 5px 10px;                                            /* Expands the click/tap zone area with custom top/bottom and side spacing */
+  transition: color 0.3s ease;                                  /* Dictates a smooth 0.3-second transition effect when text color alters */
+}
+
+nav a:hover {
+  color: #1f8f3a;                                               /* Transforms link color to brand green during mouse cursor hover actions */
+}
+
+/* =========================================
+   DROPDOWN MENU SECTION
+   ========================================= */
+
+.dropdown {
+  position: relative;                                           /* Allows children to position themselves relative to this element's boundary */
+  display: inline-block;                                        /* Keeps the block inline with other links while respecting width/height settings */
+}
+
+.dropdown-content {
+  display: none;                                                /* Keeps the dropdown context hidden entirely away from view by default */
+  position: absolute;                                           /* Pops the layout window completely out of normal document order flows */
+  top: 100%;                                                    /* Coordinates menu top position right below the parent container base */
+  right: 0;                                                     /* Flush-aligns the dropdown container container box with the right edge */
+  background: white;                                            /* Gives the popover element a crisp white canvas background look */
+  min-width: 160px;                                             /* Guarantees the card menu never squishes narrower than 160px overall */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);                      /* Softly lifts the popover menu off the background using an outer shadow layer */
+  z-index: 1;                                                   /* Ensures the popover layer floats over basic inline section structures */
+  border-radius: 6px;                                           /* Gives clean, modern curved edges to the dropdown structure box */
+  overflow: hidden;                                             /* Clips inner link background hover styling cleanly inside rounded frames */
+}
+
+.dropdown-content a {
+  display: block;                                               /* Stacks links directly on top of one another instead of letting them sit inline */
+  padding: 10px 14px;                                           /* Sets comfortable spatial dimensions inside individual menu choice cells */
+  margin: 0;                                                    /* flattens extra margin boundaries out from target anchor tags */
+  color: #222;                                                  /* Colors dropdown labels in standard neutral body gray */
+  font-weight: normal;                                          /* Softens drop text down to standard weights to distinct it from primary links */
+  text-decoration: none;                                        /* Strips the standard underline decoration off inner popover links */
+}
+
+.dropdown-content a:hover {
+  background: #f0f0f0;                                          /* Shifts cells to a clean light gray shade when hovered over */
+  color: #1f8f3a;                                               /* Highlights targeted choice tags in distinct brand green font colors */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;                                               /* Alters display property to make the menu box fully visible on hover states */
+}
+
+/* =========================================
+   HEADER IMAGE SECTION
+   ========================================= */
+
+.header-image {
+  width: 100%;                                                  /* Spreads the showcase banner across the entire screen frame grid */
+  height: 300px;                                                /* Locks structural banner sizing area down to a set 300px depth */
+  background: url("../images/header_rambu.jpg") center/cover no-repeat; /* Injects background photo, centers alignment, scales to fill, stops tiling */
+}
+
+/* =========================================
+   MAIN CONTENT STYLES
+   ========================================= */
+
+.middle {
+  padding: 50px 20px;                                           /* Places deep breathing margins vertically and side framing margins horizontally */
+  width: 100%;                                                  /* Instructs layout module context to occupy maximum available width bounds */
+  box-sizing: border-box;                                       /* Includes inner padding sizes natively into calculations to drop overflow issues */
+  background: white;                                            /* Shifts global center readable text areas into a solid clean white field */
+  text-align: left;                                             /* Orients inner textual descriptions flush leftwards for traditional parsing */
+}
+
+.middle h1 {
+  color: #1f8f3a;                                               /* Accents central page title headers in core standard green color */
+  font-size: 32px;                                              /* Broadens global title hierarchy cleanly to a visible 32px scale */
+  margin-top: 0;                                                /* Erases initial block margins at the top of the header element */
+  margin-bottom: 15px;                                          /* Forces structural white spacing under heading lines before text follows */
+}
+
+.intro-text {
+  max-width: 1200px;                                            /* Limits textual reading blocks to comfortable typographic line spans */
+  line-height: 1.6;                                             /* Enhances reading comfort by scaling text line gaps vertically */
+  font-size: 14px;                                              /* Establishes standard reading resolution scales for document context paragraphs */
+  color: #444;                                                  /* Softens reading paragraphs down to a neutral charcoal tint color */
+  margin-bottom: 25px;                                          /* Sets structural spacing below descriptive intro writing sections */
+}
+
+/* =========================================
+   USER'S CORNER CONTAINER & GLOBAL BUTTONS
+   ========================================= */
+
+.user-corner-container {
+  display: flex;                                                /* Arranges interior components vertically or horizontally using flex spaces */
+  flex-direction: column;                                       /* Stacks inner content layers vertically by default for mobile friendliness */
+  gap: 35px;                                                    /* Standardizes equal 35px gaps between all interior components */
+  align-items: center;                                          /* Adjusts interior blocks to align center along the cross layout line */
+  padding: 40px 20px;                                           /* Establishes layout frame inside spaces for the card groupings */
+  max-width: 1300px;                                            /* Extends dynamic layout cap margins max up to a 1300px desktop threshold */
+  margin: 0 auto;                                               /* Perfectly targets horizontally centered placement using auto layout fields */
+  box-sizing: border-box;                                       /* Keeps container sizing calculation safe from dynamic padding increases */
+}
+
+.user-image-wrapper {
+  width: 100%;                                                  /* Spreads flexible outer context wide over smaller fluid displays */
+  max-width: 480px;                                             /* Puts a structural maximum cap limit on profile image container widths */
+}
+
+.user-image-wrapper img {
+  width: 100%;                                                  /* Scales internal assets fluidly over full width of framework constraints */
+  height: auto;                                                 /* Lets vertical aspect heights shift cleanly inline with dynamic ratios */
+  display: block;                                               /* Nullifies empty gaps underneath standard inline layout structures */
+  border-radius: 8px;                                           /* Rounds out perimeter frame image shapes across an 8px radius boundary */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);                      /* Blends a dynamic, low-contrast shadow below profile pictures */
+}
+
+.button-group {
+  display: flex;                                                /* Unlocks structural Flexbox control layers to line up actions neatly */
+  flex-wrap: wrap;                                              /* Instructs buttons to break down onto new rows if row spacing finishes */
+  gap: 15px;                                                    /* Injects clean 15px interstitial spacing blocks between individual buttons */
+  justify-content: center;                                      /* Keeps all core landing call action buttons perfectly centered horizontally */
+}
+
+.btn {
+  display: inline-block;                                        /* Keeps tags in line with blocks while respecting full spatial adjustments */
+  padding: 12px 24px;                                           /* Maps thick hit click surface pads around typography inside labels */
+  font-size: 14px;                                              /* Synchronizes root global structural font levels down to 14px */
+  font-weight: bold;                                            /* Thickens up layout action triggers to emphasize active readability */
+  text-decoration: none;                                        /* Rips baseline text anchors styling down from links universally */
+  border-radius: 5px;                                           /* Adds soft styling adjustments to corners on button profiles */
+  transition: background-color 0.2s ease, transform 0.1s ease;  /* animates slick background swaps and quick tap responsive scales */
+  text-align: center;                                           /* Aligns text inside button tags completely in the middle axis */
+  border: none;                                                 /* Removes the default solid border style line from standard button controls */
+  cursor: pointer;                                              /* Modifies system pointers to display a distinct click hand over objects */
+}
+
+.btn-green {
+  background-color: #1f8f3a;                                    /* Floods global primary action items with unified standard green branding */
+  color: #ffffff;                                               /* Drives text contrasts up bright using crisp pure white */
+}
+
+.btn-green:hover {
+  background-color: #166629;                                    /* Darkens down action triggers when mice pointers roll over boundaries */
+}
+
+.btn-green:active {
+  transform: scale(0.98);                                       /* Contracts object down subtly to simulate click compressions */
+}
+
+/* =========================================
+   4-COLUMN GRID LAYOUT SECTION
+   ========================================= */
+
+.column-container {
+  display: flex;                                                /* Floats visual data cells side-by-side using Flexbox layout modules */
+  justify-content: center;                                      /* Focuses group components cleanly down the absolute layout center line */
+  gap: 25px;                                                    /* Standardizes column separations to 25px gutters across the sheet */
+  max-width: 1300px;                                            /* Keeps broad display grids tethered safely inside standard parameters */
+  margin: 40px auto 0 auto;                                     /* Places spacing above the grid and centers layout with auto settings */
+}
+
+.column-box {
+  flex: 1;                                                      /* Commands individual grid columns to distribute layout weights completely equally */
+  background: #f9f9f9;                                          /* Floods column cards using very crisp off-white background hues */
+  padding: 25px 15px;                                           /* Buffers structural cell information away from external outline boxes */
+  border-radius: 8px;                                           /* Synchronizes perimeter border designs with surrounding site elements */
+  border-top: 4px solid #1f8f3a;                                /* Caps structural content cells with bold standard green lines at the top */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);                      /* Applies very faint drop shadow styling around data frame blocks */
+}
+
+.column-box h3 {
+  color: #1f8f3a;                                               /* Brands internal headline elements inside unified brand green tints */
+  font-size: 20px;                                              /* Adjusts column headline levels cleanly to 20px visibility frames */
+  margin: 15px 0 10px 0;                                        /* Buffers top and lower typography limits away from lines and copy */
+}
+
+.column-box p {
+  font-size: 14px;                                              /* Retains standard 14px typographic structures inside copy bodies */
+  color: #555;                                                  /* Drops layout paragraph density slightly into mid-tone grays */
+  line-height: 1.5;                                             /* Vertically separates text stacks to make sentences easily readable */
+}
+
+.column-img {
+  width: 100%;                                                  /* Spreads picture assets across the maximum width parameters of host cards */
+  height: 160px;                                                /* Evaluates specific set limits to secure clean column symmetry lines */
+  object-fit: cover;                                            /* Crops picture dimensions perfectly without causing squished distortions */
+  border-radius: 4px;                                           /* Softens graphic image corner regions inside individual column boxes */
+  background: #ddd;                                             /* Generates gray fill blocks if specific server images fail down */
+}
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+
+footer {
+  background: #222;                                             /* Floods footer components inside clean standard midnight charcoal black */
+  color: white;                                                 /* Pushes base metadata tags into sharp white contrast visibility */
+  text-align: center;                                           /* Pulls layout alignment fields exactly down true center axes */
+  padding: 18px;                                                /* Expands layout margins cleanly around copyright strings */
+  font-size: 16px;                                              /* Scales footer text to an easy-to-read 16px font profile */
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+
+@media (min-width: 768px) {
+  .user-corner-container {
+    flex-direction: row;                                        /* Reorients structural profile nodes side-by-side on wide viewports */
+    align-items: flex-start;                                    /* Locks layout items flush along the top limit boundary rules */
+  }
+  .user-image-wrapper {
+    flex: 0 0 35%;                                              /* Pinpoints picture columns to consume strictly 35% of workspace spans */
+  }
+}
+
+@media (max-width: 900px) {
+  .column-container {
+    flex-wrap: wrap;                                            /* Permits block cells to step downward if display widths compress down */
+  }
+  .column-box {
+    flex: 0 0 45%;                                              /* Transitions grid elements into paired sets occupying 45% spans */
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    display: flex;                                              /* Migrates top layout nodes into adaptive Flexbox arrays natively */
+    flex-direction: column;                                     /* Rearranges upper headers into linear stacks over thin mobile screens */
+    align-items: center;                                        /* Centers layout components along center viewport axis lines */
+    padding: 10px 15px;                                         /* Compresses spatial header dimensions down for narrow mobile spaces */
+  }
+
+  .brand {
+    width: 100%;                                                /* commands full layout spans over compact screen configurations */
+    justify-content: center;                                    /* Guarantees header logos stay locked inside center screen axes */
+  }
+
+  nav {
+    position: static;                                           /* Resets structural navigation flows back inside simple document stacks */
+    transform: none;                                            /* Flattens alignment translation fields clean away from system parameters */
+    margin-top: 12px;                                           /* Generates spacing splits underneath brand identity modules */
+    gap: 14px;                                                  /* Slightly tightens navigation link intervals over display restrictions */
+    width: 100%;                                                /* Forces target navigation lists across maximum display bounds */
+    justify-content: center;                                    /* Centers inline menu link points inside standard viewport axes */
+    flex-wrap: wrap;                                            /* Allows mobile site navigation menus to step onto additional rows safely */
+  }
+  
+  .logo-img {
+    height: 40px;                                               /* Cuts logo dimensions in half to accommodate small viewport frames */
+  }
+
+  .header-image {
+    height: 180px;                                              /* Reduces large desktop graphic banners down to mobile height boundaries */
+  }
+
+  .column-container {
+    flex-direction: column;                                     /* Sets feature sections to stack up sequentially over mobile screens */
+    gap: 20px;                                                  /* Softens interstitial gaps between blocks to 20px limits */
+  }
+  .column-box {
+    flex: 1;                                                    /* Commands cards to extend wide across total screen spaces uniformly */
+  }
+
+  .dropdown-content {
+    right: auto;                                                /* Deletes rightward constraint boundaries out from mobile structures */
+    left: 0;                                                    /* Anchors popover dropdown items along absolute left framework walls */
+    position: static;                                           /* Flattens drop layers directly back inside core structural elements */
+    width: 100%;                                                /* Spreads choice items over full widths of host parent links */
+    box-shadow: none;                                           /* Erases shadows to streamline mobile responsive design hierarchies */
+    border-radius: 0;                                           /* Sharpens drop box perimeter contours to match responsive lists */
+  }
+}

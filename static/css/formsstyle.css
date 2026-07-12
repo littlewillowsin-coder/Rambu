@@ -1,0 +1,121 @@
+/* formsstyle.css - Standard Form Layout Styles */
+/* Note: Root body tags removed to protect global configuration layout */
+
+.form-container {
+    max-width: 600px;                                           /* Caps structural input sheets up to an optimal 600px readable desktop width */
+    margin: 30px auto;                                          /* Centers inputs horizontally while dropping them 30px from top headers */
+    background: #ffffff;                                        /* Cards form structures inside clean white background plates */
+    border: 1px solid #cbd5e0;                                  /* Frames input cards inside thin gray borders to cleanly bound lines */
+    border-radius: 8px;                                         /* Curves form field parameters elegantly with an 8px corner bevel */
+    padding: 25px;                                              /* Sets internal padding borders to give input controls breathing space */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);                  /* Drops a soft elevation glow behind the white card backdrop */
+}
+
+.form-title {
+    font-size: 1.4rem;                                          /* Emphasizes sheet headings using prominent font sizing parameters */
+    font-weight: bold;                                          /* Flags heading labels thick to identify page purposes instantly */
+    color: #2d3748;                                             /* Paints form headers inside deep charcoal gray colors */
+    margin-bottom: 20px;                                        /* Pushes lower input elements 20px down away from title segments */
+    border-bottom: 2px solid #edf2f7;                           /* Draws separating lines beneath text elements to divide input headers */
+    padding-bottom: 10px;                                       /* Generates internal clearance splits directly above boundary rules */
+}
+
+.form-group {
+    margin-bottom: 18px;                                        /* Keeps successive input modules spaced apart by 18px limits */
+}
+
+.form-group label {
+    display: block;                                             /* Commands form descriptive labels to claim their own distinct text row */
+    font-weight: 600;                                           /* Set text weights slightly heavy to cleanly contrast basic input fonts */
+    margin-bottom: 8px;                                         /* Separates text labels away from control inputs underneath them */
+    color: #4a5568;                                             /* Uses modern slate-gray values for secondary form text */
+    font-size: 0.9rem;                                          /* Scales descriptive text slightly down to secure visual harmony scales */
+}
+
+.form-control {
+    width: 100%;                                                /* Stretches fields wide to exhaust full horizontal capsule sizes */
+    padding: 10px;                                              /* Buffers entry text fields away from baseline container frames */
+    border: 1px solid #cbd5e0;                                  /* Traces field wrappers using muted, light gray tracking lines */
+    border-radius: 4px;                                         /* Softly shapes perimeter inputs using subtle 4px corner angles */
+    font-size: 0.95rem;                                         /* Synchronizes data input text matching natural reading size scopes */
+    box-sizing: border-box;                                     /* Controls full field sizes securely despite complex padding additions */
+    transition: border-color 0.2s;                              /* Smooths out visual edge color variations over a 0.2s duration */
+}
+
+.form-control:focus {
+    outline: none;                                              /* Extinguishes generic browser halo rings around chosen inputs */
+    border-color: #1f8f3a;                                      /* Paints input lines green to call out focus zones clearly */
+    box-shadow: 0 0 0 3px rgba(31, 143, 58, 0.2);               /* Emits soft green glowing field halos outside focused control inputs */
+}
+
+textarea.form-control {
+    resize: vertical;                                           /* Directs long-form input areas to strictly adapt heights vertically */
+    height: 100px;                                              /* Anchors opening message windows down to standard 100px base heights */
+}
+
+.checkbox-group {
+    display: grid;                                              /* Organizes inner binary option fields inside rapid CSS Grid patterns */
+    grid-template-columns: 1fr 1fr;                             /* Generates a balanced 2-column layout mapping selectors side-by-side */
+    gap: 10px;                                                  /* Spaces checkboxes apart uniformly inside option rows */
+    background: #f8fafc;                                        /* Injects a very light clean background wash behind checkbox fields */
+    padding: 12px;                                              /* Cushions selection bounds inside structural panel frames */
+    border-radius: 4px;                                         /* Softly matches checkbox sub-panels with primary input control shapes */
+    border: 1px solid #e2e8f0;                                  /* Sets very subtle framing outlines around checkbox selector groupings */
+}
+
+.checkbox-label {
+    display: flex;                                              /* Commands input boxes and text items to line up via Flexbox rules */
+    align-items: center;                                        /* Focuses text labels and checkboxes down parallel center lines */
+    font-weight: normal;                                        /* Removes heavy font styling weights out from long selector lists */
+    font-size: 0.85rem;                                         /* Tweaks option label structures down to clean secondary size profiles */
+    cursor: pointer;                                            /* Swaps systems over to hand pointers when mice cross input lines */
+}
+
+.checkbox-label input {
+    margin-right: 8px;                                          /* Places breathing gaps between checkboxes and text notes */
+    accent-color: #1f8f3a;                                      /* Injects matching brand green directly into native browser controls */
+}
+
+.form-actions {
+    display: flex;                                              /* Arranges cancellation and execution buttons horizontally in a row */
+    justify-content: flex-end;                                  /* Pulls critical form execution nodes rightward to align naturally */
+    gap: 12px;                                                  /* Leaves a clear 12px separation boundary directly between action triggers */
+    margin-top: 25px;                                           /* Spares lower elements away from basic input groups above them */
+    border-top: 1px solid #edf2f7;                              /* Generates fine line markers above terminal button zones */
+    padding-top: 15px;                                          /* Pins interior action spaces safely lower than separating lines */
+}
+
+/* Standardized Form Submit Button Styles */
+.btn-submit {
+    background-color: #def7ec;                                  /* Paints confirmation buttons using soft light green background tones */
+    color: #03543f;                                             /* Contrasts execution copy fields inside strong dark emerald fonts */
+    border: 1px solid #1f8f3a;                                  /* Anchors button structures firmly with primary brand green profiles */
+    padding: 10px 20px;                                         /* Maps thick click targets around execution typography scales */
+    border-radius: 4px;                                         /* Matches primary button forms to general input design parameters */
+    font-weight: 600;                                           /* Thickens typography layers to present actionable intents prominently */
+    cursor: pointer;                                            /* Activates user selection pointer states over interactive buttons */
+    font-size: 14px;                                            /* Establishes standardized button sizes matching system parameters */
+    transition: all 0.2s;                                       /* Enforces fluid animations across all state transition shifts */
+}
+
+.btn-submit:hover {
+    background-color: #1f8f3a;                                  /* Floods confirmation elements in brand green during cursor hovers */
+    color: #ffffff;                                             /* Transforms text clean white to preserve button visibility balances */
+}
+
+/* Gray Cancel Button Styles */
+.btn-cancel {
+    background-color: #eef2f6;                                  /* Fills exit buttons with neutral soft slate-gray fills */
+    color: #4a5568;                                             /* Drops action text color weight safely down to passive gray values */
+    border: 1px solid #cbd5e0;                                  /* Frames layout boundaries using standard structural color tones */
+    padding: 10px 20px;                                         /* Ensures structural cancel triggers share matching button sizes */
+    border-radius: 4px;                                         /* Maintains equal bevel shapes across all local button choices */
+    font-weight: 600;                                           /* Sets bold weights to keep cancel buttons readable against backgrounds */
+    cursor: pointer;                                            /* Summons mouse hand pointers over exit buttons natively */
+    font-size: 14px;                                            /* Holds button typography rules perfectly balanced at 14px dimensions */
+    transition: all 0.2s;                                       /* Synchronizes cancel button animations with submission transitions */
+}
+
+.btn-cancel:hover {
+    background-color: #cbd5e0;                                  /* Darkens gray backgrounds subtly during exit button mouse overs */
+}
