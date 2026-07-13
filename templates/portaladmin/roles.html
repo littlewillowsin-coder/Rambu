@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Roles Listing</title>
+    <title>Role management</title>
 </head>
 <body>
 <!-- ============================================= -->
 <div id="header-placeholder"></div>
 <!-- ============================================= --
 
-<!-- Central Operational Workspace -->
-<main class="main-container">
-<h2 style="color: var(--brand-green); margin: 30px 0 15px 0; border-bottom: 2px solid #ddd; padding-bottom: 5px;">Roles</h2>
-
-<!-- table views-->
 
 <div class="table-container">
     <h2>Admin Roles Listing</h2>
@@ -25,67 +20,80 @@
                 <th>Role ID</th>
                 <th>Role Name</th>
                 <th>Description</th>
+                <th style="text-align: center;">Show</th>
                 <th style="text-align: center;">Actions</th>
             </tr>
         </thead>
         <tbody>
+            <!-- Row 1: Super Admin -->
             <tr>
                 <td>99</td>
                 <td>Super Admin</td>
                 <td>Super Admin for Portal management</td>
+                <td style="text-align: center;"><span class="status-active">Yes</span></td>
                 <td style="white-space: nowrap; text-align: center;">
                     <a href="roles/edit_role.html" class="btn-action btn-view">Edit</a>
                     <a href="roles/showhide_role.html" class="btn-action btn-update">Hide/Show</a>
                     <a href="#" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
+            <!-- Row 2: Farmer -->
             <tr>
                 <td>1</td>
                 <td>Farmer</td>
                 <td>Grower of Rambutan plantation</td>
+                <td style="text-align: center;"><span class="status-active">Yes</span></td>
                 <td style="white-space: nowrap; text-align: center;">
-                    <a href="#" class="btn-action btn-view">Edit</a>
-                    <a href="#" class="btn-action btn-update">Hide/Show</a>
+                    <a href="roles/edit_role.html" class="btn-action btn-view">Edit</a>
+                    <a href="roles/showhide_role.html" class="btn-action btn-update">Hide/Show</a>
                     <a href="#" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
+            <!-- Row 3: Buyer -->
             <tr>
                 <td>2</td>
                 <td>Buyer</td>
                 <td>Purchaser of Rambutan fruits</td>
+                <td style="text-align: center;"><span class="status-active">Yes</span></td>
                 <td style="white-space: nowrap; text-align: center;">
-                    <a href="#" class="btn-action btn-view">Edit</a>
-                    <a href="#" class="btn-action btn-update">Hide/Show</a>
+                    <a href="roles/edit_role.html" class="btn-action btn-view">Edit</a>
+                    <a href="roles/showhide_role.html" class="btn-action btn-update">Hide/Show</a>
                     <a href="#" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
+            <!-- Row 4: Nursery -->
             <tr>
                 <td>3</td>
                 <td>Nursery</td>
                 <td>Provides Saplings and advisry services</td>
+                <td style="text-align: center;"><span class="status-active">Yes</span></td>
                 <td style="white-space: nowrap; text-align: center;">
-                    <a href="#" class="btn-action btn-view">Edit</a>
-                    <a href="#" class="btn-action btn-update">Hide/Show</a>
+                    <a href="roles/edit_role.html" class="btn-action btn-view">Edit</a>
+                    <a href="roles/showhide_role.html" class="btn-action btn-update">Hide/Show</a>
                     <a href="#" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
+            <!-- Row 5: Supplier -->
             <tr>
                 <td>4</td>
                 <td>Supplier</td>
                 <td>Store owners stocking NEts, Shears other accessories</td>
+                <td style="text-align: center;"><span class="status-active">Yes</span></td>
                 <td style="white-space: nowrap; text-align: center;">
-                    <a href="#" class="btn-action btn-view">Edit</a>
-                    <a href="#" class="btn-action btn-update">Hide/Show</a>
+                    <a href="roles/edit_role.html" class="btn-action btn-view">Edit</a>
+                    <a href="roles/showhide_role.html" class="btn-action btn-update">Hide/Show</a>
                     <a href="#" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
+            <!-- Row 6: Informer -->
             <tr>
                 <td>5</td>
                 <td>Informer</td>
                 <td>Informer updates Rambutan prices from Various markets</td>
+                <td style="text-align: center;"><span class="status-active">Yes</span></td>
                 <td style="white-space: nowrap; text-align: center;">
-                    <a href="#" class="btn-action btn-view">Edit</a>
-                    <a href="#" class="btn-action btn-update">Hide/Show</a>
+                    <a href="roles/edit_role.html" class="btn-action btn-view">Edit</a>
+                    <a href="roles/showhide_role.html" class="btn-action btn-update">Hide/Show</a>
                     <a href="#" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
@@ -94,16 +102,11 @@
     
     <!-- Add New Role Button -->
     <div style="margin-top: 20px; text-align: right;">
-        <a href="add_role" class="btn btn-green">+ Add New Role</a>
+        <a href="roles/add_role.html" class="btn btn-green">+ Add New Role</a>
     </div>
 </div>
 
- 
 
-
-
-</main>
- 
 <!-- ============================================= -->
     
  <div id="footer-placeholder"></div>   
