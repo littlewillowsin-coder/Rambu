@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varieties Management</title>
+ 
+</head>
+<body>
+
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->
+        </nav>
+        <div style="text-align: right; color: #222; font-size: 13px;">
+            Admin Panel
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <div class="header-image"></div>
+
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Varieties Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="varieties/add.html" class="btn-action btn-buy">+ Add New Variety</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Variety Name</th>
+                    <th>Origin</th>
+                    <th>Description</th>
+                    <th>Shelf Life</th>
+                    <th>Color</th>
+                    <th>Sweetness</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1. R134 (Active) -->
+                <tr>
+                    <td>1</td>
+                    <td>R134</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Large fruit, thick flesh, easy to peel. Very popular commercial variety.</td>
+                    <td>5</td>
+                    <td>Deep Red</td>
+                    <td>Very High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=1" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=1" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 2. Rongrien (Active) -->
+                <tr>
+                    <td>2</td>
+                    <td>Rongrien</td>
+                    <td>Thailand</td>
+                    <td class="text-truncate">Medium-sized, juicy flesh with a sweet and slightly tangy flavor.</td>
+                    <td>4</td>
+                    <td>Bright Red</td>
+                    <td>High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=2" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=2" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 3. R156 (Active) -->
+                <tr>
+                    <td>3</td>
+                    <td>R156</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Firm texture, rich flavor, excellent for long-distance transport.</td>
+                    <td>5</td>
+                    <td>Dark Red</td>
+                    <td>High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=3" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=3" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 4. R162 (Inactive) -->
+                <tr>
+                    <td>4</td>
+                    <td>R162</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Smaller fruit but very sweet. Flesh separates easily from the seed.</td>
+                    <td>6</td>
+                    <td>Red</td>
+                    <td>Medium-High</td>
+                    <td><span class="status-inactive">Inactive</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=4" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=4" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 4); return false;">Show</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 5. R167 (Active) -->
+                <tr>
+                    <td>5</td>
+                    <td>R167</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Distinct yellowish-red skin, exceptionally sweet and aromatic.</td>
+                    <td>5</td>
+                    <td>Yellow-Red</td>
+                    <td>Very High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=5" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=5" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 6. Chom Rong (Active) -->
+                <tr>
+                    <td>6</td>
+                    <td>Chom Rong</td>
+                    <td>Thailand</td>
+                    <td class="text-truncate">Premium Thai variety, known for its crisp texture and balanced sweetness.</td>
+                    <td>4</td>
+                    <td>Deep Red</td>
+                    <td>High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=6" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=6" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 7. R170 (Active) -->
+                <tr>
+                    <td>7</td>
+                    <td>R170</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Late-season variety, good shelf life, mild and pleasant flavor.</td>
+                    <td>6</td>
+                    <td>Orange-Red</td>
+                    <td>Medium</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=7" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=7" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 8. Siman (Active) -->
+                <tr>
+                    <td>8</td>
+                    <td>Siman</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Highly sought after for its intense sweetness and juicy flesh.</td>
+                    <td>5</td>
+                    <td>Bright Red</td>
+                    <td>Very High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=8" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=8" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 8); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 9. R130 (Active) -->
+                <tr>
+                    <td>9</td>
+                    <td>R130</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Early-season variety, good yield, standard commercial flavor profile.</td>
+                    <td>4</td>
+                    <td>Deep Red</td>
+                    <td>High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=9" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=9" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 9); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 10. Nibong (Active) -->
+                <tr>
+                    <td>10</td>
+                    <td>Nibong</td>
+                    <td>Malaysia</td>
+                    <td class="text-truncate">Wilder variety, smaller fruit size, strong traditional rambutan taste.</td>
+                    <td>5</td>
+                    <td>Dark Red</td>
+                    <td>Medium-High</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="varieties/view.html?id=10" class="btn-action btn-view">View</a>
+                        <a href="varieties/edit.html?id=10" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 10); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 10 of 10 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let message = `Are you sure you want to ${action.toLowerCase()} variety ID ${id}?`;
+            if (action === 'Delete') {
+                message = `WARNING: Are you sure you want to DELETE variety ID ${id}? This cannot be undone.`;
+            }
+            
+            if (confirm(message)) {
+                // Simulate backend success for the HTML prototype
+                alert(`Success! Variety ${id} has been ${action.toLowerCase()}d.\n\n(When connected to Python, this will send a request to your MySQL database).`);
+                // window.location.reload(); // Uncomment this line when your Python backend is ready to refresh the data
+            }
+        }
+    </script>
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+</body>
+</html>
