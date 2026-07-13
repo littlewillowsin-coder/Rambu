@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Variety</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->
+ 
+    <div class="form-container">
+        <div class="form-title">View Variety Details</div>
+        <form>
+            <div class="form-group">
+                <label>Variety ID</label>
+                <input type="text" class="form-control" value="1" readonly>
+            </div>
+            <div class="form-group">
+                <label>Variety Name</label>
+                <input type="text" class="form-control" value="R134" readonly>
+            </div>
+            <div class="form-group">
+                <label>Origin</label>
+                <input type="text" class="form-control" value="Malaysia" readonly>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" readonly>Large fruit, thick flesh, easy to peel. Very popular commercial variety.</textarea>
+            </div>
+            <div class="form-group">
+                <label>Typical Shelf Life (Days)</label>
+                <input type="text" class="form-control" value="5" readonly>
+            </div>
+            <div class="form-group">
+                <label>Color</label>
+                <input type="text" class="form-control" value="Deep Red" readonly>
+            </div>
+            <div class="form-group">
+                <label>Sweetness Level</label>
+                <input type="text" class="form-control" value="Very High" readonly>
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <input type="text" class="form-control" value="Active" readonly>
+            </div>
+            
+            <div class="form-actions">
+                <a href="../varieties.html" class="btn-cancel">Back to List</a>
+            </div>
+        </form>
+    </div>
+
+  <!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+</body>
+</html>
