@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role management</title>
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --
+
+ <!-- Hide / Show Role Form -->
+<div class="form-container">
+    <h2 class="form-title">Manage Role Visibility</h2>
+    
+    <form action="#" method="POST">
+        <!-- Hidden Role ID -->
+        <input type="hidden" name="role_id" value="1">
+        
+        <!-- Role Name (Read-Only Display) -->
+        <div class="form-group">
+            <label>Role Name</label>
+            <p style="margin: 0; font-size: 1rem; color: #2d3748; font-weight: 500;">Farmer</p>
+        </div>
+        
+        <!-- Current Status Display -->
+        <div class="form-group">
+            <label>Current Status</label>
+            <div>
+                <!-- Backend should toggle between 'status-active' and 'status-inactive' classes -->
+                <span class="status-active">Active (Visible)</span>
+            </div>
+        </div>
+        
+        <!-- New Status Selection -->
+        <div class="form-group">
+            <label>Change Visibility</label>
+            <div class="checkbox-group" style="grid-template-columns: 1fr;">
+                <label class="checkbox-label">
+                    <input type="radio" name="role_status" value="active" checked>
+                    <span>Active (Visible to users)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="radio" name="role_status" value="hidden">
+                    <span>Hidden (Temporarily disabled)</span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Form Action Buttons -->
+        <div class="form-actions">
+            <a href="admin_roles.html" class="btn-cancel">Cancel</a>
+            <button type="submit" class="btn-submit">Update Status</button>
+        </div>
+    </form>
+</div>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+</body>
+</html>
+
+
+
+</body>
+</html>
