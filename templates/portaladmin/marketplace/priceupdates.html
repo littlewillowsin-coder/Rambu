@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Updates Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
 
+ <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->  
+
+
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Price Updates Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="priceupdates/add.html" class="btn-action btn-buy">+ Add New Price Record</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Market</th>
+                    <th>Variety</th>
+                    <th>Low Price</th>
+                    <th>High Price</th>
+                    <th>Recorded Date</th>
+                    <th>Source</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td><td>1 - Thodupuzha Market</td><td>1 - R134</td><td>170</td><td>200</td><td>2026-07-10</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=1" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=1" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td><td>2 - Kothamangalam Market</td><td>2 - Rongrien</td><td>150</td><td>180</td><td>2026-07-10</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=2" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=2" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td><td>3 - Muvattupuzha Market</td><td>3 - R156</td><td>140</td><td>165</td><td>2026-07-10</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=3" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=3" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td><td>4 - Pala Market Yard</td><td>4 - R162</td><td>130</td><td>155</td><td>2026-07-11</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=4" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=4" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td><td>5 - Vazhakkulam Market</td><td>5 - R167</td><td>200</td><td>240</td><td>2026-07-11</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=5" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=5" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td><td>6 - Karshaka Open Market, Thodupuzha</td><td>6 - Chom Rong</td><td>180</td><td>210</td><td>2026-07-11</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=6" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=6" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td><td>7 - Vengalloor Market</td><td>7 - R170</td><td>120</td><td>145</td><td>2026-07-11</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=7" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=7" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td><td>1 - Thodupuzha Market</td><td>1 - Siman</td><td>220</td><td>260</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=8" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=8" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td><td>2 - Kothamangalam Market</td><td>2 - R130</td><td>140</td><td>170</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=9" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=9" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td><td>3 - Muvattupuzha Market</td><td>3 - Nibong</td><td>125</td><td>150</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=10" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=10" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td><td>4 - Pala Market Yard</td><td>4 - R134</td><td>175</td><td>205</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=11" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=11" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 11); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td><td>5 - Vazhakkulam Market</td><td>5 - Rongrien</td><td>155</td><td>185</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=12" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=12" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 12); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td><td>6 - Karshaka Open Market, Thodupuzha</td><td>6 - R167</td><td>210</td><td>245</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=13" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=13" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 13); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td><td>7 - Vengalloor Market</td><td>7 - R156</td><td>145</td><td>170</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=14" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=14" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td><td>1 - Thodupuzha Market</td><td>1 - Chom Rong</td><td>185</td><td>215</td><td>2026-07-12</td><td>informer@rambuportal</td>
+                    <td>
+                        <a href="priceupdates/view.html?id=15" class="btn-action btn-view">View</a>
+                        <a href="priceupdates/edit.html?id=15" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 15 of 15 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            if (action === 'Delete') {
+                if (confirm(`WARNING: Are you sure you want to DELETE price record ID ${id}? This cannot be undone.`)) {
+                    alert(`Success! Price record ${id} has been deleted.\n(Python backend will handle the MySQL DELETE query here).`);
+                }
+            }
+        }
+    </script>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+</body>
+</html>
