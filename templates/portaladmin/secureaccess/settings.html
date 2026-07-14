@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Profile Update</title>
+    <!-- Linking to your uniform form stylesheet -->
+    <link rel="stylesheet" href="formsstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= --> 
+
+
+<div class="form-container">
+    <div class="form-title">Contact & Profile Settings</div>
+    
+    <form action="#" method="POST">
+        <!-- Section Note -->
+        <div class="form-group">
+            <p style="font-size: 0.85rem; color: #718096; margin-bottom: 15px;">
+                Update your primary contact information. These details are used for order notifications, shipping updates, and identity verification within the network.
+            </p>
+        </div>
+
+        <!-- Field 1: Email Address -->
+        <div class="form-group">
+            <label for="profile_email">Primary Email Address</label>
+            <input type="email" id="profile_email" name="profile_email" class="form-control" value="deepak.menon@email.com" placeholder="e.g., name@example.com" required>
+        </div>
+
+        <!-- Field 2: Phone Number -->
+        <div class="form-group">
+            <label for="profile_phone">Contact Phone Number</label>
+            <input type="tel" id="profile_phone" name="profile_phone" class="form-control" value="+91 98450 12345" placeholder="e.g., +91 XXXXX XXXXX" required>
+        </div>
+
+        <!-- Optional Security Notification Parameters -->
+        <div class="form-group">
+            <label>Communication Preferences</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="notify_email" value="yes" checked> SMS Order Dispatches
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="notify_sms" value="yes" checked> Email Invoice Records
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="market_alerts" value="yes"> Weekly Market Index Alerts
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="security_alerts" value="yes" checked> Security Login Alerts
+                </label>
+            </div>
+        </div>
+
+        <!-- Submission Actions Section -->
+        <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="window.history.back();">Cancel</button>
+            <button type="submit" class="btn-submit">Save Settings</button>
+        </div>
+    </form>
+</div>
+
+<!-- ============================================= -->
+
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+</body>
+</html>
+
+
+</body>
+</html>
