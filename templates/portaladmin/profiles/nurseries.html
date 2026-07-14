@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyers Management</title>
+    <title>Nurseries Management</title>
     <link rel="stylesheet" href="ostyle.css">
     <link rel="stylesheet" href="tblstyle.css">
 </head>
@@ -11,10 +11,13 @@
 <!-- ============================================= -->
 <div id="header-placeholder"></div>
 <!-- ============================================= -->    
+    <!-- Main Table Content -->
     <div class="table-container" style="padding: 20px;">
-        <h2>Buyers Management</h2>
+        <h2>Nurseries Management</h2>
+        
+        <!-- Add New Button -->
         <div style="margin-bottom: 15px; text-align: right;">
-            <a href="buyers/add.html" class="btn-action btn-buy">+ Add New Buyer</a>
+            <a href="nurseries/add.html" class="btn-action btn-buy">+ Add New Nursery</a>
         </div>
 
         <table class="user-table">
@@ -31,111 +34,208 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- 14. Mary Thomas (Active) -->
                 <tr>
                     <td>14</td><td>Mary Thomas</td><td>Thodupuzha</td><td>919846111111</td><td>5 yrs</td>
                     <td class="text-truncate">Wholesale fruit buyer for supermarkets.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=14" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=14" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=14" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=14" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 15. Susan Joseph (Active) -->
                 <tr>
                     <td>15</td><td>Susan Joseph</td><td>Kakkanad</td><td>919846222222</td><td>8 yrs</td>
                     <td class="text-truncate">Sourcing premium quality grades for organic retail chains.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=15" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=15" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 15); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=15" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=15" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 15); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 16. Deepak Nair (Active) -->
                 <tr>
                     <td>16</td><td>Deepak Nair</td><td>Thiruvananthapuram</td><td>919846333333</td><td>12 yrs</td>
                     <td class="text-truncate">Bulk procurer for processing units and juice factories.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=16" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=16" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 16); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 16); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=16" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=16" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 16); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 16); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 17. Arun Kumar (Inactive) -->
                 <tr>
                     <td>17</td><td>Arun Kumar</td><td>Kottayam</td><td>919846444444</td><td>4 yrs</td>
                     <td class="text-truncate">Independent distributor supplying local municipal markets.</td>
                     <td><span class="status-inactive">Inactive</span></td>
-                    <td><a href="buyers/view.html?id=17" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=17" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 17); return false;">Show</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 17); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=17" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=17" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 17); return false;">Show</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 17); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 18. Kavitha Ramachandran (Active) -->
                 <tr>
                     <td>18</td><td>Kavitha Ramachandran</td><td>Palakkad</td><td>919846555555</td><td>6 yrs</td>
                     <td class="text-truncate">Category manager for regional cooperative supermarkets.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=18" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=18" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 18); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 18); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=18" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=18" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 18); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 18); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 19. Nisha Kurian (Active) -->
                 <tr>
                     <td>19</td><td>Nisha Kurian</td><td>Kanjirappally</td><td>919846666666</td><td>9 yrs</td>
                     <td class="text-truncate">Direct farm-to-retail buyer focusing on fresh daily arrivals.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=19" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=19" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 19); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 19); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=19" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=19" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 19); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 19); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 20. George Mathew (Active) -->
                 <tr>
                     <td>20</td><td>George Mathew</td><td>Meenangadi</td><td>919846777777</td><td>15 yrs</td>
                     <td class="text-truncate">Wholesale exporter handling interstate logistics and cold chains.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=20" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=20" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 20); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 20); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=20" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=20" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 20); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 20); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 21. Paul Varghese (Active) -->
                 <tr>
                     <td>21</td><td>Paul Varghese</td><td>Sultan Bathery</td><td>919846888888</td><td>11 yrs</td>
                     <td class="text-truncate">Bulk buyer specializing in high-grade highland varieties.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=21" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=21" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 21); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 21); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=21" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=21" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 21); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 21); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 22. Riya Elizabeth (Active) -->
                 <tr>
                     <td>22</td><td>Riya Elizabeth</td><td>Aluva</td><td>919846999999</td><td>3 yrs</td>
                     <td class="text-truncate">Purchasing agent for gourmet food boutiques and bakeries.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=22" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=22" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 22); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 22); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=22" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=22" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 22); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 22); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 23. Ansar Mohammad (Active) -->
                 <tr>
                     <td>23</td><td>Ansar Mohammad</td><td>Ernakulam</td><td>919846000011</td><td>14 yrs</td>
                     <td class="text-truncate">Major merchant at the central wholesale market pool.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=23" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=23" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 23); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 23); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=23" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=23" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 23); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 23); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 24. Vinod Krishnan (Active) -->
                 <tr>
                     <td>24</td><td>Vinod Krishnan</td><td>Kozhikode</td><td>919846000022</td><td>7 yrs</td>
                     <td class="text-truncate">Fruit distributor catering to hotel chains and catering services.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=24" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=24" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 24); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 24); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=24" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=24" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 24); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 24); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 25. Shafik Rahman (Active) -->
                 <tr>
                     <td>25</td><td>Shafik Rahman</td><td>Thrissur</td><td>919846000033</td><td>10 yrs</td>
                     <td class="text-truncate">Processing unit buyer seeking secondary grades for pulping.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=25" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=25" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 25); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 25); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=25" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=25" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 25); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 25); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 26. Meera Pillai (Active) -->
                 <tr>
                     <td>26</td><td>Meera Pillai</td><td>Kollam</td><td>919846000044</td><td>5 yrs</td>
                     <td class="text-truncate">Sourcing fresh produce for local merchant associations.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=26" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=26" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 26); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 26); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=26" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=26" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 26); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 26); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 27. Tony Sebastian (Active) -->
                 <tr>
                     <td>27</td><td>Tony Sebastian</td><td>Changanassery</td><td>919846000055</td><td>16 yrs</td>
                     <td class="text-truncate">Long-time wholesale partner for domestic grocery networks.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=27" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=27" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 27); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 27); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=27" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=27" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 27); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 27); return false;">Delete</a>
+                    </td>
                 </tr>
+                <!-- 28. Suresh Prabhu (Active) -->
                 <tr>
                     <td>28</td><td>Suresh Prabhu</td><td>Marthandam</td><td>919846000066</td><td>20 yrs</td>
                     <td class="text-truncate">Heavy volume cross-border trader supplying Tamil Nadu markets.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td><a href="buyers/view.html?id=28" class="btn-action btn-view">View</a> <a href="buyers/edit.html?id=28" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 28); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 28); return false;">Delete</a></td>
+                    <td>
+                        <a href="nurseries/view.html?id=28" class="btn-action btn-view">View</a>
+                        <a href="nurseries/edit.html?id=28" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 28); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 28); return false;">Delete</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
+
+        <!-- Pagination -->
         <div class="pagination-container">
             <span>Showing 1 to 15 of 15 entries</span>
-            <div class="pagination-buttons"><a href="#" class="active">1</a></div>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
         </div>
     </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
     <script>
         function handleAction(action, id) {
-            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE buyer profile ID ${id}?` : `Are you sure you want to ${action.toLowerCase()} buyer profile ID ${id}?`;
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE nursery profile ID ${id}?` : `Are you sure you want to ${action.toLowerCase()} nursery profile ID ${id}?`;
             if (confirm(msg)) {
-                alert(`Success! Buyer profile ${id} has been ${action.toLowerCase()}d.\n(Python backend will handle the MySQL update here).`);
+                alert(`Success! Nursery profile ${id} has been ${action.toLowerCase()}d.\n(Python backend will handle the MySQL update here).`);
             }
         }
     </script>
+
 <!-- ============================================= -->
     
  <div id="footer-placeholder"></div>   
@@ -152,6 +252,7 @@
   </script>
     
 <!-- ============================================= -->
-
 </body>
 </html>
+                            
+ 
