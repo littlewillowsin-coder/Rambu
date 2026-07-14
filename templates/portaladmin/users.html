@@ -9,18 +9,20 @@
 <body>
 <!-- ============================================= -->
 <div id="header-placeholder"></div>
-<!-- ============================================= --
+<!-- ============================================= -->
 
 
 <section class="middle">
  
 <!-- ====Give appropriate heading below --->
-<h2 style="text-align: center; color: var(--brand-green); margin-bottom: 20px;">RambuConnect Platform  USERS</h2>
-
-
+<h2 style="text-align: center; color: var(--brand-green); margin-bottom: 20px;">RambuConnect Platform USERS</h2>
 
 <div class="table-container">
-    <h2>Registered Users</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h2 style="margin: 0;">Registered Users</h2>
+        <a href="users/add.html" class="btn-action btn-add" style="background-color: var(--brand-green, #28a745); color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-weight: bold;">+ Add New User</a>
+    </div>
+    
     <table class="user-table">
         <thead>
             <tr>
@@ -38,22 +40,6 @@
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
-                <td>admin_user</td>
-                <td class="text-truncate">$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC</td>
-                <td>admin@rambuportal.com</td>
-                <td>+919999999999</td>
-                <td>99</td>
-                <td><span class="status-active">Active</span></td>
-                <td>2026-01-01 9:00:00</td>
-                <td>2026-07-12 10:00:00</td>
-                <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
-                </td>
-            </tr>
-            <tr>
                 <td>2</td>
                 <td>price_informer</td>
                 <td class="text-truncate">$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC</td>
@@ -64,9 +50,10 @@
                 <td>2026-01-02 10:00:00</td>
                 <td>2026-07-12 11:30:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=2" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=2" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 2); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 2); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -80,9 +67,10 @@
                 <td>2026-02-05 14:20:00</td>
                 <td>2026-07-11 9:10:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=3" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=3" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 3); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 3); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -96,9 +84,10 @@
                 <td>2026-02-15 10:00:00</td>
                 <td>2026-07-12 7:55:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=4" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=4" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 4); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 4); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -112,9 +101,10 @@
                 <td>2026-03-01 8:00:00</td>
                 <td>2026-07-09 18:20:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=5" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=5" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 5); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 5); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -128,9 +118,10 @@
                 <td>2026-01-20 9:15:00</td>
                 <td>2026-07-12 8:45:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=17" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=17" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 17); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 17); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -144,9 +135,10 @@
                 <td>2026-02-12 16:30:00</td>
                 <td>2026-07-11 15:40:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=18" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=18" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 18); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 18); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -160,9 +152,10 @@
                 <td>2026-02-22 11:45:00</td>
                 <td>2026-07-10 14:15:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=19" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=19" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 19); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 19); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -176,9 +169,10 @@
                 <td>2026-03-02 10:20:00</td>
                 <td>2026-07-12 11:00:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=20" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=20" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 20); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 20); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -192,9 +186,10 @@
                 <td>2026-03-06 14:35:00</td>
                 <td>2026-07-08 16:50:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=21" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=21" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 21); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 21); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -208,9 +203,10 @@
                 <td>2026-02-01 11:00:00</td>
                 <td>2026-07-11 16:30:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=32" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=32" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 32); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 32); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -224,9 +220,10 @@
                 <td>2026-02-18 13:15:00</td>
                 <td>2026-07-10 10:30:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=33" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=33" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 33); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 33); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -240,9 +237,10 @@
                 <td>2026-03-03 9:40:00</td>
                 <td>2026-07-12 8:50:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=34" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=34" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 34); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 34); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -256,9 +254,10 @@
                 <td>2024-02-10 8:45:00</td>
                 <td>2026-07-11 11:20:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=47" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=47" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 47); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 47); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
             <tr>
@@ -272,9 +271,27 @@
                 <td>2024-02-20 9:30:00</td>
                 <td>2026-07-10 14:15:00</td>
                 <td>
-                    <a href="#" class="btn-action btn-view">View</a>
-                    <a href="#" class="btn-action btn-update">Edit</a>
-                    <a href="#" class="btn-action btn-delete">Delete</a>
+                    <a href="users/view.html?id=48" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=48" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 48); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 48); return false;" class="btn-action btn-delete">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>49</td>
+                <td>vince_supplier</td>
+                <td class="text-truncate">$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC</td>
+                <td>vince@gmail.com</td>
+                <td>+919847000048</td>
+                <td>4</td>
+                <td><span class="status-active">Active</span></td>
+                <td>2026-03-04 11:00:00</td>
+                <td>2026-07-12 9:30:00</td>
+                <td>
+                    <a href="users/view.html?id=49" class="btn-action btn-view">View</a>
+                    <a href="users/edit.html?id=49" class="btn-action btn-update">Edit</a>
+                    <a href="#" onclick="handleAction('Hide', 49); return false;" class="btn-action btn-hide">Hide</a>
+                    <a href="#" onclick="handleAction('Delete', 49); return false;" class="btn-action btn-delete">Delete</a>
                 </td>
             </tr>
         </tbody>
@@ -290,8 +307,6 @@
     </div>
 </div>
 
-
- 
 <!-- ============================================= -->
     
  <div id="footer-placeholder"></div>   
@@ -305,7 +320,20 @@
     fetch('../components/footer.html')
       .then(response => response.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-  </script>
+
+    // Vanilla JavaScript for Prototype Flow
+    function handleAction(action, id) {
+        let message = `Are you sure you want to ${action.toLowerCase()} buyer profile ID ${id}?`;
+        if (action === 'Delete') {
+            message = `WARNING: Are you sure you want to DELETE buyer profile ID ${id}? This cannot be undone.`;
+        }
+        
+        if (confirm(message)) {
+            alert(`Success! Buyer profile ${id} has been ${action.toLowerCase()}d.\n\n(Your Python backend will handle the MySQL update here).`);
+            // window.location.reload(); // Uncomment when Python backend is ready
+        }
+    }
+</script>
     
 <!-- ============================================= -->
     
