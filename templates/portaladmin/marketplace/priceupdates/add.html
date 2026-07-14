@@ -12,8 +12,7 @@
 <div id="header-placeholder"></div>
 <!-- ============================================= -->   
 
-
-    <div class="form-container">
+   <div class="form-container">
         <div class="form-title">Add New Price Record</div>
         <form id="addForm" action="#" method="POST">
             
@@ -51,7 +50,8 @@
             <div class="form-group"><label for="price_low">Low Price (₹)</label><input type="number" id="price_low" name="price_low" class="form-control" placeholder="e.g., 150" required></div>
             <div class="form-group"><label for="price_high">High Price (₹)</label><input type="number" id="price_high" name="price_high" class="form-control" placeholder="e.g., 200" required></div>
             <div class="form-group"><label for="recorded_date">Recorded Date</label><input type="date" id="recorded_date" name="recorded_date" class="form-control" required></div>
-            <div class="form-group"><label for="source">Source</label><input type="text" id="source" name="source" class="form-control" placeholder="e.g., informer@rambuportal" required></div>
+            <div class="form-group"><label for="remarks">Remarks</label><textarea id="remarks" name="remarks" class="form-control" placeholder="e.g., Origin - Color - Sweetness Level" required></textarea></div>
+            <div class="form-group"><label for="grade">Grade</label><input type="text" id="grade" name="grade" class="form-control" placeholder="e.g., A" maxlength="2" required></div>
             
             <div class="form-actions">
                 <a href="../priceupdates.html" class="btn-cancel">Cancel</a>
@@ -66,7 +66,6 @@
             alert('New price record added successfully!\n(Python backend will execute the MySQL INSERT query here).');
             window.location.href = '../priceupdates.html';
         });
-     
     </script>
 <!-- ============================================= -->
     
