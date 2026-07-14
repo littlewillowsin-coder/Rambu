@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Rambutan Listing</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->   
+
+
+    <div class="form-container">
+        <div class="form-title">Add New Rambutan Listing</div>
+        <form id="addForm" action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="farmer_id">Farmer</label>
+                <select id="farmer_id" name="farmer_id" class="form-control" required>
+                    <option value="" disabled selected>-- Select Farmer --</option>
+                    <option value="4">4 - Ammu Sukumaran</option>
+                    <option value="5">5 - Bijoy Kurian</option>
+                    <option value="7">7 - Ani Varghese</option>
+                    <option value="10">10 - Saji Mathew</option>
+                    <option value="11">11 - Mathew George</option>
+                    <option value="12">12 - Reji Abraham</option>
+                    <option value="13">13 - Sunny Devasia</option>
+                    <option value="15">15 - Joseph Chacko</option>
+                    <option value="17">17 - Devassy Antony</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="farm_id">Farm ID</label>
+                <input type="number" id="farm_id" name="farm_id" class="form-control" placeholder="e.g., 4" required>
+            </div>
+
+            <div class="form-group">
+                <label for="variety_id">Variety</label>
+                <select id="variety_id" name="variety_id" class="form-control" required>
+                    <option value="" disabled selected>-- Select Variety --</option>
+                    <option value="1">1 - R134</option>
+                    <option value="2">2 - Rongrien</option>
+                    <option value="3">3 - R156</option>
+                    <option value="4">4 - R162</option>
+                    <option value="5">5 - R167</option>
+                    <option value="6">6 - Chom Rong</option>
+                    <option value="7">7 - R170</option>
+                    <option value="8">8 - Siman</option>
+                    <option value="9">9 - R130</option>
+                    <option value="10">10 - Nibong</option>
+                </select>
+            </div>
+
+            <div class="form-group"><label for="quality_grade">Quality Grade</label><input type="text" id="quality_grade" name="quality_grade" class="form-control" placeholder="e.g., A+, Premium, B+" required></div>
+            <div class="form-group"><label for="quantity_kg">Quantity (kg)</label><input type="number" id="quantity_kg" name="quantity_kg" class="form-control" placeholder="e.g., 5000" required></div>
+            <div class="form-group"><label for="price_per_kg">Price per kg (₹)</label><input type="number" step="0.01" id="price_per_kg" name="price_per_kg" class="form-control" placeholder="e.g., 85.50" required></div>
+            <div class="form-group"><label for="available_date">Available Date</label><input type="date" id="available_date" name="available_date" class="form-control" required></div>
+            
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control">
+                    <option value="Available" selected>Available</option>
+                    <option value="Sold">Sold</option>
+                    <option value="Expired">Expired</option>
+                </select>
+            </div>
+            
+            <div class="form-actions">
+                <a href="../rambutanforsale.html" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn-submit">Add Listing</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('addForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('New listing added successfully!\n(Python backend will execute the MySQL INSERT query here).');
+            window.location.href = '../rambutanforsale.html';
+        });
+    </script>
+
+  
+<!-- ============================================= -->
+
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+
+  
+</body>
+</html>
