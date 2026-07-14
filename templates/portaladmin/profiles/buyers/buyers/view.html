@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Buyer Profile</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
+
+  
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->  
+
+    <div class="form-container">
+        <div class="form-title">View Buyer Profile Details</div>
+        <form>
+            <div class="form-group">
+                <label>Profile ID</label>
+                <input type="text" class="form-control" value="14" readonly>
+            </div>
+            <div class="form-group">
+                <label>User ID</label>
+                <input type="text" class="form-control" value="18" readonly>
+            </div>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-control" value="Mary Thomas" readonly>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" class="form-control" value="45/2 Green Park" readonly>
+            </div>
+            <div class="form-group">
+                <label>Location Area</label>
+                <input type="text" class="form-control" value="Thodupuzha" readonly>
+            </div>
+            <div class="form-group">
+                <label>Pincode</label>
+                <input type="text" class="form-control" value="685584" readonly>
+            </div>
+            <div class="form-group">
+                <label>Alternate Phone</label>
+                <input type="text" class="form-control" value="919846111111" readonly>
+            </div>
+            <div class="form-group">
+                <label>Years of Experience</label>
+                <input type="text" class="form-control" value="5" readonly>
+            </div>
+            <div class="form-group">
+                <label>Preferred Language</label>
+                <input type="text" class="form-control" value="English" readonly>
+            </div>
+            <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <input type="text" class="form-control" value="Email" readonly>
+            </div>
+            <div class="form-group">
+                <label>Profile Picture URL</label>
+                <input type="text" class="form-control" value="https://example.com/p18.jpg" readonly>
+            </div>
+            <div class="form-group">
+                <label>Bio</label>
+                <textarea class="form-control" readonly>Wholesale fruit buyer for supermarkets.</textarea>
+            </div>
+            
+            <div class="form-actions">
+                <a href="../buyers.html" class="btn-cancel">Back to List</a>
+            </div>
+        </form>
+    </div>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->  
+</body>
+</html>
