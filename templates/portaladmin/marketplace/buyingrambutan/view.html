@@ -75,18 +75,23 @@
 </div>
 
 <!-- ============================================= -->
-<div id="footer-placeholder"></div>   
+
+    
+ <div id="footer-placeholder"></div>   
 <script>
-    // Load header and footer (Adjust '../' to '../../' if this is in a deeper subfolder)
+    // Load header
     fetch('../../../components/header_portaladmin.html') 
       .then(response => response.text())
       .then(data => document.getElementById('header-placeholder').innerHTML = data);
     
+    // Load footer
     fetch('../../../components/footer.html')
       .then(response => response.text())
       .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-</script>
+  </script>
+    
 <!-- ============================================= -->
+
 
 </body>
 </html>
