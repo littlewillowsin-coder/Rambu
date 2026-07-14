@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Sapling Listing</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
+   <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->   
 
+    <div class="form-container">
+        <div class="form-title">Add New Sapling Listing</div>
+        <form id="addForm" action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="nursery_id">Nursery</label>
+                <select id="nursery_id" name="nursery_id" class="form-control" required>
+                    <option value="" disabled selected>-- Select Nursery --</option>
+                    <option value="33">33 - Jose Thomas</option>
+                    <option value="34">34 - Lina M. Varghese</option>
+                    <option value="35">35 - Kurian Joseph</option>
+                    <option value="36">36 - Sara Abraham</option>
+                    <option value="37">37 - Babu Rajan</option>
+                    <option value="38">38 - Anand Krishna</option>
+                    <option value="39">39 - Helen Peter</option>
+                    <option value="40">40 - Manu Bhaskar</option>
+                    <option value="41">41 - Gopi Pillai</option>
+                    <option value="42">42 - Reba Mathew</option>
+                    <option value="43">43 - Sunny Sebastian</option>
+                    <option value="44">44 - Mini Cherian</option>
+                    <option value="45">45 - Shaji George</option>
+                    <option value="46">46 - Biju Kurup</option>
+                    <option value="47">47 - Alice D'Souza</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="variety_id">Variety</label>
+                <select id="variety_id" name="variety_id" class="form-control" required>
+                    <option value="" disabled selected>-- Select Variety --</option>
+                    <option value="1">1 - R134</option>
+                    <option value="2">2 - Rongrien</option>
+                    <option value="3">3 - R156</option>
+                    <option value="4">4 - R162</option>
+                    <option value="5">5 - R167</option>
+                    <option value="6">6 - Chom Rong</option>
+                    <option value="7">7 - R170</option>
+                    <option value="8">8 - Siman</option>
+                    <option value="9">9 - R130</option>
+                    <option value="10">10 - Nibong</option>
+                </select>
+            </div>
+
+            <div class="form-group"><label for="plant_age_months">Plant Age (Months)</label><input type="number" id="plant_age_months" name="plant_age_months" class="form-control" placeholder="e.g., 5" required></div>
+            <div class="form-group"><label for="plant_height_cm">Plant Height (cm)</label><input type="number" id="plant_height_cm" name="plant_height_cm" class="form-control" placeholder="e.g., 60" required></div>
+            <div class="form-group"><label for="price_per_unit">Price per Unit (₹)</label><input type="number" id="price_per_unit" name="price_per_unit" class="form-control" placeholder="e.g., 250" required></div>
+            <div class="form-group"><label for="quantity_available">Quantity Available</label><input type="number" id="quantity_available" name="quantity_available" class="form-control" placeholder="e.g., 500" required></div>
+            
+            <div class="form-group">
+                <label for="is_grafted">Is Grafted</label>
+                <select id="is_grafted" name="is_grafted" class="form-control" required>
+                    <option value="1" selected>Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group"><label for="disease_resistance_notes">Disease Resistance Notes</label><textarea id="disease_resistance_notes" name="disease_resistance_notes" class="form-control" placeholder="e.g., High resistance to root rot"></textarea></div>
+            
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control" required>
+                    <option value="Available" selected>Available</option>
+                    <option value="Sold Out">Sold Out</option>
+                </select>
+            </div>
+            
+            <div class="form-actions">
+                <a href="../saplingsforsale.html" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn-submit">Add Listing</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('addForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('New sapling listing added successfully!\n(Python backend will execute the MySQL INSERT query here).');
+            window.location.href = '../saplingsforsale.html';
+        });
+    </script>
+
+   <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+  
+</body>
+</html>
