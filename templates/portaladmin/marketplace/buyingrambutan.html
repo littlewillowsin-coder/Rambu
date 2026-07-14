@@ -594,19 +594,17 @@
       </div>
   </div>
 
-    // Vanilla JavaScript for Prototype Flow
-    function handleAction(action, id) {
-        let message = `Are you sure you want to ${action.toLowerCase()} buying rambutan request ID ${id}?`;
-        if (action === 'Delete') {
-            message = `WARNING: Are you sure you want to DELETE buying rambutan request ID ${id}? This cannot be undone.`;
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE listing ID ${id}?` : `Are you sure you want to ${action.toLowerCase()} listing ID ${id}?`;
+            if (confirm(msg)) {
+                alert(`Success! Listing ${id} has been ${action.toLowerCase()}d.\n(Python backend will handle the MySQL update here).`);
+            }
         }
-        
-        if (confirm(message)) {
-            alert(`Success! Buying rambutan request ${id} has been ${action.toLowerCase()}d.\n\n(Your Python backend will handle the MySQL update here).`);
-            // window.location.reload(); // Uncomment when Python backend is ready
-        }
-    }
-</script>
+    </script>
+
 
 <!-- ============================================= -->
 
