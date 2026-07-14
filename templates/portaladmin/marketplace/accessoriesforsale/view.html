@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Accessory</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
 
+   <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->  
+    
+    <div class="form-container">
+        <div class="form-title">View Accessory Details</div>
+        <form>
+            <div class="form-group"><label>Accessory ID</label><input type="text" class="form-control" value="1" readonly></div>
+            <div class="form-group"><label>Supplier</label><input type="text" class="form-control" value="48 - Rahul Eastland" readonly></div>
+            <div class="form-group"><label>Category</label><input type="text" class="form-control" value="Crop Protection" readonly></div>
+            <div class="form-group"><label>Item Name</label><input type="text" class="form-control" value="Nylon Bird Netting" readonly></div>
+            <div class="form-group"><label>Brand</label><input type="text" class="form-control" value="AgroShield" readonly></div>
+            <div class="form-group"><label>Description</label><textarea class="form-control" readonly>Anti-bird protective canopy nets</textarea></div>
+            <div class="form-group"><label>Price per Unit (₹)</label><input type="text" class="form-control" value="45" readonly></div>
+            <div class="form-group"><label>Quantity Available</label><input type="text" class="form-control" value="100" readonly></div>
+            <div class="form-group"><label>Unit of Measure</label><input type="text" class="form-control" value="Meter" readonly></div>
+            <div class="form-group"><label>Status</label><input type="text" class="form-control" value="Available" readonly></div>
+            <div class="form-actions"><a href="../accessoriesforsale.html" class="btn-cancel">Back to List</a></div>
+        </form>
+    </div>
+
+  <!-- ============================================= -->
+
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+  
+</body>
+</html>
