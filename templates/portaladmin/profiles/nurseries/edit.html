@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Buyer Profile</title>
+    <title>Edit Nursery Profile</title>
     <link rel="stylesheet" href="../ostyle.css">
     <link rel="stylesheet" href="../formsstyle.css">
 </head>
@@ -13,43 +13,18 @@
 <div id="header-placeholder"></div>
 <!-- ============================================= -->  
 
-    <div class="form-container">
-        <div class="form-title">Edit Buyer Profile</div>
+   <div class="form-container">
+        <div class="form-title">Edit Nursery Profile</div>
         <form id="editForm" action="#" method="POST">
             <input type="hidden" name="profile_id" value="14">
             
-            <div class="form-group">
-                <label for="user_id">User ID</label>
-                <input type="number" id="user_id" name="user_id" class="form-control" value="18" required>
-            </div>
-            <div class="form-group">
-                <label for="full_name">Full Name</label>
-                <input type="text" id="full_name" name="full_name" class="form-control" value="Mary Thomas" required>
-            </div>
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" class="form-control" value="45/2 Green Park" required>
-            </div>
-            <div class="form-group">
-                <label for="location_area">Location Area</label>
-                <input type="text" id="location_area" name="location_area" class="form-control" value="Thodupuzha" required>
-            </div>
-            <div class="form-group">
-                <label for="pincode">Pincode</label>
-                <input type="text" id="pincode" name="pincode" class="form-control" value="685584" required>
-            </div>
-            <div class="form-group">
-                <label for="alternate_phone">Alternate Phone</label>
-                <input type="text" id="alternate_phone" name="alternate_phone" class="form-control" value="919846111111" required>
-            </div>
-            <div class="form-group">
-                <label for="years_of_experience">Years of Experience</label>
-                <input type="number" id="years_of_experience" name="years_of_experience" class="form-control" value="5" required>
-            </div>
-            <div class="form-group">
-                <label for="preferred_language">Preferred Language</label>
-                <input type="text" id="preferred_language" name="preferred_language" class="form-control" value="English" required>
-            </div>
+            <div class="form-group"><label for="user_id">User ID</label><input type="number" id="user_id" name="user_id" class="form-control" value="18" required></div>
+            <div class="form-group"><label for="full_name">Full Name</label><input type="text" id="full_name" name="full_name" class="form-control" value="Mary Thomas" required></div>
+            <div class="form-group"><label for="address">Address</label><input type="text" id="address" name="address" class="form-control" value="45/2 Green Park" required></div>
+            <div class="form-group"><label for="location_area">Location Area</label><input type="text" id="location_area" name="location_area" class="form-control" value="Thodupuzha" required></div>
+            <div class="form-group"><label for="alternate_phone">Alternate Phone</label><input type="text" id="alternate_phone" name="alternate_phone" class="form-control" value="919846111111" required></div>
+            <div class="form-group"><label for="years_of_experience">Years of Experience</label><input type="number" id="years_of_experience" name="years_of_experience" class="form-control" value="5" required></div>
+            
             <div class="form-group">
                 <label for="preferred_contact_method">Preferred Contact Method</label>
                 <select id="preferred_contact_method" name="preferred_contact_method" class="form-control">
@@ -58,14 +33,10 @@
                     <option value="Email" selected>Email</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="profile_picture_url">Profile Picture URL</label>
-                <input type="url" id="profile_picture_url" name="profile_picture_url" class="form-control" value="https://example.com/p18.jpg">
-            </div>
-            <div class="form-group">
-                <label for="bio">Bio</label>
-                <textarea id="bio" name="bio" class="form-control" required>Wholesale fruit buyer for supermarkets.</textarea>
-            </div>
+            
+            <div class="form-group"><label for="profile_picture_url">Profile Picture URL</label><input type="url" id="profile_picture_url" name="profile_picture_url" class="form-control" value="https://example.com/p18.jpg"></div>
+            <div class="form-group"><label for="bio">Bio</label><textarea id="bio" name="bio" class="form-control" required>Wholesale fruit buyer for supermarkets.</textarea></div>
+            
             <div class="form-group">
                 <label for="show_status">Show Status</label>
                 <select id="show_status" name="show_status" class="form-control">
@@ -75,21 +46,19 @@
             </div>
             
             <div class="form-actions">
-                <a href="../buyers.html" class="btn-cancel">Cancel</a>
-                <button type="submit" class="btn-submit">Update Buyer</button>
+                <a href="../nurseries.html" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn-submit">Update Nursery</button>
             </div>
         </form>
     </div>
 
-    <!-- Vanilla JavaScript to simulate form submission -->
     <script>
         document.getElementById('editForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Buyer profile updated successfully!\n\n(Your Python backend will execute the MySQL UPDATE query here).');
-            window.location.href = '../buyers.html';
+            alert('Nursery profile updated successfully!\n(Python backend will execute the MySQL UPDATE query here).');
+            window.location.href = '../nurseries.html';
         });
     </script>
-
 <!-- ============================================= -->
     
  <div id="footer-placeholder"></div>   
