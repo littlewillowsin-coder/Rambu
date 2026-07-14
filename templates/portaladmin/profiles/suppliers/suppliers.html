@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->  
 
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Suppliers Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="suppliers/add.html" class="btn-action btn-buy">+ Add New Supplier</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Location Area</th>
+                    <th>Alternate Phone</th>
+                    <th>Experience</th>
+                    <th>Bio</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 116. Rahul Eastland (Active) -->
+                <tr>
+                    <td>116</td><td>Rahul Eastland</td><td>Kanjirappally</td><td>919447077799</td><td>9 yrs</td>
+                    <td class="text-truncate">Wholesale supplier of premium specialized pruning tools and shears.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=116" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=116" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 116); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 116); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 117. Shibu Varghese (Active) -->
+                <tr>
+                    <td>117</td><td>Shibu Varghese</td><td>Erumely</td><td>919447088800</td><td>12 yrs</td>
+                    <td class="text-truncate">Providing ventilated commercial fruit crates and harvest packaging.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=117" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=117" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 117); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 117); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 118. Vince Joseph (Active) -->
+                <tr>
+                    <td>118</td><td>Vince Joseph</td><td>Kalpetta</td><td>919447099911</td><td>6 yrs</td>
+                    <td class="text-truncate">Distributor of premium organic fertilizers and micronutrient blends.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=118" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=118" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 118); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 118); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 119. Prema Kumari (Inactive) -->
+                <tr>
+                    <td>119</td><td>Prema Kumari</td><td>Mananthavady</td><td>919447011144</td><td>15 yrs</td>
+                    <td class="text-truncate">Specializing in UV-stabilized shade nets and greenhouse lining film.</td>
+                    <td><span class="status-inactive">Inactive</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=119" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=119" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 119); return false;">Show</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 119); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 120. Saju Paul (Active) -->
+                <tr>
+                    <td>120</td><td>Saju Paul</td><td>Nilambur</td><td>919447022255</td><td>11 yrs</td>
+                    <td class="text-truncate">Supply and retail setup of automated micro-drip irrigation hardware.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=120" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=120" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 120); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 120); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 121. Ubaid Rahman (Active) -->
+                <tr>
+                    <td>121</td><td>Ubaid Rahman</td><td>Sultan Bathery</td><td>919447033366</td><td>20 yrs</td>
+                    <td class="text-truncate">Vendor of organic pest management inputs and plant growth regulators.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=121" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=121" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 121); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 121); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 122. Gita Ramakrishnan (Active) -->
+                <tr>
+                    <td>122</td><td>Gita Ramakrishnan</td><td>Pala</td><td>919447044477</td><td>8 yrs</td>
+                    <td class="text-truncate">Supplier of premium neem-cake, vermicompost, and bio-primers.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=122" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=122" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 122); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 122); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 123. Xavier D'Souza (Active) -->
+                <tr>
+                    <td>123</td><td>Xavier D'Souza</td><td>Thodupuzha</td><td>919447055588</td><td>14 yrs</td>
+                    <td class="text-truncate">Standard and export-grade corrugated cardboard boxes for tropical fruits.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=123" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=123" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 123); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 123); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 124. Latha Madhavan (Active) -->
+                <tr>
+                    <td>124</td><td>Latha Madhavan</td><td>Kattappana</td><td>919447066699</td><td>7 yrs</td>
+                    <td class="text-truncate">Commercial rootstock bags, budding tape, and grafting kits.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=124" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=124" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 124); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 124); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 125. Pradeep Kumar (Active) -->
+                <tr>
+                    <td>125</td><td>Pradeep Kumar</td><td>Moovattupuzha</td><td>919447077711</td><td>10 yrs</td>
+                    <td class="text-truncate">Direct bulk distributor of treated coco-peat and organic potting mixes.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=125" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=125" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 125); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 125); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 126. Salim Malik (Active) -->
+                <tr>
+                    <td>126</td><td>Salim Malik</td><td>Adimali</td><td>919447088822</td><td>18 yrs</td>
+                    <td class="text-truncate">Heavy-duty agricultural misting systems and battery-operated knapsack sprayers.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=126" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=126" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 126); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 126); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 127. Mercy Abraham (Active) -->
+                <tr>
+                    <td>127</td><td>Mercy Abraham</td><td>Pathanamthitta</td><td>919447099933</td><td>5 yrs</td>
+                    <td class="text-truncate">Providing crop protection covers and anti-bird netting for orchards.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=127" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=127" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 127); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 127); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 128. Anil Bhaskar (Active) -->
+                <tr>
+                    <td>128</td><td>Anil Bhaskar</td><td>Thamarassery</td><td>919447011155</td><td>13 yrs</td>
+                    <td class="text-truncate">High-volume merchant for commercial harvesting picking poles and baskets.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=128" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=128" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 128); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 128); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 129. Sindhu Suresh (Active) -->
+                <tr>
+                    <td>129</td><td>Sindhu Suresh</td><td>Aluva</td><td>919447022266</td><td>9 yrs</td>
+                    <td class="text-truncate">Wholesale supplier of treated bamboo support stakes for sapling stability.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=129" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=129" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 129); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 129); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 130. Joby Mathew (Active) -->
+                <tr>
+                    <td>130</td><td>Joby Mathew</td><td>Vythiri</td><td>919447033377</td><td>16 yrs</td>
+                    <td class="text-truncate">Laboratory supplier of specialized rooting hormones and grafting wax.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="suppliers/view.html?id=130" class="btn-action btn-view">View</a>
+                        <a href="suppliers/edit.html?id=130" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 130); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 130); return false;">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 15 of 15 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE supplier profile ID ${id}?` : `Are you sure you want to ${action.toLowerCase()} supplier profile ID ${id}?`;
+            if (confirm(msg)) {
+                alert(`Success! Supplier profile ${id} has been ${action.toLowerCase()}d.\n(Python backend will handle the MySQL update here).`);
+            }
+        }
+    </script>
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+
+<!-- ============================================= -->  
+</body>
+</html>
