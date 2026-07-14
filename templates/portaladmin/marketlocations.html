@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Locations Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Market Locations Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="marketlocations/add.html" class="btn-action btn-buy">+ Add New Market Location</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Market Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Created Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1. Thodupuzha Market (Active) -->
+                <tr>
+                    <td>1</td>
+                    <td>Thodupuzha Market</td>
+                    <td class="text-truncate">A bustling municipal commercial center serving as a primary transit point for agricultural produce coming from the Idukki foothills.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 06:00</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=1" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=1" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a>
+                    </td>
+                </tr>
+
+                <!-- 2. Kothamangalam Market (Active) -->
+                <tr>
+                    <td>2</td>
+                    <td>Kothamangalam Market</td>
+                    <td class="text-truncate">A major gateway market connecting high-range farm produce with midland traders, experiencing heavy seasonal volumes of exotic fruits like Rambutan.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 06:15</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=2" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=2" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a>
+                    </td>
+                </tr>
+
+                <!-- 3. Muvattupuzha Market (Active) -->
+                <tr>
+                    <td>3</td>
+                    <td>Muvattupuzha Market</td>
+                    <td class="text-truncate">A strategic regional trading hub that connects three major districts, making it an essential wholesale network for local fruit growers.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 06:30</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=3" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=3" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a>
+                    </td>
+                </tr>
+
+                <!-- 4. Pala Market Yard (Active) -->
+                <tr>
+                    <td>4</td>
+                    <td>Pala Market Yard</td>
+                    <td class="text-truncate">A dedicated agricultural yard known for trading cash crops and expanding rapidly into local orchard-grown tropical fruits.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 06:45</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=4" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=4" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 4); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a>
+                    </td>
+                </tr>
+
+                <!-- 5. Vazhakkulam Market (Active) -->
+                <tr>
+                    <td>5</td>
+                    <td>Vazhakkulam Market</td>
+                    <td class="text-truncate">Famous as Asia's premier pineapple market, this hub has evolved into a vital trade center for other high-value tropical crops like Rambutan and Mangoes.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 07:00</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=5" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=5" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a>
+                    </td>
+                </tr>
+
+                <!-- 6. Karshaka Open Market, Thodupuzha (Active) -->
+                <tr>
+                    <td>6</td>
+                    <td>Karshaka Open Market, Thodupuzha</td>
+                    <td class="text-truncate">A farmer-centric direct-to-retail marketplace that minimizes middlemen, allowing growers to secure premium prices for fresh, daily harvests.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 07:15</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=6" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=6" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a>
+                    </td>
+                </tr>
+
+                <!-- 7. Vengalloor Market (Active) -->
+                <tr>
+                    <td>7</td>
+                    <td>Vengalloor Market</td>
+                    <td class="text-truncate">An emerging neighborhood wholesale market that handles heavy daily distribution of fresh seasonal fruits to local retailers.</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>2026-07-14 07:30</td>
+                    <td>
+                        <a href="marketlocations/view.html?id=7" class="btn-action btn-view">View</a>
+                        <a href="marketlocations/edit.html?id=7" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 7 of 7 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let message = `Are you sure you want to ${action.toLowerCase()} market location ID ${id}?`;
+            if (action === 'Delete') {
+                message = `WARNING: Are you sure you want to DELETE market location ID ${id}? This cannot be undone.`;
+            }
+            
+            if (confirm(message)) {
+                alert(`Success! Market location ${id} has been ${action.toLowerCase()}d.\n\n(Your Python backend will handle the MySQL update here).`);
+                // window.location.reload(); // Uncomment when Python backend is ready
+            }
+        }
+    </script>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+
+</body>
+</html>
