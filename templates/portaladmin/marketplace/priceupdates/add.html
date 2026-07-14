@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Price Record</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
+   <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->   
 
+
+    <div class="form-container">
+        <div class="form-title">Add New Price Record</div>
+        <form id="addForm" action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="market_id">Market</label>
+                <select id="market_id" name="market_id" class="form-control" required>
+                    <option value="" disabled selected>-- Select Market --</option>
+                    <option value="1">1 - Thodupuzha Market</option>
+                    <option value="2">2 - Kothamangalam Market</option>
+                    <option value="3">3 - Muvattupuzha Market</option>
+                    <option value="4">4 - Pala Market Yard</option>
+                    <option value="5">5 - Vazhakkulam Market</option>
+                    <option value="6">6 - Karshaka Open Market, Thodupuzha</option>
+                    <option value="7">7 - Vengalloor Market</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="variety_id">Variety</label>
+                <select id="variety_id" name="variety_id" class="form-control" required>
+                    <option value="" disabled selected>-- Select Variety --</option>
+                    <option value="1">1 - R134</option>
+                    <option value="2">2 - Rongrien</option>
+                    <option value="3">3 - R156</option>
+                    <option value="4">4 - R162</option>
+                    <option value="5">5 - R167</option>
+                    <option value="6">6 - Chom Rong</option>
+                    <option value="7">7 - R170</option>
+                    <option value="8">8 - Siman</option>
+                    <option value="9">9 - R130</option>
+                    <option value="10">10 - Nibong</option>
+                </select>
+            </div>
+
+            <div class="form-group"><label for="price_low">Low Price (₹)</label><input type="number" id="price_low" name="price_low" class="form-control" placeholder="e.g., 150" required></div>
+            <div class="form-group"><label for="price_high">High Price (₹)</label><input type="number" id="price_high" name="price_high" class="form-control" placeholder="e.g., 200" required></div>
+            <div class="form-group"><label for="recorded_date">Recorded Date</label><input type="date" id="recorded_date" name="recorded_date" class="form-control" required></div>
+            <div class="form-group"><label for="source">Source</label><input type="text" id="source" name="source" class="form-control" placeholder="e.g., informer@rambuportal" required></div>
+            
+            <div class="form-actions">
+                <a href="../priceupdates.html" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn-submit">Add Price Record</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('addForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('New price record added successfully!\n(Python backend will execute the MySQL INSERT query here).');
+            window.location.href = '../priceupdates.html';
+        });
+     
+    </script>
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+
+  
+</body>
+</html>
