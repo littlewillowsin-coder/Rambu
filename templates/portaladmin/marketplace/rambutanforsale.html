@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rambutan For Sale Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->   
 
+
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Rambutan For Sale Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="rambutanforsale/add.html" class="btn-action btn-buy">+ Add New Listing</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Created Date</th>
+                    <th>Farmer</th>
+                    <th>Variety</th>
+                    <th>Var. ID</th>
+                    <th>Grade</th>
+                    <th>Qty (kg)</th>
+                    <th>Price/kg</th>
+                    <th>Avail. Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td><td>05/06/2026</td><td>7 - Ani Varghese</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>9</td><td>A+</td><td>5000</td><td>85</td><td>2026-06-15</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=1" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=1" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>2</td><td>10/04/2026</td><td>11 - Mathew George</td>
+                    <td class="text-truncate">10 Nibong Wilder variant traditional sharp profile Dark Red Sweetness: Medium-High</td>
+                    <td>10</td><td>A</td><td>8000</td><td>28.5</td><td>2026-04-20</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=2" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=2" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>3</td><td>01/03/2026</td><td>7 - Ani Varghese</td>
+                    <td class="text-truncate">6 Chom Rong Premium crisp texture balanced sugars Deep Red Sweetness: High</td>
+                    <td>6</td><td>B+</td><td>2500</td><td>62</td><td>2026-03-10</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=3" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=3" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>4</td><td>22/04/2026</td><td>17 - Devassy Antony</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>9</td><td>Premium</td><td>800</td><td>180</td><td>2026-05-02</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=4" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=4" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 4); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>5</td><td>08/05/2026</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>2</td><td>A</td><td>1200</td><td>110</td><td>2026-05-18</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=5" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=5" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>6</td><td>18/02/2026</td><td>11 - Mathew George</td>
+                    <td class="text-truncate">3 R156 Firm texture excellent for transport Dark Red Sweetness: High</td>
+                    <td>3</td><td>A+</td><td>450</td><td>550</td><td>2026-02-28</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=6" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=6" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>7</td><td>26/03/2026</td><td>4 - Ammu Sukumaran</td>
+                    <td class="text-truncate">8 Siman Intense candy sweetness very juicy Bright Red Sweetness: Very High</td>
+                    <td>8</td><td>Premium Bold</td><td>300</td><td>1650</td><td>2026-04-05</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=7" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=7" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>8</td><td>05/01/2026</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">4 R162 Smaller fruit very sweet flesh loose Red Sweetness: Medium-High</td>
+                    <td>4</td><td>A</td><td>1500</td><td>240</td><td>2026-01-15</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=8" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=8" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 8); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>9</td><td>08/04/2026</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">7 R170 Late-season variant mild flavor Orange-Red Sweetness: Medium</td>
+                    <td>7</td><td>A</td><td>12000</td><td>27</td><td>2026-04-18</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=9" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=9" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 9); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>10</td><td>02/02/2026</td><td>10 - Saji Mathew</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>1</td><td>B+</td><td>15000</td><td>18</td><td>2026-02-12</td>
+                    <td><span class="status-inactive">Sold</span></td>
+                    <td><a href="rambutanforsale/view.html?id=10" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=10" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 10); return false;">Show</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>11</td><td>20/06/2026</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>1</td><td>B</td><td>6000</td><td>22.5</td><td>2026-06-30</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=11" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=11" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 11); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 11); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>12</td><td>30/04/2026</td><td>17 - Devassy Antony</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>1</td><td>A</td><td>10000</td><td>24</td><td>2026-05-10</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=12" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=12" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 12); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 12); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>13</td><td>12/03/2026</td><td>13 - Sunny Devasia</td>
+                    <td class="text-truncate">8 Siman Intense candy sweetness very juicy Bright Red Sweetness: Very High</td>
+                    <td>8</td><td>Export Quality</td><td>4000</td><td>75</td><td>2026-03-22</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=13" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=13" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 13); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 13); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>14</td><td>26/05/2026</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>1</td><td>B+</td><td>3500</td><td>32</td><td>2026-06-05</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=14" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=14" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>15</td><td>22/06/2026</td><td>11 - Mathew George</td>
+                    <td class="text-truncate">3 R156 Firm texture excellent for transport Dark Red Sweetness: High</td>
+                    <td>3</td><td>TD5</td><td>3000</td><td>68</td><td>2026-07-02</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=15" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=15" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 15); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>16</td><td>10/01/2026</td><td>10 - Saji Mathew</td>
+                    <td class="text-truncate">5 R167 Yellowish-red skin aromatic profile Yellow-Red Sweetness: Very High</td>
+                    <td>5</td><td>A+</td><td>2000</td><td>95</td><td>2026-01-20</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=16" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=16" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 16); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 16); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>17</td><td>05/03/2026</td><td>12 - Reji Abraham</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>2</td><td>B</td><td>1100</td><td>58</td><td>2026-03-15</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=17" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=17" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 17); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 17); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>18</td><td>30/06/2026</td><td>12 - Reji Abraham</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>9</td><td>Premium</td><td>5000</td><td>120</td><td>2026-07-10</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=18" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=18" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 18); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 18); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>19</td><td>02/06/2026</td><td>4 - Ammu Sukumaran</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>9</td><td>A</td><td>600</td><td>280</td><td>2026-06-12</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=19" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=19" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 19); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 19); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>20</td><td>21/06/2026</td><td>4 - Ammu Sukumaran</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>9</td><td>A-</td><td>1800</td><td>85</td><td>2026-07-01</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=20" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=20" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 20); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 20); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>21</td><td>31/01/2026</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">5 R167 Yellowish-red skin aromatic profile Yellow-Red Sweetness: Very High</td>
+                    <td>5</td><td>Premium Red</td><td>2000</td><td>410</td><td>2026-02-10</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=21" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=21" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 21); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 21); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>22</td><td>15/06/2026</td><td>4 - Ammu Sukumaran</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>1</td><td>A</td><td>4000</td><td>35</td><td>2026-06-25</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=22" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=22" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 22); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 22); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>23</td><td>20/05/2026</td><td>11 - Mathew George</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>2</td><td>Large Size</td><td>3500</td><td>45</td><td>2026-05-30</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=23" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=23" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 23); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 23); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>24</td><td>26/12/2025</td><td>15 - Joseph Chacko</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>2</td><td>A</td><td>9000</td><td>72</td><td>2026-01-05</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=24" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=24" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 24); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 24); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>25</td><td>08/03/2026</td><td>17 - Devassy Antony</td>
+                    <td class="text-truncate">6 Chom Rong Premium crisp texture balanced sugars Deep Red Sweetness: High</td>
+                    <td>6</td><td>Premium Dry</td><td>4500</td><td>210</td><td>2026-03-18</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=25" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=25" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 25); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 25); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>26</td><td>12/04/2026</td><td>4 - Ammu Sukumaran</td>
+                    <td class="text-truncate">6 Chom Rong Premium crisp texture balanced sugars Deep Red Sweetness: High</td>
+                    <td>6</td><td>A+</td><td>3200</td><td>135</td><td>2026-04-22</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=26" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=26" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 26); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 26); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>27</td><td>23/02/2026</td><td>12 - Reji Abraham</td>
+                    <td class="text-truncate">5 R167 Yellowish-red skin aromatic profile Yellow-Red Sweetness: Very High</td>
+                    <td>5</td><td>A</td><td>1500</td><td>340</td><td>2026-03-05</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=27" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=27" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 27); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 27); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>28</td><td>02/04/2026</td><td>7 - Ani Varghese</td>
+                    <td class="text-truncate">4 R162 Smaller fruit very sweet flesh loose Red Sweetness: Medium-High</td>
+                    <td>4</td><td>B+</td><td>2000</td><td>165</td><td>2026-04-12</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=28" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=28" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 28); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 28); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>29</td><td>10/06/2026</td><td>13 - Sunny Devasia</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>1</td><td>A</td><td>3000</td><td>88</td><td>2026-06-20</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=29" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=29" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 29); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 29); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>30</td><td>20/01/2026</td><td>5 - Bijoy Kurian</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>9</td><td>Standard</td><td>50000</td><td>3.4</td><td>2026-01-30</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="rambutanforsale/view.html?id=30" class="btn-action btn-view">View</a> <a href="rambutanforsale/edit.html?id=30" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 30); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 30); return false;">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 30 of 30 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE listing ID ${id}?` : `Are you sure you want to ${action.toLowerCase()} listing ID ${id}?`;
+            if (confirm(msg)) {
+                alert(`Success! Listing ${id} has been ${action.toLowerCase()}d.\n(Python backend will handle the MySQL update here).`);
+            }
+        }
+    </script>
+
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+  
+</body>
+</html>
