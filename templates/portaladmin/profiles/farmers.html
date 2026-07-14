@@ -12,11 +12,8 @@
 <!-- ============================================= -->
 <div id="header-placeholder"></div>
 <!-- ============================================= -->    
-<!-- Main Table Content -->
     <div class="table-container" style="padding: 20px;">
         <h2>Farmers Management</h2>
-        
-        <!-- Add New Button -->
         <div style="margin-bottom: 15px; text-align: right;">
             <a href="farmers/add.html" class="btn-action btn-buy">+ Add New Farmer</a>
         </div>
@@ -24,281 +21,117 @@
         <table class="user-table">
             <thead>
                 <tr>
-                    <th>Profile ID</th>
+                    <th>ID</th>
                     <th>Full Name</th>
                     <th>Location Area</th>
-                    <th>Pincode</th>
                     <th>Alternate Phone</th>
                     <th>Experience</th>
-                    <th>Language</th>
+                    <th>Bio</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- 1. Ammu Sukumaran (Active) -->
                 <tr>
-                    <td>1</td>
-                    <td>Ammu Sukumaran</td>
-                    <td>Kanjirappally</td>
-                    <td>686507</td>
-                    <td>919847222222</td>
-                    <td>12 yrs</td>
-                    <td>Malayalam</td>
+                    <td>1</td><td>Ammu Sukumaran</td><td>Kanjirappally</td><td>919847222222</td><td>12 yrs</td>
+                    <td class="text-truncate">Organic farmer focusing on high-yield varieties.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=1" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=1" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=1" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=1" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a></td>
                 </tr>
-                <!-- 2. Bijoy Kurian (Active) -->
                 <tr>
-                    <td>2</td>
-                    <td>Bijoy Kurian</td>
-                    <td>Meenangadi</td>
-                    <td>673591</td>
-                    <td>919847333333</td>
-                    <td>20 yrs</td>
-                    <td>Malayalam</td>
+                    <td>2</td><td>Bijoy Kurian</td><td>Meenangadi</td><td>919847333333</td><td>20 yrs</td>
+                    <td class="text-truncate">Specializing in robust highland varieties and spice intercropping.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=2" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=2" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=2" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=2" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a></td>
                 </tr>
-                <!-- 3. Jayan Pillai (Active) -->
                 <tr>
-                    <td>3</td>
-                    <td>Jayan Pillai</td>
-                    <td>Nedumangad</td>
-                    <td>695541</td>
-                    <td>919847444444</td>
-                    <td>8 yrs</td>
-                    <td>Malayalam</td>
+                    <td>3</td><td>Jayan Pillai</td><td>Nedumangad</td><td>919847444444</td><td>8 yrs</td>
+                    <td class="text-truncate">Experienced in wet-zone cultivation and sustainable practices.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=3" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=3" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=3" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=3" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a></td>
                 </tr>
-                <!-- 4. Ani Varghese (Inactive) -->
                 <tr>
-                    <td>4</td>
-                    <td>Ani Varghese</td>
-                    <td>Sultan Bathery</td>
-                    <td>673592</td>
-                    <td>919847555555</td>
-                    <td>15 yrs</td>
-                    <td>English</td>
+                    <td>4</td><td>Ani Varghese</td><td>Sultan Bathery</td><td>919847555555</td><td>15 yrs</td>
+                    <td class="text-truncate">Focused on commercial-grade distribution and quality grading.</td>
                     <td><span class="status-inactive">Inactive</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=4" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=4" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 4); return false;">Show</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=4" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=4" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 4); return false;">Show</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a></td>
                 </tr>
-                <!-- 5. Thomas Joseph (Active) -->
                 <tr>
-                    <td>5</td>
-                    <td>Thomas Joseph</td>
-                    <td>Kattappana</td>
-                    <td>685515</td>
-                    <td>919847666666</td>
-                    <td>25 yrs</td>
-                    <td>Malayalam</td>
+                    <td>5</td><td>Thomas Joseph</td><td>Kattappana</td><td>919847666666</td><td>25 yrs</td>
+                    <td class="text-truncate">Veteran farmer with deep expertise in High Range agricultural conditions.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=5" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=5" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=5" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=5" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a></td>
                 </tr>
-                <!-- 6. Binu John (Active) -->
                 <tr>
-                    <td>6</td>
-                    <td>Binu John</td>
-                    <td>Pathanamthitta</td>
-                    <td>689645</td>
-                    <td>919847777777</td>
-                    <td>10 yrs</td>
-                    <td>Malayalam</td>
+                    <td>6</td><td>Binu John</td><td>Pathanamthitta</td><td>919847777777</td><td>10 yrs</td>
+                    <td class="text-truncate">Specializing in premium seed selection and nursery management.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=6" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=6" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=6" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=6" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a></td>
+
                 </tr>
-                <!-- 7. Saji Mathew (Active) -->
                 <tr>
-                    <td>7</td>
-                    <td>Saji Mathew</td>
-                    <td>Pala</td>
-                    <td>686575</td>
-                    <td>919847888888</td>
-                    <td>18 yrs</td>
-                    <td>Malayalam</td>
+                    <td>7</td><td>Saji Mathew</td><td>Pala</td><td>919847888888</td><td>18 yrs</td>
+                    <td class="text-truncate">Dedicated to sustainable farming with integrated soil management.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=7" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=7" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=7" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=7" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a></td>
                 </tr>
-                <!-- 8. Mathew George (Active) -->
                 <tr>
-                    <td>8</td>
-                    <td>Mathew George</td>
-                    <td>Marthandam</td>
-                    <td>629165</td>
-                    <td>919847999999</td>
-                    <td>30 yrs</td>
-                    <td>Tamil</td>
+                    <td>8</td><td>Mathew George</td><td>Marthandam</td><td>919847999999</td><td>30 yrs</td>
+                    <td class="text-truncate">Decades of experience in border-region trade and cultivation.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=8" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=8" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 8); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=8" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=8" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 8); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a></td>
                 </tr>
-                <!-- 9. Reji Abraham (Active) -->
                 <tr>
-                    <td>9</td>
-                    <td>Reji Abraham</td>
-                    <td>Kothamangalam</td>
-                    <td>686691</td>
-                    <td>919847000001</td>
-                    <td>14 yrs</td>
-                    <td>Malayalam</td>
+                    <td>9</td><td>Reji Abraham</td><td>Kothamangalam</td><td>919847000001</td><td>14 yrs</td>
+                    <td class="text-truncate">Managing structured harvest timelines for bulk commercial demands.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=9" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=9" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 9); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=9" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=9" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 9); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a></td>
                 </tr>
-                <!-- 10. Sunny Devasia (Active) -->
                 <tr>
-                    <td>10</td>
-                    <td>Sunny Devasia</td>
-                    <td>Adimali</td>
-                    <td>685561</td>
-                    <td>919847000002</td>
-                    <td>22 yrs</td>
-                    <td>Malayalam</td>
+                    <td>10</td><td>Sunny Devasia</td><td>Adimali</td><td>919847000002</td><td>22 yrs</td>
+                    <td class="text-truncate">Hill-track cultivation specialist focused on disease-resistant variants.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=10" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=10" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 10); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=10" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=10" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 10); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a></td>
                 </tr>
-                <!-- 11. Roy Antony (Active) -->
                 <tr>
-                    <td>11</td>
-                    <td>Roy Antony</td>
-                    <td>Thodupuzha</td>
-                    <td>685584</td>
-                    <td>919847000003</td>
-                    <td>16 yrs</td>
-                    <td>Malayalam</td>
+                    <td>11</td><td>Roy Antony</td><td>Thodupuzha</td><td>919847000003</td><td>16 yrs</td>
+                    <td class="text-truncate">Optimizing yield capacities using modern micro-irrigation systems.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=11" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=11" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 11); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 11); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=11" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=11" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 11); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 11); return false;">Delete</a></td>
                 </tr>
-                <!-- 12. Joseph Chacko (Active) -->
                 <tr>
-                    <td>12</td>
-                    <td>Joseph Chacko</td>
-                    <td>Mananthavady</td>
-                    <td>670645</td>
-                    <td>919847000004</td>
-                    <td>28 yrs</td>
-                    <td>Malayalam</td>
+                    <td>12</td><td>Joseph Chacko</td><td>Mananthavady</td><td>919847000004</td><td>28 yrs</td>
+                    <td class="text-truncate">Large-scale grower specializing in predictable supply fulfillment.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=12" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=12" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 12); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 12); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=12" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=12" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 12); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 12); return false;">Delete</a></td>
                 </tr>
-                <!-- 13. Varghese Paul (Active) -->
                 <tr>
-                    <td>13</td>
-                    <td>Varghese Paul</td>
-                    <td>Perumbavoor</td>
-                    <td>683542</td>
-                    <td>919847000005</td>
-                    <td>19 yrs</td>
-                    <td>Malayalam</td>
+                    <td>13</td><td>Varghese Paul</td><td>Perumbavoor</td><td>919847000005</td><td>19 yrs</td>
+                    <td class="text-truncate">Balancing traditional farm mechanics with modern testing metrics.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=13" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=13" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 13); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 13); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=13" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=13" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 13); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 13); return false;">Delete</a></td>
                 </tr>
-                <!-- 14. Devassy Antony (Active) -->
                 <tr>
-                    <td>14</td>
-                    <td>Devassy Antony</td>
-                    <td>Chalakudy</td>
-                    <td>680307</td>
-                    <td>919847000006</td>
-                    <td>35 yrs</td>
-                    <td>Malayalam</td>
+                    <td>14</td><td>Devassy Antony</td><td>Chalakudy</td><td>919847000006</td><td>35 yrs</td>
+                    <td class="text-truncate">Senior agriculturalist with focus on long-term crop rotation.</td>
                     <td><span class="status-active">Active</span></td>
-                    <td>
-                        <a href="farmers/view.html?id=14" class="btn-action btn-view">View</a>
-                        <a href="farmers/edit.html?id=14" class="btn-action btn-update">Edit</a>
-                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a>
-                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a>
-                    </td>
+                    <td><a href="farmers/view.html?id=14" class="btn-action btn-view">View</a> <a href="farmers/edit.html?id=14" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a></td>
                 </tr>
             </tbody>
         </table>
-
-        <!-- Pagination -->
         <div class="pagination-container">
             <span>Showing 1 to 14 of 14 entries</span>
-            <div class="pagination-buttons">
-                <a href="#" class="active">1</a>
-            </div>
+            <div class="pagination-buttons"><a href="#" class="active">1</a></div>
         </div>
     </div>
-
-    <!-- Vanilla JavaScript for Prototype Flow -->
     <script>
         function handleAction(action, id) {
-            let message = `Are you sure you want to ${action.toLowerCase()} farmer profile ID ${id}?`;
-            if (action === 'Delete') {
-                message = `WARNING: Are you sure you want to DELETE farmer profile ID ${id}? This cannot be undone.`;
-            }
-            
-            if (confirm(message)) {
-                alert(`Success! Farmer profile ${id} has been ${action.toLowerCase()}d.\n\n(Your Python backend will handle the MySQL update here).`);
-                // window.location.reload(); // Uncomment when Python backend is ready
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE farmer profile ID ${id}?` : `Are you sure you want to ${action.toLowerCase()} farmer profile ID ${id}?`;
+            if (confirm(msg)) {
+                alert(`Success! Farmer profile ${id} has been ${action.toLowerCase()}d.\n(Python backend will handle the MySQL update here).`);
             }
         }
+ each
     </script>
 
 <!-- ============================================= -->
