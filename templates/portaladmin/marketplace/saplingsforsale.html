@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saplings For Sale Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->   
 
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Saplings For Sale Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="saplingsforsale/add.html" class="btn-action btn-buy">+ Add New Sapling Listing</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nursery Owner</th>
+                    <th>Variety</th>
+                    <th>Age (mo)</th>
+                    <th>Height (cm)</th>
+                    <th>Price (₹)</th>
+                    <th>Qty</th>
+                    <th>Grafted</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td><td>33 - Jose Thomas</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>5</td><td>60</td><td>250</td><td>500</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=1" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=1" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>2</td><td>34 - Lina M. Varghese</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>3</td><td>45</td><td>220</td><td>300</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=2" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=2" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>3</td><td>35 - Kurian Joseph</td>
+                    <td class="text-truncate">3 R156 Firm texture excellent for transport Dark Red Sweetness: High</td>
+                    <td>4</td><td>75</td><td>280</td><td>150</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=3" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=3" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>4</td><td>36 - Sara Abraham</td>
+                    <td class="text-truncate">4 R162 Smaller fruit very sweet flesh loose Red Sweetness: Medium-High</td>
+                    <td>8</td><td>40</td><td>180</td><td>0</td><td>Yes</td>
+                    <td><span class="status-inactive">Sold Out</span></td>
+                    <td><a href="saplingsforsale/view.html?id=4" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=4" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 4); return false;">Show</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>5</td><td>37 - Babu Rajan</td>
+                    <td class="text-truncate">5 R167 Yellowish-red skin aromatic profile Yellow-Red Sweetness: Very High</td>
+                    <td>12</td><td>55</td><td>300</td><td>200</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=5" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=5" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>6</td><td>38 - Anand Krishna</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>15</td><td>80</td><td>270</td><td>400</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=6" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=6" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>7</td><td>39 - Helen Peter</td>
+                    <td class="text-truncate">6 Chom Rong Premium crisp texture balanced sugars Deep Red Sweetness: High</td>
+                    <td>9</td><td>50</td><td>240</td><td>250</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=7" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=7" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>8</td><td>40 - Manu Bhaskar</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>12</td><td>65</td><td>230</td><td>350</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=8" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=8" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 8); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>9</td><td>41 - Gopi Pillai</td>
+                    <td class="text-truncate">7 R170 Late-season variant mild flavor Orange-Red Sweetness: Medium</td>
+                    <td>11</td><td>55</td><td>200</td><td>180</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=9" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=9" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 9); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>10</td><td>42 - Reba Mathew</td>
+                    <td class="text-truncate">8 Siman Intense candy sweetness very juicy Bright Red Sweetness: Very High</td>
+                    <td>6</td><td>90</td><td>350</td><td>100</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=10" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=10" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 10); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>11</td><td>43 - Sunny Sebastian</td>
+                    <td class="text-truncate">1 R134 Large fruit thick flesh easy to peel Deep Red Sweetness: Very High</td>
+                    <td>10</td><td>45</td><td>240</td><td>450</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=11" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=11" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 11); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 11); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>12</td><td>44 - Mini Cherian</td>
+                    <td class="text-truncate">9 R130 Early-season variant robust yield Deep Red Sweetness: High</td>
+                    <td>12</td><td>60</td><td>210</td><td>300</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=12" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=12" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 12); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 12); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>13</td><td>45 - Shaji George</td>
+                    <td class="text-truncate">5 R167 Yellowish-red skin aromatic profile Yellow-Red Sweetness: Very High</td>
+                    <td>14</td><td>70</td><td>320</td><td>120</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=13" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=13" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 13); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 13); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>14</td><td>46 - Biju Kurup</td>
+                    <td class="text-truncate">2 Rongrien Juicy flesh sweet and slightly tangy Bright Red Sweetness: High</td>
+                    <td>8</td><td>38</td><td>195</td><td>250</td><td>No</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=14" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=14" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>15</td><td>47 - Alice D'Souza</td>
+                    <td class="text-truncate">10 Nibong Wilder variant traditional sharp profile Dark Red Sweetness: Medium-High</td>
+                    <td>12</td><td>60</td><td>200</td><td>400</td><td>Yes</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="saplingsforsale/view.html?id=15" class="btn-action btn-view">View</a> <a href="saplingsforsale/edit.html?id=15" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 15); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 15 of 15 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let statusText = action === 'Show' ? 'Available' : 'Sold Out';
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE sapling listing ID ${id}?` : `Are you sure you want to mark sapling ID ${id} as ${statusText}?`;
+            if (confirm(msg)) {
+                alert(`Success! Sapling listing ${id} status updated.\n(Python backend will handle the MySQL update here).`);
+            }
+        }
+    </script>
+
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+  
+</body>
+</html>
