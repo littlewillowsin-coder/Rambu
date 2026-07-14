@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories For Sale Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+ <!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->   
 
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Accessories For Sale Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="accessoriesforsale/add.html" class="btn-action btn-buy">+ Add New Accessory</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Supplier</th>
+                    <th>Category</th>
+                    <th>Item Name</th>
+                    <th>Brand</th>
+                    <th>Price (₹)</th>
+                    <th>Qty</th>
+                    <th>Unit</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td><td>48 - Rahul Eastland</td><td>Crop Protection</td>
+                    <td class="text-truncate">Nylon Bird Netting</td><td>AgroShield</td><td>45</td><td>100</td><td>Meter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=1" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=1" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 1); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 1); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>2</td><td>49 - Shibu Varghese</td><td>Pruning & Grafting</td>
+                    <td class="text-truncate">Pruning Shears</td><td>Falcon</td><td>450</td><td>25</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=2" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=2" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 2); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 2); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>3</td><td>50 - Vince Joseph</td><td>Soil & Nutrition</td>
+                    <td class="text-truncate">Organic NPK Mix</td><td>BioGrow</td><td>80</td><td>50</td><td>kg</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=3" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=3" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 3); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 3); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>4</td><td>51 - Prema Kumari</td><td>Irrigation & Water</td>
+                    <td class="text-truncate">Drip Emitting Pipes</td><td>Finolex</td><td>22</td><td>500</td><td>Meter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=4" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=4" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 4); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 4); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>5</td><td>52 - Saju Paul</td><td>Harvesting & Storage</td>
+                    <td class="text-truncate">Plastic Harvest Crates</td><td>Supreme</td><td>280</td><td>60</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=5" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=5" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 5); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 5); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>6</td><td>53 - Ubaid Rahman</td><td>Pruning & Grafting</td>
+                    <td class="text-truncate">Grafting Tapes</td><td>IndoTape</td><td>65</td><td>200</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=6" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=6" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 6); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 6); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>7</td><td>54 - Gita Ramakrishnan</td><td>Crop Protection</td>
+                    <td class="text-truncate">Neem Oil Spray</td><td>EcoClean</td><td>320</td><td>40</td><td>Liter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=7" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=7" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 7); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 7); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>8</td><td>55 - Xavier D'Souza</td><td>Crop Protection</td>
+                    <td class="text-truncate">Copper Oxychloride</td><td>FungiKill</td><td>240</td><td>30</td><td>kg</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=8" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=8" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 8); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 8); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>9</td><td>56 - Latha Madhavan</td><td>Harvesting & Storage</td>
+                    <td class="text-truncate">Fruit Picking Poles</td><td>ReachMax</td><td>850</td><td>15</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=9" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=9" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 9); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 9); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>10</td><td>57 - Pradeep Kumar</td><td>Soil & Nutrition</td>
+                    <td class="text-truncate">Mulching Sheets</td><td>AgroShield</td><td>18</td><td>300</td><td>Meter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=10" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=10" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 10); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 10); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>11</td><td>58 - Salim Malik</td><td>Pruning & Grafting</td>
+                    <td class="text-truncate">Budding Knives</td><td>Victorinox</td><td>1200</td><td>10</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=11" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=11" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 11); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 11); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>12</td><td>59 - Mercy Abraham</td><td>Nursery & Growth</td>
+                    <td class="text-truncate">Rooting Hormone Gel</td><td>FastRoot</td><td>150</td><td>80</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=12" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=12" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 12); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 12); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>13</td><td>60 - Anil Bhaskar</td><td>Irrigation & Water</td>
+                    <td class="text-truncate">Water Storage Tanks</td><td>Sintex</td><td>7500</td><td>5</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=13" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=13" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 13); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 13); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>14</td><td>61 - Sindhu Suresh</td><td>Nursery & Growth</td>
+                    <td class="text-truncate">Agro-Shade Net 50%</td><td>GreenHouse</td><td>55</td><td>150</td><td>Meter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=14" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=14" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>15</td><td>62 - Joby Mathew</td><td>Soil & Nutrition</td>
+                    <td class="text-truncate">pH Meter Digital</td><td>TechLab</td><td>1850</td><td>0</td><td>Piece</td>
+                    <td><span class="status-inactive">Out of Stock</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=15" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=15" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 15); return false;">Show</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>16</td><td>48 - Rahul Eastland</td><td>Crop Protection</td>
+                    <td class="text-truncate">Rambutan Fruit Bags</td><td>AgroShield</td><td>12</td><td>1500</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=16" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=16" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 16); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 16); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>17</td><td>49 - Shibu Varghese</td><td>Pruning & Grafting</td>
+                    <td class="text-truncate">Lopping Shears</td><td>Falcon</td><td>1450</td><td>12</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=17" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=17" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 17); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 17); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>18</td><td>50 - Vince Joseph</td><td>Soil & Nutrition</td>
+                    <td class="text-truncate">Micronutrient Spray</td><td>BioGrow</td><td>420</td><td>35</td><td>Liter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=18" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=18" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 18); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 18); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>19</td><td>51 - Prema Kumari</td><td>Irrigation & Water</td>
+                    <td class="text-truncate">Venturi Injector</td><td>Finolex</td><td>950</td><td>8</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=19" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=19" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 19); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 19); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>20</td><td>52 - Saju Paul</td><td>Harvesting & Storage</td>
+                    <td class="text-truncate">Heavy Orchard Ladders</td><td>Supreme</td><td>5200</td><td>6</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=20" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=20" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 20); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 20); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>21</td><td>53 - Ubaid Rahman</td><td>Pruning & Grafting</td>
+                    <td class="text-truncate">Grafting Wax</td><td>IndoTape</td><td>380</td><td>25</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=21" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=21" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 21); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 21); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>22</td><td>54 - Gita Ramakrishnan</td><td>Crop Protection</td>
+                    <td class="text-truncate">Sticky Insect Traps</td><td>EcoClean</td><td>15</td><td>400</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=22" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=22" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 22); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 22); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>23</td><td>55 - Xavier D'Souza</td><td>Crop Protection</td>
+                    <td class="text-truncate">Sulfur Wettable Powder</td><td>FungiKill</td><td>190</td><td>45</td><td>kg</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=23" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=23" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 23); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 23); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>24</td><td>56 - Latha Madhavan</td><td>Harvesting & Storage</td>
+                    <td class="text-truncate">Fruit Sorting Tables</td><td>ReachMax</td><td>8900</td><td>2</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=24" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=24" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 24); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 24); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>25</td><td>57 - Pradeep Kumar</td><td>Soil & Nutrition</td>
+                    <td class="text-truncate">Bio-Char Soil Amendment</td><td>AgroShield</td><td>110</td><td>100</td><td>kg</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=25" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=25" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 25); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 25); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>26</td><td>58 - Salim Malik</td><td>Nursery & Growth</td>
+                    <td class="text-truncate">Tree Tying Twine</td><td>Victorinox</td><td>240</td><td>50</td><td>Roll</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=26" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=26" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 26); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 26); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>27</td><td>59 - Mercy Abraham</td><td>Nursery & Growth</td>
+                    <td class="text-truncate">Seedling Pro Trays</td><td>FastRoot</td><td>45</td><td>120</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=27" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=27" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 27); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 27); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>28</td><td>60 - Anil Bhaskar</td><td>Irrigation & Water</td>
+                    <td class="text-truncate">Drip Laterals 12mm</td><td>Sintex</td><td>16</td><td>800</td><td>Meter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=28" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=28" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 28); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 28); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>29</td><td>61 - Sindhu Suresh</td><td>Nursery & Growth</td>
+                    <td class="text-truncate">Agro-Shade Net 70%</td><td>GreenHouse</td><td>75</td><td>100</td><td>Meter</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=29" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=29" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 29); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 29); return false;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>30</td><td>62 - Joby Mathew</td><td>Soil & Nutrition</td>
+                    <td class="text-truncate">Soil EC Tester</td><td>TechLab</td><td>3400</td><td>4</td><td>Piece</td>
+                    <td><span class="status-active">Available</span></td>
+                    <td><a href="accessoriesforsale/view.html?id=30" class="btn-action btn-view">View</a> <a href="accessoriesforsale/edit.html?id=30" class="btn-action btn-update">Edit</a> <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 30); return false;">Hide</a> <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 30); return false;">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 30 of 30 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let statusText = action === 'Show' ? 'Available' : 'Out of Stock';
+            let msg = action === 'Delete' ? `WARNING: Are you sure you want to DELETE accessory ID ${id}?` : `Are you sure you want to mark accessory ID ${id} as ${statusText}?`;
+            if (confirm(msg)) {
+                alert(`Success! Accessory ${id} status updated.\n(Python backend will handle the MySQL update here).`);
+            }
+        }
+    </script>
+
+  
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+  
+</body>
+</html>
