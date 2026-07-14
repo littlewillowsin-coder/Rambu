@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyers Management</title>
+    <link rel="stylesheet" href="ostyle.css">
+    <link rel="stylesheet" href="tblstyle.css">
+</head>
+<body>
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->    
+    <!-- Main Table Content -->
+    <div class="table-container" style="padding: 20px;">
+        <h2>Buyers Management</h2>
+        
+        <!-- Add New Button -->
+        <div style="margin-bottom: 15px; text-align: right;">
+            <a href="buyers/add.html" class="btn-action btn-buy">+ Add New Buyer</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Profile ID</th>
+                    <th>Full Name</th>
+                    <th>Location Area</th>
+                    <th>Pincode</th>
+                    <th>Alternate Phone</th>
+                    <th>Experience</th>
+                    <th>Language</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 14. Mary Thomas (Active) -->
+                <tr>
+                    <td>14</td>
+                    <td>Mary Thomas</td>
+                    <td>Thodupuzha</td>
+                    <td>685584</td>
+                    <td>919846111111</td>
+                    <td>5 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=14" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=14" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 14); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 14); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 15. Susan Joseph (Active) -->
+                <tr>
+                    <td>15</td>
+                    <td>Susan Joseph</td>
+                    <td>Kakkanad</td>
+                    <td>682030</td>
+                    <td>919846222222</td>
+                    <td>8 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=15" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=15" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 15); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 15); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 16. Deepak Nair (Active) -->
+                <tr>
+                    <td>16</td>
+                    <td>Deepak Nair</td>
+                    <td>Thiruvananthapuram</td>
+                    <td>695001</td>
+                    <td>919846333333</td>
+                    <td>12 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=16" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=16" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 16); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 16); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 17. Arun Kumar (Inactive) -->
+                <tr>
+                    <td>17</td>
+                    <td>Arun Kumar</td>
+                    <td>Kottayam</td>
+                    <td>686001</td>
+                    <td>919846444444</td>
+                    <td>4 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-inactive">Inactive</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=17" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=17" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-buy" onclick="handleAction('Show', 17); return false;">Show</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 17); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 18. Kavitha Ramachandran (Active) -->
+                <tr>
+                    <td>18</td>
+                    <td>Kavitha Ramachandran</td>
+                    <td>Palakkad</td>
+                    <td>678001</td>
+                    <td>919846555555</td>
+                    <td>6 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=18" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=18" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 18); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 18); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 19. Nisha Kurian (Active) -->
+                <tr>
+                    <td>19</td>
+                    <td>Nisha Kurian</td>
+                    <td>Kanjirappally</td>
+                    <td>686507</td>
+                    <td>919846666666</td>
+                    <td>9 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=19" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=19" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 19); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 19); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 20. George Mathew (Active) -->
+                <tr>
+                    <td>20</td>
+                    <td>George Mathew</td>
+                    <td>Meenangadi</td>
+                    <td>673591</td>
+                    <td>919846777777</td>
+                    <td>15 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=20" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=20" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 20); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 20); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 21. Paul Varghese (Active) -->
+                <tr>
+                    <td>21</td>
+                    <td>Paul Varghese</td>
+                    <td>Sultan Bathery</td>
+                    <td>673592</td>
+                    <td>919846888888</td>
+                    <td>11 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=21" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=21" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 21); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 21); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 22. Riya Elizabeth (Active) -->
+                <tr>
+                    <td>22</td>
+                    <td>Riya Elizabeth</td>
+                    <td>Aluva</td>
+                    <td>683101</td>
+                    <td>919846999999</td>
+                    <td>3 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=22" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=22" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 22); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 22); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 23. Ansar Mohammad (Active) -->
+                <tr>
+                    <td>23</td>
+                    <td>Ansar Mohammad</td>
+                    <td>Ernakulam</td>
+                    <td>682011</td>
+                    <td>919846000011</td>
+                    <td>14 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=23" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=23" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 23); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 23); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 24. Vinod Krishnan (Active) -->
+                <tr>
+                    <td>24</td>
+                    <td>Vinod Krishnan</td>
+                    <td>Kozhikode</td>
+                    <td>673001</td>
+                    <td>919846000022</td>
+                    <td>7 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=24" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=24" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 24); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 24); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 25. Shafik Rahman (Active) -->
+                <tr>
+                    <td>25</td>
+                    <td>Shafik Rahman</td>
+                    <td>Thrissur</td>
+                    <td>680001</td>
+                    <td>919846000033</td>
+                    <td>10 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=25" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=25" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 25); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 25); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 26. Meera Pillai (Active) -->
+                <tr>
+                    <td>26</td>
+                    <td>Meera Pillai</td>
+                    <td>Kollam</td>
+                    <td>691001</td>
+                    <td>919846000044</td>
+                    <td>5 yrs</td>
+                    <td>Malayalam</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=26" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=26" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 26); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 26); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 27. Tony Sebastian (Active) -->
+                <tr>
+                    <td>27</td>
+                    <td>Tony Sebastian</td>
+                    <td>Changanassery</td>
+                    <td>686101</td>
+                    <td>919846000055</td>
+                    <td>16 yrs</td>
+                    <td>English</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=27" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=27" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 27); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 27); return false;">Delete</a>
+                    </td>
+                </tr>
+                <!-- 28. Suresh Prabhu (Active) -->
+                <tr>
+                    <td>28</td>
+                    <td>Suresh Prabhu</td>
+                    <td>Marthandam</td>
+                    <td>629165</td>
+                    <td>919846000066</td>
+                    <td>20 yrs</td>
+                    <td>Tamil</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                        <a href="buyers/view.html?id=28" class="btn-action btn-view">View</a>
+                        <a href="buyers/edit.html?id=28" class="btn-action btn-update">Edit</a>
+                        <a href="#" class="btn-action btn-update" onclick="handleAction('Hide', 28); return false;">Hide</a>
+                        <a href="#" class="btn-action btn-delete" onclick="handleAction('Delete', 28); return false;">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <span>Showing 1 to 15 of 15 entries</span>
+            <div class="pagination-buttons">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript for Prototype Flow -->
+    <script>
+        function handleAction(action, id) {
+            let message = `Are you sure you want to ${action.toLowerCase()} buyer profile ID ${id}?`;
+            if (action === 'Delete') {
+                message = `WARNING: Are you sure you want to DELETE buyer profile ID ${id}? This cannot be undone.`;
+            }
+            
+            if (confirm(message)) {
+                alert(`Success! Buyer profile ${id} has been ${action.toLowerCase()}d.\n\n(Your Python backend will handle the MySQL update here).`);
+                // window.location.reload(); // Uncomment when Python backend is ready
+            }
+        }
+    </script>
+<!-- ============================================= -->
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('../../components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('../../components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+</body>
+</html>
