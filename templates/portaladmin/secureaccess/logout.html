@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - RambuConnect PORTAL Admin</title>
+    <link rel="stylesheet" href="../ostyle.css">
+    <link rel="stylesheet" href="../formsstyle.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<div id="header-placeholder"></div>
+<!-- ============================================= -->    
+
+<section class="middle">
+    <div class="form-container" style="text-align: center; max-width: 500px; margin: 50px auto; padding: 40px;">
+        <div class="form-title" style="color: var(--brand-green); margin-bottom: 20px;">Logout Successful</div>
+        
+        <p style="font-size: 1.2em; color: #333; margin-bottom: 30px;">
+            You have successfully logged out !
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+            <a href="login.html" class="btn-submit" style="text-decoration: none; display: inline-block;">
+                Login Again
+            </a>
+            <a href="/Rambu/templates/portaladmin/dashboard.html" class="btn-cancel" style="text-decoration: none; display: inline-block;">
+                Go to Dashboard
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================= -->
+
+    
+ <div id="footer-placeholder"></div>   
+<script>
+    // Load header
+    fetch('/Rambu/templates/components/header_portaladmin.html') 
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    
+    // Load footer
+    fetch('/Rambu/templates/components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+    
+<!-- ============================================= -->
+
+</body>
+</html>
